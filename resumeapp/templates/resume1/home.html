@@ -1,0 +1,450 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset = "UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>Daniel Ungureanu Curriculum Vitae</title>
+  <link rel="stylesheet"  href="{% static 'css/screenstyle.css' %}">
+
+  <!-- Other uploads for css to adjust to creen seizes
+  <link rel="stylesheet" media="screen and (max-width: 1299px)" href="{% static 'css/midscreenstyle.css' %}">
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="{% static 'css/smallscreenstyle.css' %}">
+-->
+</head>
+<body id="top">
+  <button onclick="topFunction()" id="myBtn" class="float-left" title="Go to top">Top</button>
+  <!-- make the back to top button move -->
+    <script language="JavaScript">
+      var mybutton = document.getElementById("myBtn");
+      // when i scroll down from the top, call button show function
+      window.onscroll = function() {scrollFunction()};
+      // instruct the button show function to show button only when i scroll
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // when the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+
+<!-- Header with name, picture and titles -->
+  <div class="container-fluid">
+
+    <div class="header row">
+    <!-- navigation bar with icons-->
+      <nav class="navbar float-left col-md-12 col-lg-1 d-sm-flex" >
+
+    <!-- navbar links -->
+        <ul class="navbar-nav align-self-start flex-lg-column flex-row d-flex">
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="#profile"><i class="fas fa-user-alt pr-2" title="Profile"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience" ><i class="fas fa-briefcase pr-2 " title="Experience"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certificates"><i class="fas fa-certificate pr-2 " title="Certificates"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills"><i class="fas fa-plus pr-2 " title="Skills"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#languages"><i class="fas fa-comments pr-2 " title="Languages"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education"><i class="fas fa-graduation-cap pr-2 " title="Education"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#exchange"><i class="fas fa-exchange-alt pr-2 " title="Exchange Programs"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="col-md-12 col-lg-3 name align-self-center">
+        <h2 class="text-center ">Daniel Ungureanu</h2>
+      </div>
+      <div class="headshot col-md-12 col-lg-4">
+        <img class=" align-self-center w-20 h-20 m-2 text-info img-fluid rounded-circle p-0"; src="{% static 'images/EU.jpg' %}" alt="Daniel Ungureanu">
+      </div>
+      <div class="col-md-12 col-lg-4 title align-self-center">
+        <h2 class="text-center">Master in Science<br>Experience in ArcGIS,<br>Python and Django</h2>
+      </div>
+    </div>
+
+
+<!-- animation showing different hobbies, some kind of typewriter ......... -->
+    <div class="col justify-content-center text-center d-block text-info">
+      <p class="typewriter"></p>
+    </div>
+
+<!-- COntact bar ....................................... -->
+    <div class="row bg-white justify-content-center align-items-center">
+      <div class="col-md col-sm-12 contacts border border-info border-right-0 border-left-0 text-center">
+        <a href="tel:00407537484560" class="contact_buttons btn btn-xlg" type="button" role="button">
+          <i class="fas fa-mobile-alt pr-2 text-info fa-1x"></i>0040-757-484560
+        </a>
+      </div>
+      <div class="col-md col-sm-12 contacts border border-info border-right-0 border-left-0 text-center">
+        <a class="contact_buttons btn btn-xlg" href="mailto:ungureanu.daniel86@gmail.com" type="button" role="button">
+          <i class="fas fa-envelope pr-2 text-info fa-1x"></i>ungureanu.daniel86@gmail.com
+        </a>
+      </div>
+      <div class="col-md col-sm-12 contacts border border-info border-right-0 border-left-0 text-center">
+        <a href="https://www.google.ro/maps/place/Bra%C8%99ov/@44.9183909,15.9724383,5z/data=!4m5!3m4!1s0x40b35b862aa214f1:0x6cf5f2ef54391e0f!8m2!3d45.6579677!4d25.6011915" class="contact_buttons btn btn-xlg" type="button" role="button">
+          <i class="fas fa-home pr-2 text-info fa-1x"></i>Brasov, Romania
+        </a>
+      </div>
+      <div class="col-md col-sm-12 contacts border border-info border-right-0 border-left-0 text-center">
+        <a href="https://www.linkedin.com/in/daniel-ungureanu-32a1a8a3/?originalSubdomain=ro" class="contact_buttons btn btn-xlg" type="button" role="button">
+          <i class="fab fa-linkedin-in pr-2 text-info fa-1x"></i>Linkedin
+        </a>
+      </div>
+      <div class="col-md col-sm-12 contacts border border-info border-right-0 border-left-0 text-center">
+        <a href="https://github.com/ungureanudaniel" class="contact_buttons btn btn-xlg" type="button" role="button">
+          <i class="fab fa-github pr-2 text-info fa-1x"></i>Github
+        </a>
+      </div>
+    </div>
+
+  <!-- LEFT MOST COLUMN!!!..........-->
+      <!-- PROFILE CHAPTER ........... -->
+      <div  class="chapters mt-5 row">
+        <div class="left-column col-sm-12 col-md-12 col-lg-5 mt-5 mb-1">
+          <div class="icon py-2 p-0">
+            <i id="profile" class="fa fa-user-alt col p-0"><h4 class="ml-2 mt-0">PROFILE</h4></i>
+          </div>
+          <div class="chp-border mt-2">
+          </div>
+          <div class="profile-box mt-2 d-inline-block">
+            <p class=" mt-1 small text-justify">I am a nature and wildlife lover, enjoy long long hikes on the mountains and sometimes even trail running. As of today, i've gathered 7 years of experience working with nature in different ways, among which 5 years of experience in nature protection and conservation projects. In the same time i've always been a tech-savvy person and thus, got my self into working a lot with databases, GIS and GPS devices in the field.<br>I aspire to learn more about nature conservation abroad, work in projects that have access to a much larger audience, talented people, latest tech, foreign cultures etc. Plus, i am currently learning programming with python, putting projects online with django and data science with python........</p>
+          </div >
+      <!-- EXPERIENCE CHAPTER ..........-->
+          <div id="experience" class="exp mt-5">
+            <div class="icon py-2">
+              <i class="fa fa-briefcase col fa-1x p-0"><h4 class="ml-2 mt-0">EXPERIENCE</h4></i>
+            </div>
+            <div class="mt-2 chp-border">
+            </div>
+            <!-- JOBS DESCRIPTION EACH WITH ITS DIV ...................-->
+            <div class="job-five mt-3">
+              <p class="date m-2">SEPTEMBER 2019 - CURRENT</p>
+              <ul class="font-weight-bold list-unstyled mt-1">DIRECTOR SELF-EMPLOYED
+                <li class="text-black ml-3 font-italic"><a href="https://www.artisanbakery.ro">OBICEIURI SANATOASE SRL</a></li>
+                <li class="mb-1 mt-1 text-justify font-weight-light"></li>
+                <ul class="tasks list-styled">Tasks
+                      <li class="ml-4 font-weight-light small">Product photos</li>
+                      <li class="ml-4 font-weight-light small">Administrative paper work</li>
+                      <li class="ml-4 font-weight-light small">Online marketing</li>
+                      <li class="ml-4 font-weight-light small">Purchasing ingredients</li>
+                      <li class="ml-4 font-weight-light small">Barista</li>
+                      <li class="ml-4 font-weight-light small">Overall business management</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="job-four">
+              <p class="date m-2">FEB 2015 - SEP 2018</p>
+              <ul class="font-weight-bold list-unstyled">ASSISTANT MANAGER
+                <li class="text-black ml-3 font-italic"><a href="https://www.carpathia.org/life/">FUNDATIA CONSERVATION CARPATHIA</a></li>
+                <li class="pb-1 pt-1 text-justify font-weight-light"></li>
+                <ul class="tasks list-styled">Tasks
+                  <li class="ml-4 font-weight-light small">Coordination of field staff</li>
+                  <li class="ml-4 font-weight-light small">Field surveys and habitat inventories</li>
+                  <li class="ml-4 font-weight-light small">GIS maps and database with large amounts of field data</li>
+                  <li class="ml-4 font-weight-light small">Project management</li>
+                  <li class="ml-4 font-weight-light small">Work shops and presentations to general public and authorities</li>
+                  <li class="ml-4 font-weight-light small">Activity reports in English or German</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="job-three">
+              <p class="date m-2">MAR 2014 - FEB 2015</p>
+              <ul class="font-weight-bold list-unstyled">ASSISTANT MANAGER
+                <li class="text-black ml-3 font-italic">BCP WILDLIFE S.R.L.</li>
+                <li class="pb-1 pt-1 text-justify font-weight-light"></li>
+                <ul class="tasks list-styled">Tasks
+                  <li class="ml-4 font-weight-light small">Coordination of field staff</li>
+                  <li class="ml-4 font-weight-light small">Field surveys and habitat inventories</li>
+                  <li class="ml-4 font-weight-light small">GIS maps and database with large amounts of field data</li>
+                  <li class="ml-4 font-weight-light small">Project management</li>
+                  <li class="ml-4 font-weight-light small">Work shops and presentations to general public and authorities</li>
+                  <li class="ml-4 font-weight-light small">Activity reports in English or German</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="job-two">
+              <p class="date m-2">MAY 2013 - JAN 2014</p>
+              <ul class="font-weight-bold list-unstyled">TECHNICAL DIRECTOR
+                <li class="text-black ml-3 font-italic"><a href="www.forbiom.eu">FBR FOREST OPS S.A.</a></li>
+                <li class="pb-1 pt-1 text-justify font-weight-light"></li>
+                <ul class="tasks list-styled">Tasks
+                  <li class="ml-4 font-weight-light small">Coordination of field staff and contracted teams</li>
+                  <li class="ml-4 font-weight-light small">Negotiating contracts</li>
+                  <li class="ml-4 font-weight-light small">Manage permits for timber harvesting</li>
+                  <li class="ml-4 font-weight-light small">Resposible for work safety</li>
+                  <li class="ml-4 font-weight-light small">Forest management GIS database and maps</li>
+                  <li class="ml-4 font-weight-light small">Equipment purchase</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="job-one">
+              <p class="date m-2">JUN 2012 - MAY 2013</p>
+              <ul class="font-weight-bold list-unstyled">FOREST ENGINEER
+                <li class="text-black ml-3 font-italic"><a href="www.forbiom.eu">FOREST AND BIOMASS ROMANIA S.R.L.</a></li>
+                <li class="pb-1 pt-1 text-justify font-weight-light"></li>
+                <ul class="tasks list-styled">Tasks
+                  <li class="ml-4 font-weight-light small">Coordination of field staff and contracted teams</li>
+                  <li class="ml-4 font-weight-light small">Negotiating contracts</li>
+                  <li class="ml-4 font-weight-light small">Manage permits for timber harvesting</li>
+                  <li class="ml-4 font-weight-light small">Resposible for work safety</li>
+                  <li class="ml-4 font-weight-light small">Forest management GIS database and maps</li>
+                  <li class="ml-4 font-weight-light small">Equipment purchase</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+              <!-- SKILLS COLUMN THAT SHOULD BE IN THE MIDDLE WHEN ON LARGE SCREEN AND AFTER CERTIFICATES ON SMALL SCREEN -->
+      <div class="middle-column skills col-sm-12 col-md-12 col-lg-2 mt-5" id="skills">
+        <div class="icon icon-skills py-2 p-0">
+          <i class="fa fa-plus col"><h4 class="ml-2 mt-0">SKILLS</h4></i>
+        </div>
+        <div class="mt-2 chp-border">
+        </div>
+          <!-- THE ROUND PROGRESS BARS THEMSELVES -->
+        <div class="mt-3">
+          <!-- card child 1 - first pie --->
+          <div class="card m-0">
+            <div class="box">
+              <h2 class="text">FOREST ECOLOGY</h2>
+              <div class="percent">
+                <svg class="">
+                  <circle cx="90" cy="90" r="60"></circle>
+                  <circle cx="90" cy="90" r="60"></circle>
+                </svg>
+                <div class="number">
+                    <h2>90<span>%</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card child 2 - second pie --->
+          <div class="card">
+            <div class="box">
+              <h2 class="text">NATURE CONSERVATION</h2>
+              <div class="percent">
+                <svg class="">
+                  <circle cx="90" cy="90" r="60"></circle>
+                  <circle cx="90" cy="90" r="60"></circle>
+                </svg>
+                <div class="number">
+                    <h2>90<span>%</span></h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- card child 3 - third pie --->
+          <div class="card">
+            <div class="box">
+              <h2 class="text">WILDLIFE GUIDE</h2>
+              <div class="percent">
+                <svg class="">
+                  <circle cx="90" cy="90" r="60"></circle>
+                  <circle cx="90" cy="90" r="60"></circle>>
+                </svg>
+                <div class="number">
+                    <h2>70<span>%</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card child 4 - fourth pie --->
+          <div class="card">
+            <div class="box">
+              <h2 class="text">ARCGIS</h2>
+              <div class="percent">
+                <svg class="">
+                  <circle cx="90" cy="90" r="60"></circle>
+                  <circle cx="90" cy="90" r="60"></circle>e>
+                </svg>
+                <div class="number">
+                    <h2>85<span>%</span></h2>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- card child 5 - fifth pie --->
+          <div class="card">
+            <div class="box">
+              <h2 class="text">PROGRAMMING PYTHON</h2>
+              <div class="percent">
+                <svg class="">
+                  <circle cx="90" cy="90" r="60"></circle>
+                  <circle cx="90" cy="90" r="60"></circle>
+                </svg>
+                <div class="number">
+                    <h2>35<span>%</span></h2>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- card child 6 - sixtg pie --->
+          <div class="card">
+            <div class="box">
+              <h2 class="text">WEB DEVELOPMENT</h2>
+              <div class="percent">
+                <svg class="">
+                  <circle cx="90" cy="90" r="60"></circle>
+                  <circle cx="90" cy="90" r="60"></circle>
+                </svg>
+                <div class="number">
+                    <h2>50<span>%</span></h2>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- card child 7 - seventh pie --->
+          <div class="card">
+            <div class="box">
+              <h2 class="text">DATA SCIENCE</h2>
+              <div class="percent">
+                <svg class="">
+                  <circle cx="90" cy="90" r="60"></circle>
+                  <circle cx="90" cy="90" r="60"></circle>
+                </svg>
+                <div class="number">
+                  <h2 class="">10<span>%</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--  END OF SKILLS PIECHARTS -->
+
+<!-- LANGUAGES CHAPTER .......................-->
+      <div  class="col-sm-12 col-md-12 col-lg-5 mt-5">
+          <div id="languages" class="icon py-2">
+            <i class="far fa-comments col p-0"><h4 class="ml-2 mt-0">LANGUAGES</h4></i>
+          </div>
+          <div class="mt-2 chp-border">
+          </div>
+          <div>
+            <div class="progress mt-2">
+              <div id="progressBar" class="progress-bar en" role="progressbar" style="width:90%" area-valuenow="25" aria-valuemin="0" aria-valuemax="100">ENGLISH</div>
+            </div>
+            <div class="progress mt-2">
+              <div id="progressBar" class="progress-bar de bg-warning" style="width:30%;" role="progressbar" area-valuenow="25" aria-valuemin="0" aria-valuemax="100">GERMAN</div>
+            </div>
+          </div>
+
+
+<!-- HOBBIES .......................-->
+          <div id="hobbies" class="hobbies mt-5">
+            <div class="icon py-2">
+              <i class="fa fa-running col p-0"><h4 class="ml-2 mt-0">HOBBIES</h4></i>
+            </div>
+            <div class="mt-2 chp-border">
+            </div>
+            <div class="hobbies mt-4">
+              <span class="rounded">PHOTOGRAPHY</span>
+              <span class="rounded">READING TECH</span>
+              <span class="rounded">TRADING CRYPTOCURRENCIES</span>
+              <span class="rounded">HIKING</span>
+              <span class="rounded">CAMPING</span>
+              <span class="rounded">BIKING</span>
+            </div>
+          </div>
+<!-- EDUCATION CHAPTER .......................-->
+          <div id="education" class="mt-5">
+            <div class="icon py-2">
+              <i class="fa fa-graduation-cap col p-0"><h4 class="ml-2 mt-0">EDUCATION</h4></i>
+            </div>
+            <div class="mt-2 chp-border">
+            </div>
+            <div class="edu">
+              <dl class="list-unstyled mt-3">
+                <dt class="date border-bottom ">OCT 2010 - JUN 2012</dt>
+                  <dd class="font-weight-bold text-dark">UNIVERSITY TRANSILVANIA OF BRASOV</dd>
+                  <dd class="text-secondary ml-3">Master's Degree</dd>
+                  <dd class="" style="color:teal;">Forest Ecology</dd>
+                <dt class="date   border-bottom ">OCT 2006 - JUN 2010</dt>
+                  <dd class="font-weight-bold text-dark">UNIVERSITY TRANSILVANIA OF BRASOV</dd>
+                  <dd class="text-secondary ml-3">Bachelor Degree</dd>
+                  <dd class="" style="color:teal;">Forestry</dd>
+                <dt class=" date   border-bottom ">SEP 2002 - JUN 2006</dt>
+                  <dd class="font-weight-bold text-dark">NATIONAL COLLEGE 'NICU GANE'</dd>
+                  <dd class="text-secondary ml-3">HIGH SCHOOL DIPLOMA</dd>
+                  <dd class="" style="color:teal;">Advanced computer skills certificate</dd>
+              </dl>
+            </div>
+          </div>
+          <div id="exchange" class="mt-5">
+            <div class="icon py-2">
+              <i class="fa fa-exchange-alt col "><h4 class="ml-2 mt-0">EXCHANGE PROGRAMS</h4></i>
+            </div>
+            <div class="mt-2 chp-border">
+            </div>
+            <div class="exchange">
+              <dl class="list-unstyled mt-3">
+                <dt class="border-bottom">MAR 2015 - APR 2015</dt>
+                  <dd class="font-weight-bold text-dark">TOMPKINS CONSERVATION PROJECTS</dd>
+                  <dd class="text-secondary ml-3">ARGENTINA AND CHILE </dd>
+                  <dd class="" style="color:teal;">Field visits and presentations of different wilderness conservation projects in Ibera Wetlands, Parque Pumalin, Parque Patagonia</dd>
+                <dt class="border-bottom">AUG 2011</dt>
+                  <dd class="font-weight-bold text-dark">ORGANIZATION FOR CULTURAL EXCHANGE AMONG NATIONS</dd>
+                  <dd class="text-secondary ml-3">CANADA</dd>
+                  <dd class="" style="color:teal;">Field trip in different key forestry sites in Alberta, Rocky Mountains, Coast Mountains, Vancouver Island</dd>
+                <dt class="border-bottom ">APR 2011 - JUNE 2011</dt>
+                  <dd class="font-weight-bold text-dark">ERASMUS INTERNSHIP</dd>
+                  <dd class="text-secondary ml-3">GEORG AUGUST UNIVERSITY, GERMANY</dd>
+                  <dd class="" style="color:teal;">Assisting lab research on pest management</dd>
+                <dt class="border-bottom ">AUG 2010</dt>
+                  <dd class="font-weight-bold text-dark">SUMMERSCHOOL IN NORTHEN GREECE</dd>
+                  <dd class="text-secondary ml-3">ARISTOTLE UNIVERSITY OF THESSALONIKI</dd>
+                  <dd class="" style="color:teal;">Forest site classification and computing statistics on field data</dd>
+                <dt class="border-bottom ">OCT 2009 - MAR 2010</dt>
+                  <dd class="font-weight-bold text-dark">ERASMUS EXCHANGE STUDENT</dd>
+                  <dd class="text-secondary ml-3">GERMANY</dd>
+                  <dd class="" style="color:teal;">Participated in various courses, mostly focused on tropical forestry</dd>
+              </dl>
+            </div>
+          </div>
+          <!-- CERTIFICATE DESCRIPTION .....-->
+          <div id="certificates" class="cert mt-5">
+            <div class="icon py-2 p-0">
+              <i class="fa fa-certificate col-sm"><h4 class="ml-2 mt-0">CERTIFICATES</h4></i>
+            </div>
+            <div class="mt-2 chp-border">
+            </div>
+              <dl class="list-unstyled">
+                <dt class="certificates m-2">IELTS</dt>
+                  <dd class="mt-2 ml-4">BAND 8</dd>
+                  <dd class="font-weight-light mt-1 ml-6">OCTOBER 2019</dd>
+              </dl>
+              <dl class="list-unstyled">
+                  <dt class="certificates m-2">TOURIST GUIDE</dt>
+                    <dd class="mt-2 ml-4">LICENCE TO MANAGE TOURIST VISITORS</dd>
+            <dd class="font-weight-light">JUNE 2015</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
