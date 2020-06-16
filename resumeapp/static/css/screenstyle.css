@@ -6,8 +6,8 @@
  --textspacing: 0.02em;
  --font: Verdana, Geneva, sans-serif;
  --paragraphtext: 1rem;
- --titlesize: 3vw;
- --Namesize: 4vw;
+ --titlesize: 2.5rem;
+ --Namesize: 4rem;
  --chaptersize:2.2vw;
  --jobsize: 1.7vw;
  --companysize: 1.4vw;
@@ -24,7 +24,7 @@ html {
 
 .navbar-nav {
   float: left;
-  font-size: 2vw;
+  font-size: 2rem;
   position: relative;
 }
 
@@ -70,7 +70,9 @@ html {
 
 .name {
   vertical-align: middle;
+  justify-content: flex-start;
 }
+
 .name h2 {
   font-size: var(--Namesize);
   font-weight: bolder;
@@ -79,7 +81,7 @@ html {
 .headshot {
   align-self: center;
   display: block;
-  object-fit: contain;
+  object-fit: scale-down;
 }
 
 .title h2 {
@@ -93,9 +95,9 @@ html {
   display: inline-block;
   overflow: hidden;
   letter-spacing: 0.1em;
- 	animation: typing 5s steps(30, end), blink .75s step-end infinite;
+ 	animation: typing 10s steps(30, end), blink .90s step-end infinite;
     white-space: nowrap;
-    font-size: var(--paragraphtext);
+    font-size: 2rem;
     font-family: var(--typewriterfont);
     font-weight: 70%;
     border-right: 0.3em solid orange;
@@ -104,22 +106,23 @@ html {
 }
 
 .typewriter:before {
-  content: 'Python and django programming enthusiast';
+  content: 'Python programming enthusiast';
   -webkit-animation-name: typing;
   -webkit-animation-duration: 3s;
   animation-name: typing;
-  animation-duration: 3s;
-  animation-delay: 3s;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
   animation-iteration-count: infinite;
 }
 
 /* The typing effect */
 
 @keyframes typing {
-  0% {content: 'Python and django programming enthusiast';}
-  25% {content: 'Amateur photographer';}
-  50% {content: 'Wildlife lover and guide';}
-  75% {content: 'Entrepreneur';}
+  0% {content: 'Tech-savvy';}
+  20% {content: 'Amateur photographer';}
+  40% {content: 'Nature lover';}
+  60% {content: 'Entrepreneur';}
+  80% {content: 'Python programming enthusiast';}
   100% {content: 'Trail runner';}
 
 }
@@ -128,8 +131,21 @@ html {
   color: var(--tealcolor);
 }
 
-.contacts:hover a{
-  font-size: 1.2rem;
+.contacts:hover {
+  background-color: var(--tealcolor);
+  border: var(--tealcolor);
+  color: white;
+  transition-delay: 0.03s;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+.contacts:hover a {
+  color: white;
+}
+
+.contacts:hover i {
+  color: white;
 }
 
 .left-col {
@@ -173,6 +189,7 @@ html {
 .tasks li {
   font-size: var(--paragraphtext);
   color: teal;
+  line-height: 2.5rem;
 }
 .icon-skills i {
   margin-bottom: -0.35rem;
@@ -185,11 +202,12 @@ html {
   color: black;
   opacity: 30%;
 
+
 }
 
 .middle-column {
   background-color: var(--tealcolor);
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 50px 50px 50px 50px;
 }
 /*the round progress bars style*/
 
@@ -203,6 +221,7 @@ html {
 .box {
  justify-content: center;
  color:white;
+ margin-bottom: 4rem;
 }
 
 .round i{
