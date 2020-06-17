@@ -14,7 +14,7 @@
  --typewriterfont: Courier, monospace;
  --chapterindent:2.6em;
  --taskssize: 1.4vw;
- --typewriter_top: 1em;
+ --typewriter_top: 0.6em;
  --profile_box_top:13em;
  --headshot_height: 100%;
 }
@@ -97,7 +97,7 @@ html {
   letter-spacing: 0.1em;
  	animation: typing 10s steps(30, end), blink .90s step-end infinite;
     white-space: nowrap;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-family: var(--typewriterfont);
     font-weight: 70%;
     border-right: 0.3em solid orange;
