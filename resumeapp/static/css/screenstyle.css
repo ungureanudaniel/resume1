@@ -26,10 +26,22 @@ html {
   float: left;
   font-size: 2rem;
   position: relative;
+  animation-name: navbar;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
+@keyframes navbar {
+  from {top: -40rem; left: 0;opacity: 0%;}
+  to {top: 0rem;left: 0em;opacity: 100%;}
+}
+
+
 .nav-link i {
-  color: rgba(0,128,128, 0.8);
+  color: black;
+  opacity: 40%;
 }
 
 .nav-link i:hover {
@@ -65,9 +77,14 @@ html {
 }
 
 .header {
-  background-image: linear-gradient(rgba(0, 178, 169,1), rgba(255,0,0,0));
+  background-image: linear-gradient(rgba(0, 178, 169,1), rgb(0,139,139,1));
 }
 
+/*
+.header {
+  background-image: linear-gradient(rgba(0, 178, 169,1), rgba(255,0,0,0));
+}
+*/
 .name {
   vertical-align: middle;
   justify-content: flex-start;
@@ -89,6 +106,11 @@ html {
 }
 
 /*TYPEWRITER ANIMATION */
+
+.type-row {
+  position: relative;
+
+}
 .typewriter {
   justify-content: center;
   position: relative;
@@ -96,13 +118,13 @@ html {
   overflow: hidden;
   letter-spacing: 0.1em;
  	animation: typing 10s steps(30, end), blink .90s step-end infinite;
-    white-space: nowrap;
-    font-size: 1.2rem;
-    font-family: var(--typewriterfont);
-    font-weight: 70%;
-    border-right: 0.3em solid orange;
-    border-left: 0.3em solid orange;
-    box-sizing: border-box;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-family: var(--typewriterfont);
+  font-weight: 70%;
+  border-right: 0.3em solid orange;
+  border-left: 0.3em solid orange;
+  box-sizing: border-box;
 }
 
 .typewriter:before {
@@ -125,6 +147,20 @@ html {
   80% {content: 'Python programming enthusiast';}
   100% {content: 'Trail runner';}
 
+}
+
+.contacts {
+  animation-name: contacts;
+animation-duration: 1.5s;
+animation-delay: 0.3s;
+animation-direction: normal;
+animation-timing-function: ease-in;
+animation-fill-mode: both;
+}
+
+@keyframes contacts {
+from {opacity: 0%;}
+to {opacity: 100%;}
 }
 
 .contacts i {
