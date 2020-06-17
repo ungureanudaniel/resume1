@@ -99,18 +99,27 @@ html {
   align-self: center;
   display: block;
   object-fit: scale-down;
+  z-index: 10;
 }
 
 .title h2 {
   font-size: var(--titlesize);
 }
 
-/*TYPEWRITER ANIMATION */
-
-.type-row {
+/*text slide
+.slideshow {
   position: relative;
-
+  background-color: var(--tealcolor);
 }
+#carouselContent {
+  color: white;
+  z-index: 1;
+  margin-top: -2.85rem;
+  background-color: var(--tealcolor);
+  border-radius: 0% 0% 50% 50%;
+  font-weight: 700;
+}
+/*
 .typewriter {
   justify-content: center;
   position: relative;
@@ -132,12 +141,15 @@ html {
   -webkit-animation-name: typing;
   -webkit-animation-duration: 3s;
   animation-name: typing;
-  animation-duration: 5s;
+  animation-duration: 7s;
   animation-delay: 0.5s;
   animation-iteration-count: infinite;
 }
 
-/* The typing effect */
+@keyframes typing {
+
+}
+ The typing effect
 
 @keyframes typing {
   0% {content: 'Tech-savvy';}
@@ -148,7 +160,7 @@ html {
   100% {content: 'Trail runner';}
 
 }
-
+*/
 .contacts {
   animation-name: contacts;
 animation-duration: 1.5s;
@@ -225,7 +237,7 @@ to {opacity: 100%;}
 .tasks li {
   font-size: var(--paragraphtext);
   color: teal;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 .icon-skills i {
   margin-bottom: -0.35rem;
