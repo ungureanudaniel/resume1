@@ -5,15 +5,15 @@
   --greycolor: #4f4f4d;
  --textspacing: 0.02em;
  --font: Verdana, Geneva, sans-serif;
- --paragraphtext: 1rem;
+ --paragraphtext: 0.9rem;
  --titlesize: 2.5rem;
  --Namesize: 4rem;
- --chaptersize:2.2vw;
- --jobsize: 1.7vw;
- --companysize: 1.4vw;
+ --chaptersize:2.2rem;
+ --jobsize: 1.2rem;
+ --companysize: 1rem;
  --typewriterfont: Courier, monospace;
  --chapterindent:2.6em;
- --taskssize: 1.4vw;
+ --taskssize: 0.9rem;
  --typewriter_top: 0.6em;
  --profile_box_top:13em;
  --headshot_height: 100%;
@@ -234,6 +234,10 @@ to {opacity: 100%;}
   font-size: var(--jobsize);
 }
 
+.company {
+  font-size: var(--companysize);
+}
+
 .tasks li {
   font-size: var(--paragraphtext);
   color: teal;
@@ -246,6 +250,7 @@ to {opacity: 100%;}
 }
 .date {
   border-bottom: 0.05rem ridge var(--tealcolor);
+  font-size: var(--jobsize);
   font-weight: bolder;
   color: black;
   opacity: 30%;
@@ -334,4 +339,8 @@ to {opacity: 100%;}
 
 .exchange dd:nth-child(1) {
 
+}
+
+.certificates {
+  font-size: var(--jobsize);
 }
