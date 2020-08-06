@@ -1,0 +1,346 @@
+
+
+:root {
+  --tealcolor:rgb(0,139,139,1);
+  --greycolor: #4f4f4d;
+ --textspacing: 0.02em;
+ --font: Verdana, Geneva, sans-serif;
+ --paragraphtext: 0.9rem;
+ --titlesize: 2.5rem;
+ --Namesize: 4rem;
+ --chaptersize:2.2rem;
+ --jobsize: 1.2rem;
+ --companysize: 1rem;
+ --typewriterfont: Courier, monospace;
+ --chapterindent:2.6em;
+ --taskssize: 0.9rem;
+ --typewriter_top: 0.6em;
+ --profile_box_top:13em;
+ --headshot_height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-nav {
+  float: left;
+  font-size: 2rem;
+  position: relative;
+  animation-name: navbar;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+@keyframes navbar {
+  from {top: -40rem; left: 0;opacity: 0%;}
+  to {top: 0rem;left: 0em;opacity: 100%;}
+}
+
+
+.nav-link i {
+  color: black;
+  opacity: 40%;
+}
+
+.nav-link i:hover {
+  color: white;
+}
+
+#myBtn {
+  display:block;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1050;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: lightgrey;
+  font-weight: 600;
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+#myBtn:hover {
+  color: white;
+  font-size: 1.2rem;
+}
+.right {
+  background-color: #fff;
+}
+
+.left {
+  color: white;
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 178, 169,1), rgb(0,139,139,1));
+}
+
+/*
+.header {
+  background-image: linear-gradient(rgba(0, 178, 169,1), rgba(255,0,0,0));
+}
+*/
+.name {
+  vertical-align: middle;
+  justify-content: flex-start;
+}
+
+.name h2 {
+  font-size: var(--Namesize);
+  font-weight: bolder;
+}
+
+.headshot {
+  align-self: center;
+  display: block;
+  object-fit: scale-down;
+  z-index: 10;
+}
+
+.title h2 {
+  font-size: var(--titlesize);
+}
+
+/*text slide
+.slideshow {
+  position: relative;
+  background-color: var(--tealcolor);
+}
+#carouselContent {
+  color: white;
+  z-index: 1;
+  margin-top: -2.85rem;
+  background-color: var(--tealcolor);
+  border-radius: 0% 0% 50% 50%;
+  font-weight: 700;
+}
+/*
+.typewriter {
+  justify-content: center;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 0.1em;
+ 	animation: typing 10s steps(30, end), blink .90s step-end infinite;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-family: var(--typewriterfont);
+  font-weight: 70%;
+  border-right: 0.3em solid orange;
+  border-left: 0.3em solid orange;
+  box-sizing: border-box;
+}
+
+.typewriter:before {
+  content: 'Python programming enthusiast';
+  -webkit-animation-name: typing;
+  -webkit-animation-duration: 3s;
+  animation-name: typing;
+  animation-duration: 7s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+
+}
+ The typing effect
+
+@keyframes typing {
+  0% {content: 'Tech-savvy';}
+  20% {content: 'Amateur photographer';}
+  40% {content: 'Nature lover';}
+  60% {content: 'Entrepreneur';}
+  80% {content: 'Python programming enthusiast';}
+  100% {content: 'Trail runner';}
+
+}
+*/
+.contacts {
+  animation-name: contacts;
+animation-duration: 1.5s;
+animation-delay: 0.3s;
+animation-direction: normal;
+animation-timing-function: ease-in;
+animation-fill-mode: both;
+}
+
+@keyframes contacts {
+from {opacity: 0%;}
+to {opacity: 100%;}
+}
+
+.contacts i {
+  color: var(--tealcolor);
+}
+
+.contacts:hover {
+  background-color: var(--tealcolor);
+  border: var(--tealcolor);
+  color: white;
+  transition-delay: 0.03s;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+.contacts:hover a {
+  color: white;
+}
+
+.contacts:hover i {
+  color: white;
+}
+
+.left-col {
+
+}
+
+.contacts {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.icon i {
+  font-size: 1.8rem;
+  margin-bottom: -0.35rem;
+  display: flex;
+  color: var(--tealcolor);
+}
+
+#profile {
+  padding: 0rem;
+}
+
+.profile-box p {
+  font-size: var(--paragraphtext);
+}
+.chp-border {
+
+  border-top: 0.1rem solid var(--tealcolor);
+}
+
+.icon h4 {
+  margin: -1.0rem;
+  font-size: 1.6rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.job {
+  font-size: var(--jobsize);
+}
+
+.company {
+  font-size: var(--companysize);
+}
+
+.tasks li {
+  font-size: var(--paragraphtext);
+  color: teal;
+  line-height: 2rem;
+}
+.icon-skills i {
+  margin-bottom: -0.35rem;
+  display: flex;
+  color: white;
+}
+.date {
+  border-bottom: 0.05rem ridge var(--tealcolor);
+  font-size: var(--jobsize);
+  font-weight: bolder;
+  color: black;
+  opacity: 30%;
+
+
+}
+
+.middle-column {
+  background-color: var(--tealcolor);
+  border-radius: 50px 50px 50px 50px;
+}
+/*the round progress bars style*/
+
+.container {
+  position: relative;
+  display: block;
+  padding: 0;
+  background-color: white;
+}
+
+.box {
+ justify-content: center;
+ color:white;
+ margin-bottom: 4rem;
+}
+
+.round i{
+  color:white;
+}
+
+.box span {
+  color: grey;
+}
+
+.box:hover {
+  color: black;
+  font-size: 1.2rem;
+}
+
+/*LANGUAGES PIE CHART STYLES*/
+.language {
+
+}
+.progress {
+  font-size: var(--paragraphtext);
+  height: 2rem;
+}
+
+.progress:hover {
+  font-size: var(--jobsize);
+}
+
+.progress-bar {
+  background-color: var(--tealcolor);
+}
+
+/*HOBBIES STYLE*/
+.hobbies span{
+  color: rgb(255, 255, 255, 1);
+  border: 1px solid rgb(0, 178, 169, 1);
+  margin:1rem;
+  padding: 0.2rem;
+  font-size: var(--paragraphtext);
+  font-weight: 600;
+  display: inline-flex;
+  background-color: rgb(0, 178, 169, 0.7);
+
+}
+
+.edu .icon h4{
+  margin: -1.0rem;
+  font-size: var(--chaptersize);
+  text-align: center;
+  justify-content: center;
+  border-bottom: 0.05rem ridge var(--tealcolor);
+  font-weight: bolder;
+}
+
+.edu dl dt dd {
+  color: var(--tealcolor);
+}
+
+.exchange dt {
+  border-bottom: 0.05rem ridge var(--tealcolor);
+}
+
+.exchange dd:nth-child(1) {
+
+}
+
+.certificates {
+  font-size: var(--jobsize);
+}
