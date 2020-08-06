@@ -1,7 +1,13 @@
 from django.shortcuts import render
+from .models import Profile
 
 
 
-# Create your views here.
+# the main view
 def home(request):
-    return render(request, 'resume1/home.html', {})
+    profile = Profile.objects.all().order_by('-id')[:1]
+
+    context = {
+        'profile': profile,
+    }
+    return render(request, 'resume1/home.html', context)
