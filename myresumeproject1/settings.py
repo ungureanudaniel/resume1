@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = ['fierce-turmeric-wosexrdlqhzyk396c1a772kn.herokudns.com']
 
