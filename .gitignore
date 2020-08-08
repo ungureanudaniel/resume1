@@ -4,6 +4,6 @@
 __pycache__
 myvenv
 db.sqlite3
-.env
+myresumeproject1/.env
 .DS_Store
-.env
+myresumeproject1/.env
