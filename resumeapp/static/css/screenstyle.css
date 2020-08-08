@@ -217,6 +217,7 @@ to {opacity: 100%;}
 
 .profile-box p {
   font-size: var(--paragraphtext);
+  line-height: 1.7rem;
 }
 .chp-border {
 
