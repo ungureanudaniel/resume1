@@ -1,0 +1,41 @@
+{% extends 'resume1/index.html' %}
+{% load static %}
+
+{% block content %}
+<section id="home" class="bg-hero" style="background-image: url(images/home/bg2.jpg);">
+					<div class="main-wrapper">
+						<div class="img-box"><img src="{% static 'images/home/headshot.jpg' %}" alt="" class="user-img"></div>
+						<h1 class="author-name">Daniel Ungureanu</h1>
+						<h4>
+			                <span class="cd-headline letters scale">
+			                  <span class="cd-words-wrapper">
+			                    <b>ARCGIS</b>
+			                    <b class="is-visible">forestry</b>
+			                    <b>python</b>
+			                  </span>
+			                </span>
+			                <span class="cd-headline letters scale">
+			                  <span class="cd-words-wrapper">
+			                    <b>forestry</b>
+			                    <b>python</b>
+			                    <b class="is-visible">ARCGIS</b>
+			                  </span>
+			                </span>
+			                <span class="cd-headline letters scale">
+			                  <span class="cd-words-wrapper">
+			                    <b class="is-visible">python</b>
+			                    <b>ARCGIS</b>
+			                    <b>forestry</b>
+			                  </span>
+			                </span>
+			            </h4>
+			            <ul class="social-icon">
+				       		<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				       		<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				       		<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+				       		<li><a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+				       		<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				       	</ul>
+			        </div> <!-- /.main-wrapper -->
+				</section>
+{% endblock %}
