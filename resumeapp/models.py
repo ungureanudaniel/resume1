@@ -1,5 +1,5 @@
 from django.db import models
-from ckeditor.fields import RichTextField
+# from ckeditor.fields import RichTextField
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils import timezone
@@ -54,7 +54,7 @@ class Experience(models.Model):
     location = models.CharField(max_length=200, default=" ")
     position = models.CharField(max_length=300)
     year = models.CharField(max_length=300)
-    text = RichTextField()
+    text = models.TextField()
 
     def __str__(self):
         return self.company
