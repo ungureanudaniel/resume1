@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, Education, Experience, Skill, Exchange, Certificates, MainAbilities
+from .models import Profile, Education, Experience, Skill, Exchange, Certificates, MainAbilities, RecentWork
 # Register your models here.
 
 class ProfileAdmin(admin.ModelAdmin):
@@ -15,7 +15,7 @@ class ExperienceAdmin(admin.ModelAdmin):
     list_display = ('id', 'company', 'position', 'year', 'text',)
 
 class SkillAdmin(admin.ModelAdmin):
-    list_display = ('id', 'skill_type', 'skill_name')
+    list_display = ('id', 'skill_type', 'skill_name', 'percent', 'active')
 
 class CertificatesAdmin(admin.ModelAdmin):
     list_display = ('id', 'text')
@@ -23,7 +23,11 @@ class CertificatesAdmin(admin.ModelAdmin):
 class ExchangeAdmin(admin.ModelAdmin):
     list_display = ('id', 'text')
 
+class RecentWorkAdmin(admin.ModelAdmin):
+    list_display = ('id', 'category', 'title', 'image')
+
 admin.site.register(Profile, ProfileAdmin)
+admin.site.register(RecentWork, RecentWorkAdmin)
 admin.site.register(MainAbilities, MainAbilitiesAdmin)
 admin.site.register(Education, EducationAdmin)
 admin.site.register(Experience, ExperienceAdmin)

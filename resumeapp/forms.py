@@ -15,3 +15,16 @@ class ProfileForm(forms.ModelForm):
             'current_job': forms.TextInput(attrs = {'class': 'form-control', 'placeholder': 'Add your current job...'}),
             'city': forms.TextInput(attrs = {'class': 'form-control', 'placeholder': 'Add your current city...'}),
         }
+
+
+class ContactForm(forms.Form):
+
+    class Meta:
+        fields = ['name', 'email', 'message']
+
+        widgets = {
+            'name': forms.TextInput(attrs = {'class': 'form-control', 'placeholder': 'Add name...'}),
+            'email': forms.TextInput(attrs = {'class': 'form-control', 'placeholder': 'Add your email...'}),
+            'message': forms.TextInput(attrs = {'class': 'form-control', 'placeholder': 'Add a few words...'}),
+
+        }

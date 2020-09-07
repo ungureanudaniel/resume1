@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils import timezone
 
@@ -33,6 +34,10 @@ class Profile(models.Model):
     def __str__(self):
         return self.text
 
+    def get_absolute_url(self):
+        # return reverse('post_detail', kwargs={'pk': self.pk})
+        return reverse('home')
+
 #---------------------------EDUCATITON---------------------------------------
 class Education(models.Model):
     title = models.CharField(max_length=200)
@@ -56,19 +61,38 @@ class Experience(models.Model):
 
 #---------------------------SKILLS---------------------------------------
 class Skill(models.Model):
-    skill_type = models.CharField(max_length=200, default="")
-    skill_name = models.TextField()
+    skill_type_choice = (
+        ('technical', 'technical'),
+        ('professional', 'professional'),
+        ('language', 'language')
+    )
+    skill_type = models.CharField(max_length=300, default="technical", choices=skill_type_choice)
+    skill_name = models.CharField(max_length=200)
+    percent = models.IntegerField()
+    active = models.BooleanField(default='True')
+
+
+    def __str__(self):
+        return self.skill_name
+
+
+#--------------------------RECENT WORK------------------------------------------
+class RecentWork(models.Model):
+    category = models.CharField(max_length=200)
+    title = models.CharField(max_length=300)
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
 
     def __str__(self):
         return self.title
 
 #---------------------------CONTACT---------------------------------------
-class Contact(models.Model):
-    title = models.CharField(max_length=200, default="Hi")
-    text = models.TextField()
-
-    def __str__(self):
-        return self.title
+# class Contact(models.Model):
+#     name = models.CharField(max_length=200, default=" ")
+#     email = models.EmailField(max_length=300)
+#     message = models.TextField()
+#
+#     def __str__(self):
+#         return self.name
 
 #---------------------------CERTIFICATES---------------------------------------
 class Certificates(models.Model):

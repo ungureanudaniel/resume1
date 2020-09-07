@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -86,7 +86,6 @@
 			        	<li class="nav-item"><a class="nav-link" href="#about"><i class="icon flaticon-user"></i> About Me</a></li>
 			        	<li class="nav-item"><a class="nav-link" href="#resume"><i class="icon flaticon-resume-and-cv"></i> Resume</a></li>
 			        	<li class="nav-item"><a class="nav-link" href="#portfolio"><i class="icon flaticon-motivational"></i> Portfolio</a></li>
-			        	<li class="nav-item"><a class="nav-link" href="#blog"><i class="icon flaticon-blogging"></i> Blog</a></li>
 			        	<li class="nav-item"><a class="nav-link" href="#contact"><i class="icon flaticon-contact"></i> Contact</a></li>
 			        </ul>
 				</nav>
@@ -375,6 +374,29 @@
 <!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
 								</div>
 							</div>
+							<div class="row qualification-block">
+									<div class="col-md-6">
+									<h4 class="inner-title mt-40">Certificates</h4>
+									{% for item in certificates %}
+										<div class="single-block">
+										<h5 class="title">{{ item.title }}</h5>
+										<span class="text-success">{{ item.date }}</span>
+										<p>{{ item.text|safe }}</p>
+										</div> <!-- /.single-block -->
+									{% endfor %}
+<!--									<div class="single-block">-->
+<!--										<h5 class="title">Graphic Design</h5>-->
+<!--										<span>University of Adobe, 2016</span>-->
+<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
+<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
+<!--									<div class="single-block">-->
+<!--										<h5 class="title">web development</h5>-->
+<!--										<span>University of Nco, 2014</span>-->
+<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
+<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
+									</div>
+
+								</div>
 
 							<div class="skill-progress pt-130">
 								<h2 class="theme-title-two">Ski<span>lls.</span></h2>
@@ -383,60 +405,78 @@
 								<div class="row">
 									<div class="col-md-6">
 										<h4 class="inner-title mt-50">Technical Skills</h4>
+										{% for item in technical_skills %}
 										<div class="skill-bar">
-											<h6 class="skill-title">web development</h6>
+											<h6 class="skill-title">{{ item.skill_name }}</h6>
 											<div class="progress">
-												<div class="progress-bar" data-percent="80">
+												<div class="progress-bar" data-percent="{{ item.percent }}">
 													<span class="percent-text"><span class="count"></span>%</span>
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
-										<div class="skill-bar">
-											<h6 class="skill-title">HTML/CSS</h6>
-											<div class="progress">
-												<div class="progress-bar" data-percent="85">
-													<span class="percent-text"><span class="count"></span>%</span>
-												</div>
-											</div>
-										</div> <!-- /.skill-bar -->
-										<div class="skill-bar">
-											<h6 class="skill-title">Print Design</h6>
-											<div class="progress">
-												<div class="progress-bar" data-percent="90">
-													<span class="percent-text"><span class="count"></span>%</span>
-												</div>
-											</div>
-										</div> <!-- /.skill-bar -->
+										{% endfor %}
+<!--										<div class="skill-bar">-->
+<!--											<h6 class="skill-title">HTML/CSS</h6>-->
+<!--											<div class="progress">-->
+<!--												<div class="progress-bar" data-percent="85">-->
+<!--													<span class="percent-text"><span class="count"></span>%</span>-->
+<!--												</div>-->
+<!--											</div>-->
+<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
+<!--										<div class="skill-bar">-->
+<!--											<h6 class="skill-title">Print Design</h6>-->
+<!--											<div class="progress">-->
+<!--												<div class="progress-bar" data-percent="90">-->
+<!--													<span class="percent-text"><span class="count"></span>%</span>-->
+<!--												</div>-->
+<!--											</div>-->
+<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
 									</div> <!-- /.col- -->
 
 									<div class="col-md-6">
 										<h4 class="inner-title mt-50">Professional Skills</h4>
+										{% for item in professional_skills %}
 										<div class="skill-bar">
-											<h6 class="skill-title">Communication</h6>
+											<h6 class="skill-title">{{ item.skill_name }}</h6>
 											<div class="progress">
-												<div class="progress-bar" data-percent="90">
+												<div class="progress-bar" data-percent="{{ item.percent }}">
 													<span class="percent-text"><span class="count"></span>%</span>
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
-										<div class="skill-bar">
-											<h6 class="skill-title">Project Management</h6>
-											<div class="progress">
-												<div class="progress-bar" data-percent="80">
-													<span class="percent-text"><span class="count"></span>%</span>
-												</div>
-											</div>
-										</div> <!-- /.skill-bar -->
-										<div class="skill-bar">
-											<h6 class="skill-title">Team Work</h6>
-											<div class="progress">
-												<div class="progress-bar" data-percent="95">
-													<span class="percent-text"><span class="count"></span>%</span>
-												</div>
-											</div>
-										</div> <!-- /.skill-bar -->
+										{% endfor %}
+<!--										<div class="skill-bar">-->
+<!--											<h6 class="skill-title">Project Management</h6>-->
+<!--											<div class="progress">-->
+<!--												<div class="progress-bar" data-percent="80">-->
+<!--													<span class="percent-text"><span class="count"></span>%</span>-->
+<!--												</div>-->
+<!--											</div>-->
+<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
+<!--										<div class="skill-bar">-->
+<!--											<h6 class="skill-title">Team Work</h6>-->
+<!--											<div class="progress">-->
+<!--												<div class="progress-bar" data-percent="95">-->
+<!--													<span class="percent-text"><span class="count"></span>%</span>-->
+<!--												</div>-->
+<!--											</div>-->
+<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
+
 									</div> <!-- /.col- -->
 								</div> <!-- /.row -->
+								<div class="row">
+									<div class="col-md-6">
+										<h4 class="inner-title mt-50">Language Skills</h4>
+										{% for item in language_skills %}
+										<div class="skill-bar">
+											<h6 class="skill-title">{{ item.skill_name }}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="{{ item.percent }}">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										{% endfor %}
 							</div> <!-- /.skill-progress -->
 						</div> <!-- /.theme-container -->
 					</div> <!-- /.main-wrapper-bg -->
@@ -452,201 +492,105 @@
 							<h2 class="theme-title">Recent <span>Work.</span></h2>
 							<div class="project-gallery-wrapper mt-40">
 								<ul class="isotop-menu-wrapper">
-									<li class=" is-checked" data-filter="*">All</li>
-									<li data-filter=".typo">Typograhy</li>
-									<li data-filter=".branding">Branding</li>
-									<li data-filter=".illustration">Illustration</li>
+<!--									<li class=" is-checked" data-filter="*">All</li>-->
+<!--									<li data-filter="{{ RecentWork.category }}">Web Development</li>-->
+<!--									<li data-filter="{{ RecentWork.category }}">Branding</li>-->
+<!--									<li data-filter="{{ RecentWork.category }}">Illustration</li>-->
 								</ul>
 
 								<div id="isotop-gallery-wrapper" class="row mt-40">
 									<div class="grid-sizer"></div>
-									<div class="isotop-item branding">
+									<!-------items---------------->
+<!--									<div class="isotop-item branding">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/1.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="{% static 'images/portfolio/1.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+<!--									<div class="isotop-item typo branding">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/2.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="{% static 'images/portfolio/2.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+<!--									<div class="isotop-item">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/3.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="{% static 'images/portfolio/3.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+<!--									<div class="isotop-item illustration">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/4.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="{% static 'images/portfolio/4.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+<!--									<div class="isotop-item illustration typo">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/6.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="images/portfolio/6.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+<!--									<div class="isotop-item branding illustration">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/5.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="images/portfolio/5.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+<!--									<div class="isotop-item branding typo">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/8.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="images/portfolio/8.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+<!--									<div class="isotop-item illustration">-->
+<!--										<figure class="single-item">-->
+<!--											<img src="{% static 'images/portfolio/7.jpg' %}" alt="Image">-->
+<!--											<figcaption>-->
+<!--												<h3><a href="#">Strong <span>Apollo</span></a></h3>-->
+<!--												<a data-fancybox="gallery" href="images/portfolio/7.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>-->
+<!--											</figcaption>-->
+<!--										</figure> &lt;!&ndash; /.single-item &ndash;&gt;-->
+<!--									</div> &lt;!&ndash; /.isotop-item &ndash;&gt;-->
+									{% for item in portfolio %}
+									<div class="isotop-item {{ item.category }}">
 										<figure class="single-item">
-											<img src="{% static 'images/portfolio/1.jpg' %}" alt="Image">
+											<img src="{{ item.image.url }}" alt="Image">
 											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="{% static 'images/portfolio/1.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+												<h3><a href="#">{{ item.title }} <span></span></a></h3>
+												<a data-fancybox="gallery" href="{{ item.image.url }}" class="fancybox" data-caption="{{ item.title|safe }}"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 											</figcaption>
 										</figure> <!-- /.single-item -->
 									</div> <!-- /.isotop-item -->
-									<div class="isotop-item typo branding">
-										<figure class="single-item">
-											<img src="{% static 'images/home/1.jpg' %}images/portfolio/2.jpg" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="{% static 'images/portfolio/2.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
-									<div class="isotop-item">
-										<figure class="single-item">
-											<img src="{% static 'images/portfolio/3.jpg' %}" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="{% static 'images/portfolio/3.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
-									<div class="isotop-item illustration">
-										<figure class="single-item">
-											<img src="{% static 'images/portfolio/4.jpg' %}" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="{% static 'images/portfolio/4.jpg' %}" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
-									<div class="isotop-item illustration typo">
-										<figure class="single-item">
-											<img src="{% static 'images/portfolio/6.jpg' %}" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="images/portfolio/6.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
-									<div class="isotop-item branding illustration">
-										<figure class="single-item">
-											<img src="{% static 'images/portfolio/5.jpg' %}" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="images/portfolio/5.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
-									<div class="isotop-item branding typo">
-										<figure class="single-item">
-											<img src="{% static 'images/portfolio/8.jpg' %}" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="images/portfolio/8.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
-									<div class="isotop-item illustration">
-										<figure class="single-item">
-											<img src="{% static 'images/portfolio/7.jpg' %}" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="images/portfolio/7.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
-									<div class="isotop-item branding">
-										<figure class="single-item">
-											<img src="{% static 'images/home/1.jpg' %}images/portfolio/9.jpg" alt="Image">
-											<figcaption>
-												<h3><a href="#">Strong <span>Apollo</span></a></h3>
-												<a data-fancybox="gallery" href="images/portfolio/9.jpg" class="fancybox" data-caption="Strong Apollo"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-											</figcaption>
-										</figure> <!-- /.single-item -->
-									</div> <!-- /.isotop-item -->
+									{% endfor %}
+
 								</div> <!-- /#isotop-gallery-wrapper -->
 							</div> <!-- /.project-gallery-wrapper -->
 						</div> <!-- /.theme-container -->
 					</div> <!-- /.main-wrapper-bg -->
 				</section> <!-- /#portfolio -->
 				<!-- End Portfolio -->
-
-
-
-				<!-- Blog -->
-				<section id="blog" class="our-blog">
-					<div class="main-wrapper-bg">
-						<div class="theme-container">
-							<h2 class="theme-title">My <span>Blog.</span></h2>
-
-							<div class="row mt-50">
-								<div class="col-xl-4 col-md-6">
-									<div class="blog-post">
-										<div class="post-image"><img src="{% static 'images/blog/12.jpg' %}" alt=""></div>
-										<div class="post">
-											<ul class="info">
-												<li>By <a href="#">Admin</a> in <a href="#">Design</a></li>
-												<li>21 February 2019</li>
-											</ul>
-											<h4 class="blog-title"><a href="blog-details.html">With professionalism & unique ideas we help clients</a></h4>
-											<p>Duis aute irure dolor reprehenderit in volute fugiat nulla pariatur excepteur sint ocaec atcu qui officia.</p>
-										</div>
-									</div> <!-- /.blog-post -->
-								</div> <!-- /.col- -->
-								<div class="col-xl-4 col-md-6">
-									<div class="blog-post">
-										<div class="post-image"><img src="images/blog/13.jpg" alt=""></div>
-										<div class="post">
-											<ul class="info">
-												<li>By <a href="#">Admin</a> in <a href="#">Web</a></li>
-												<li>21 February 2019</li>
-											</ul>
-											<h4 class="blog-title"><a href="blog-details.html">Dingilla luctus quis faucibus odio cursus tortor.</a></h4>
-											<p>Duis aute irure dolor reprehenderit in volute fugiat nulla pariatur excepteur sint ocaec atcu qui officia.</p>
-										</div>
-									</div> <!-- /.blog-post -->
-								</div> <!-- /.col- -->
-								<div class="col-xl-4 col-md-6">
-									<div class="blog-post">
-										<div class="post-image"><img src="images/blog/14.jpg" alt=""></div>
-										<div class="post">
-											<ul class="info">
-												<li>By <a href="#">Admin</a> in <a href="#">Application</a></li>
-												<li>21 February 2019</li>
-											</ul>
-											<h4 class="blog-title"><a href="blog-details.html">Justo dignissim ornare mattis pretium ayc.</a></h4>
-											<p>Duis aute irure dolor reprehenderit in volute fugiat nulla pariatur excepteur sint ocaec atcu qui officia.</p>
-										</div>
-									</div> <!-- /.blog-post -->
-								</div> <!-- /.col- -->
-								<div class="col-xl-4 col-md-6">
-									<div class="blog-post">
-										<div class="post-image"><img src="images/blog/15.jpg" alt=""></div>
-										<div class="post">
-											<ul class="info">
-												<li>By <a href="#">Admin</a> in <a href="#">Logo</a></li>
-												<li>21 February 2019</li>
-											</ul>
-											<h4 class="blog-title"><a href="blog-details.html">Dingilla luctus quis faucibus odio cursus tortor.</a></h4>
-											<p>Duis aute irure dolor reprehenderit in volute fugiat nulla pariatur excepteur sint ocaec atcu qui officia.</p>
-										</div>
-									</div> <!-- /.blog-post -->
-								</div> <!-- /.col- -->
-								<div class="col-xl-4 col-md-6">
-									<div class="blog-post">
-										<div class="post-image"><img src="images/blog/16.jpg" alt=""></div>
-										<div class="post">
-											<ul class="info">
-												<li>By <a href="#">Admin</a> in <a href="#">Branding</a></li>
-												<li>21 February 2019</li>
-											</ul>
-											<h4 class="blog-title"><a href="blog-details.html">Elementum donec a velit consequat nibh fusce.</a></h4>
-											<p>Duis aute irure dolor reprehenderit in volute fugiat nulla pariatur excepteur sint ocaec atcu qui officia.</p>
-										</div>
-									</div> <!-- /.blog-post -->
-								</div> <!-- /.col- -->
-								<div class="col-xl-4 col-md-6">
-									<div class="blog-post">
-										<div class="post-image"><img src="images/blog/17.jpg" alt=""></div>
-										<div class="post">
-											<ul class="info">
-												<li>By <a href="#">Admin</a> in <a href="#">Programming</a></li>
-												<li>21 February 2019</li>
-											</ul>
-											<h4 class="blog-title"><a href="blog-details.html">Ridiculus venenatis duis egestas nunc.</a></h4>
-											<p>Duis aute irure dolor reprehenderit in volute fugiat nulla pariatur excepteur sint ocaec atcu qui officia.</p>
-										</div>
-									</div> <!-- /.blog-post -->
-								</div> <!-- /.col- -->
-							</div> <!-- /.row -->
-
-
-							<div class="mt-50">
-								<button class="theme-btn button--wayra m-auto" id="loadMore">Load More</button>
-							</div>
-						</div> <!-- /.theme-container -->
-					</div> <!-- /.main-wrapper-bg -->
-				</section> <!-- /#blog -->
-				<!-- End Blog -->
-
-
 
 				<!-- Contact -->
 				<section id="contact" class="contact-section">
@@ -659,53 +603,62 @@
 				            			<div class="single-block">
 				            				<div class="icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
 				            				<h5>My Location</h5>
-				            				<p>36498-076, Largo Estrada, 5. Ap.<br> 83 Joaquin d'Oeste - DF</p>
-				            			</div> <!-- /.single-block -->
+											<p>500461, Pelicanului Str., 5., Bl. B9, Ap41., Brasov, Romania</p>
+										</div> <!-- /.single-block -->
 				            		</div>
 				            		<div class="col-md-4">
 				            			<div class="single-block">
 				            				<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
 				            				<h5>Phone Number</h5>
-				            				<p><a href="#">+99 022 248 05 08</a> <br> <a href="#">+99 022 248 05 08</a></p>
+				            				<p><a href="tel:0040757484560">+40-757-484560</a></p>
 				            			</div> <!-- /.single-block -->
 				            		</div>
 				            		<div class="col-md-4">
 				            			<div class="single-block">
 				            				<div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
 				            				<h5>Email Adderss</h5>
-				            				<p><a href="#">your@hotmail.com</a> <br> <a href="#">your@hotmail.com</a></p>
+				            				<p><a href="mailto:ungureanu.daniel86@gmail.com">ungureanu.daniel86@gmail.com</a> <br> </p>
 				            			</div> <!-- /.single-block -->
 				            		</div>
 				            	</div>
 				            </div> <!-- /.contact-address -->
-
-							<div class="contact-form mt-50">
+							Thank you {{ message_name }}!
+							<div class="row">
+								<div class="text-center col-lg-12 col-md-12">
+									<div class="m-2 ">
+									  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89245.39472599306!2d25.526423469855324!3d45.65245670123032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b862aa214f1%3A0x6cf5f2ef54391e0f!2zQnJhyJlvdg!5e0!3m2!1sen!2sro!4v1593452481294!5m2!1sen!2sro" width="600" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+									</div>
+								</div>
+							</div>
+<!--							<div class="contact-form mt-50">-->
 								<h4 class="inner-title">Get In Touch.</h4>
-				              	<form class="form mt-50" id="contact-form" action="inc/contact.php" data-toggle="validator">
-				                	<div class="messages"></div>
-				                	<div class="controls">
+				              	<form action="{% url 'index' %}" method="POST" class="form mt-50 form-horizontal">
+									{% csrf_token %}
+<!--				                	<div class="messages"></div>-->
+<!--				                	<div class="controls">-->
 				                		<div class="row">
 					                    	<div class="col-md-6">
 					                    		<div class="form-group">
-							                        <input id="form_sub" type="text" name="name" placeholder="Your Name" required="required" data-error="Name is required.">
-							                        <div class="help-block with-errors"></div>
+							                        <input class="form-control" type="text" name="name" placeholder="Your Name" required="required" data-error="Name is required.">
+<!--&lt;!&ndash;							                        <div class="help-block with-errors"></div>&ndash;&gt;-->
 							                    </div>
 					                    	</div>
 					                    	<div class="col-md-6">
 					                    		<div class="form-group">
-							                        <input id="form_email" type="email" name="email" placeholder="Your Email" required="required" data-error="Valid email is required.">
-							                        <div class="help-block with-errors"></div>
+							                        <input class="form-control" type="email" name="email" placeholder="Your Email" required="required" data-error="Valid email is required.">
+<!--&lt;!&ndash;							                        <div class="help-block with-errors"></div>&ndash;&gt;-->
 							                    </div>
 					                    	</div>
 					                    </div>
 				                		<div class="form-group">
-					                    	<textarea id="form_message" name="message" class="form_message" placeholder="Type Your Message" required="required" data-error="Please,leave us a message."></textarea>
-					                    	<div class="help-block with-errors"></div>
+					                    	<textarea  class="form-control"  name="message" class="form_message" placeholder="Type Your Message" required="required" data-error="Please,leave us a message."></textarea>
+<!--&lt;!&ndash;					                    	<div class="help-block with-errors"></div>&ndash;&gt;-->
 					                    </div>
-					                    <button class="theme-btn button--wayra mt-50">Send Message</button>
-				                	</div> <!-- /.controls -->
+
+<!--&lt;!&ndash;				                	</div> &lt;!&ndash; /.controls &ndash;&gt;&ndash;&gt;-->
+									<button type="submit" class="theme-btn button--wayra mt-50">Send Message</button>
 				              	</form>
-				            </div> <!-- /.contact-form -->
+<!--				            </div> &lt;!&ndash; /.contact-form &ndash;&gt;-->
 						</div> <!-- /.theme-container -->
 					</div> <!-- /.main-wrapper-bg -->
 				</section> <!-- /#contact -->

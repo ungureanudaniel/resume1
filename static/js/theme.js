@@ -197,7 +197,7 @@
           $('#contact-form').on('submit', function (e) {
               // if the validator does not prevent form submit
               if (!e.isDefaultPrevented()) {
-                  var url = "inc/contact.php";
+                  var url = "{% url 'index.html' %}";
                   // POST values in the background the the script URL
                   $.ajax({
                       type: "POST",
