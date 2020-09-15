@@ -12,7 +12,7 @@ class EducationAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'text', 'year', 'university')
 
 class ExperienceAdmin(admin.ModelAdmin):
-    list_display = ('id', 'company', 'position', 'year', 'text',)
+    list_display = ('id', 'company', 'website', 'position', 'year', 'text',)
 
 class SkillAdmin(admin.ModelAdmin):
     list_display = ('id', 'skill_type', 'skill_name', 'percent', 'active')

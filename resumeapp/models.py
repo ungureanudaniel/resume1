@@ -51,6 +51,7 @@ class Education(models.Model):
 #---------------------------EXPERIENCE---------------------------------------
 class Experience(models.Model):
     company = models.CharField(max_length=200)
+    website = models.CharField(max_length=300)
     location = models.CharField(max_length=200, default=" ")
     position = models.CharField(max_length=300)
     year = models.CharField(max_length=300)
