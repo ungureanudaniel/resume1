@@ -3,6 +3,7 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils import timezone
+from datetime import datetime  
 
 class MainAbilities(models.Model):
     id = models.IntegerField(primary_key=True, default=1)
@@ -30,6 +31,7 @@ class Profile(models.Model):
     website = models.CharField(max_length=200, default="")
     phone = models.IntegerField(default="0")
     employment_status = models.CharField(max_length=200, default="", choices=freelance_choices)
+    timestamp = models.DateTimeField(default=datetime.now(), blank=True)
 
     def __str__(self):
         return self.text
@@ -44,6 +46,7 @@ class Education(models.Model):
     university = models.CharField(max_length=300)
     year = models.TextField()
     text = models.TextField()
+    timestamp = models.DateTimeField(default=datetime.now(), blank=True)
 
     def __str__(self):
         return self.title
@@ -56,6 +59,7 @@ class Experience(models.Model):
     position = models.CharField(max_length=300)
     year = models.CharField(max_length=300)
     text = models.TextField()
+    timestamp = models.DateTimeField(default=datetime.now(), blank=True)
 
     def __str__(self):
         return self.company
