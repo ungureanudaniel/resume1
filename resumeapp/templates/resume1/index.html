@@ -21,9 +21,9 @@
 		<!-- Awesome fonts -->
 		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 		<!-- Main style sheet -->
-		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<!-- Color Css -->
-		<link rel="stylesheet" id="jssDefault" href="{% static 'css/color4.css' %}">
+		<link rel="stylesheet" id="jssDefault" href="/css/color4.css">
 		<!-- responsive style sheet -->
 		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
 
@@ -100,7 +100,7 @@
 				<section id="home" class="bg-hero" style="background-image: url({% static 'images/patagonia.jpg' %});">
 
 					<div class="main-wrapper">
-						<div class="img-box"><img src="{% static 'images/home/headshot.jpg' %}" alt="" class="user-img"></div>
+						<div class="img-box"><img src="{% static '/images/home/headshot.jpg' %}" alt="" class="user-img"></div>
 						<h1 class="author-name">{{ user.first_name }} {{ user.last_name }}</h1>
 
 						<h4>
