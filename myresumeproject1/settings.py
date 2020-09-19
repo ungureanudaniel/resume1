@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'resumeapp',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -144,8 +145,26 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
+#------------------AWS SETTINGS ---------------------------------------
+AWS_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+# AWS_S3_CUSTOM_DOMAIN='%s.s3.amazonaws.com' % daniel-resume1
+# AWS_S3_OBJECT_PARAMETERS = {
+#      'CacheControl': 'max-age=86400',
+# }
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+
+#----------------------MEDIA SETTINGS ----------------------------------
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 

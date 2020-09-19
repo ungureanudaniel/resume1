@@ -3,7 +3,7 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils import timezone
-from datetime import datetime  
+from datetime import datetime
 
 class MainAbilities(models.Model):
     id = models.IntegerField(primary_key=True, default=1)

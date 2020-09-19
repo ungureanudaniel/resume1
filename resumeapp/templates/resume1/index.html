@@ -79,7 +79,7 @@
 
 			<!-- Aside Navigation Menu -->
 			<div id="aside-nav-wrapper">
-				<a href="{% url 'index' %}" class="logo"><img src="{% static 'images/logo/logo1.svg' %}" alt=""></a>
+				<a href="{% url 'index' %}" class="logo ml-5 mt-5"><img src="{% static 'images/logo/logo2.png' %}" alt=""></a>
 				<nav id='theme-menu-list'>
 					<ul class="navbar-nav ml-auto">
 			        	<li class="nav-item"><a class="nav-link" href="#home"><i class="icon flaticon-house-outline"></i> Home</a></li>
@@ -102,9 +102,6 @@
 					<div class="main-wrapper">
 						<div class="img-box"><img src="{% static 'images/home/headshot.jpg' %}" alt="" class="user-img"></div>
 						<h1 class="author-name">{{ user.first_name }} {{ user.last_name }}</h1>
-							{% if user.is_authenticated %}
-							<a class="{% url 'add_profile' %}"><i class="fa fa-pencil text-warning">Edit</i></a>
-							{% endif %}
 
 						<h4>
 
@@ -189,138 +186,6 @@
 								{% endfor %}
 							</div> <!-- /.about-block -->
 
-<!--							<div class="service-block pt-130">-->
-<!--								<h2 class="theme-title-two">Servi<span>ces.</span></h2>-->
-
-<!--								<div class="row">-->
-<!--									<div class="col-lg-4 col-sm-6">-->
-<!--										<div class="single-core-service mt-40">-->
-<!--											<i class="icon flaticon-pencil"></i>-->
-<!--											<h5><a href="#">WEB DEVELOPMENT</a></h5>-->
-<!--											<p>Lorem ipsum dolor sit amet, ne utamur partiendo posidoniu peru, justo meitum democritum ut eam. Minim numquam sed ne.</p>-->
-<!--										</div> &lt;!&ndash; /.single-core-service &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--									<div class="col-lg-4 col-sm-6">-->
-<!--										<div class="single-core-service mt-40">-->
-<!--											<i class="icon flaticon-idea"></i>-->
-<!--											<h5><a href="#">GAME DEVELOPMENT</a></h5>-->
-<!--											<p>Lorem ipsum dolor sit amet, ne utamur partiendo posidoniu peru, justo meitum democritum ut eam. Minim numquam sed ne.</p>-->
-<!--										</div> &lt;!&ndash; /.single-core-service &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--									<div class="col-lg-4 col-sm-6">-->
-<!--										<div class="single-core-service mt-40">-->
-<!--											<i class="icon flaticon-bookmark"></i>-->
-<!--											<h5><a href="#">Mobile Application</a></h5>-->
-<!--											<p>Lorem ipsum dolor sit amet, ne utamur partiendo posidoniu peru, justo meitum democritum ut eam. Minim numquam sed ne.</p>-->
-<!--										</div> &lt;!&ndash; /.single-core-service &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--									<div class="col-lg-4 col-sm-6">-->
-<!--										<div class="single-core-service mt-40">-->
-<!--											<i class="icon flaticon-alarm"></i>-->
-<!--											<h5><a href="#">Social Media</a></h5>-->
-<!--											<p>Lorem ipsum dolor sit amet, ne utamur partiendo posidoniu peru, justo meitum democritum ut eam. Minim numquam sed ne.</p>-->
-<!--										</div> &lt;!&ndash; /.single-core-service &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--									<div class="col-lg-4 col-sm-6">-->
-<!--										<div class="single-core-service mt-40">-->
-<!--											<i class="icon flaticon-target"></i>-->
-<!--											<h5><a href="#">Photography</a></h5>-->
-<!--											<p>Lorem ipsum dolor sit amet, ne utamur partiendo posidoniu peru, justo meitum democritum ut eam. Minim numquam sed ne.</p>-->
-<!--										</div> &lt;!&ndash; /.single-core-service &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--									<div class="col-lg-4 col-sm-6">-->
-<!--										<div class="single-core-service mt-40">-->
-<!--											<i class="icon flaticon-star"></i>-->
-<!--											<h5><a href="#">Marketing</a></h5>-->
-<!--											<p>Lorem ipsum dolor sit amet, ne utamur partiendo posidoniu peru, justo meitum democritum ut eam. Minim numquam sed ne.</p>-->
-<!--										</div> &lt;!&ndash; /.single-core-service &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--								</div>-->
-<!--							</div> &lt;!&ndash; /.service-block &ndash;&gt;-->
-
-
-<!--							<div class="pricing-plan pt-130">-->
-<!--								<h2 class="theme-title-two">Pricing <span>Plan</span></h2>-->
-<!--								<div class="row mt-20">-->
-<!--									<div class="col-md-4">-->
-<!--										<div class="single-plan-table">-->
-<!--											<h6>Basic</h6>-->
-<!--											<strong><sup>$</sup>09<span>/Hour</span></strong>-->
-<!--											<ul>-->
-<!--												<li>Web Development</li>-->
-<!--												<li>Advetising</li>-->
-<!--												<li class="inactive"><del>Game Development</del></li>-->
-<!--												<li>Content Writing</li>-->
-<!--												<li class="inactive"><del>Photography</del></li>-->
-<!--											</ul>-->
-<!--											<a href="#">Enroll NOW</a>-->
-<!--										</div> &lt;!&ndash; /.single-plan-table &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--									<div class="col-md-4">-->
-<!--										<div class="single-plan-table">-->
-<!--											<h6>Pro</h6>-->
-<!--											<strong><sup>$</sup>19<span>/Hour</span></strong>-->
-<!--											<ul>-->
-<!--												<li>Web Development</li>-->
-<!--												<li>Advetising</li>-->
-<!--												<li>Game Development</li>-->
-<!--												<li>Content Writing</li>-->
-<!--												<li class="inactive"><del>Photography</del></li>-->
-<!--											</ul>-->
-<!--											<a href="#">Enroll NOW</a>-->
-<!--										</div> &lt;!&ndash; /.single-plan-table &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--									<div class="col-md-4">-->
-<!--										<div class="single-plan-table">-->
-<!--											<h6>Premimum</h6>-->
-<!--											<strong><sup>$</sup>39<span>/Hour</span></strong>-->
-<!--											<ul>-->
-<!--												<li>Web Development</li>-->
-<!--												<li>Advetising</li>-->
-<!--												<li>Game Development</li>-->
-<!--												<li>Content Writing</li>-->
-<!--												<li>Photography</li>-->
-<!--											</ul>-->
-<!--											<a href="#">Enroll NOW</a>-->
-<!--										</div> &lt;!&ndash; /.single-plan-table &ndash;&gt;-->
-<!--									</div> &lt;!&ndash; /.col- &ndash;&gt;-->
-<!--								</div>-->
-<!--							</div> &lt;!&ndash; /.pricing-plan &ndash;&gt;-->
-
-
-<!--							<div class="testimonial-seaction pt-130">-->
-<!--								<h2 class="theme-title-two">Testimo<span>nials.</span></h2>-->
-<!--								<div class="testimonial-slider">-->
-<!--									<div class="item">-->
-<!--										<p>Aristotle maintained the sharp distinction between science and the practical knowledge of artisans, treating theoretical with as speculation as the highest type of human</p>-->
-<!--										<img src="{% static 'images/home/1.jpg' %}" alt="">-->
-<!--										<h6>JOHN DOE</h6>-->
-<!--										<span>CEO Founder,Microsoft</span>-->
-<!--									</div> &lt;!&ndash; /.item &ndash;&gt;-->
-<!--									<div class="item">-->
-<!--										<p>Aristotle maintained the sharp distinction between science and the practical knowledge of artisans, treating theoretical with as speculation as the highest type of human</p>-->
-<!--										<img src="{% static 'images/home/1.jpg' %}" alt="">-->
-<!--										<h6>John Mike</h6>-->
-<!--										<span>CEO Founder,Dropbox</span>-->
-<!--									</div> &lt;!&ndash; /.item &ndash;&gt;-->
-<!--								</div> &lt;!&ndash; /.testimonial-slider &ndash;&gt;-->
-<!--							</div> &lt;!&ndash; /.testimonial-seaction &ndash;&gt;-->
-
-<!--							<div class="partner pt-130">-->
-<!--								<h2 class="theme-title-two">Clie<span>nts.</span></span></h2>-->
-<!--								<div class="partner-logo mt-50">-->
-<!--									<div class="item"><img src="{% static 'images/home/1.jpg' %}images/logo/1.png" alt=""></div>-->
-<!--									<div class="item"><img src="{% static 'images/home/1.jpg' %}images/logo/2.png" alt=""></div>-->
-<!--									<div class="item"><img src="{% static 'images/home/1.jpg' %}images/logo/3.png" alt=""></div>-->
-<!--									<div class="item"><img src="{% static 'images/home/1.jpg' %}images/logo/4.png" alt=""></div>-->
-<!--								</div> &lt;!&ndash; /.partner-logo &ndash;&gt;-->
-<!--							</div> &lt;!&ndash; /.partner &ndash;&gt;-->
-<!--						</div> &lt;!&ndash; /.theme-container &ndash;&gt;-->
-<!--					</div> &lt;!&ndash; /.main-wrapper-bg &ndash;&gt;-->
-<!--				</section> &lt;!&ndash; /#about &ndash;&gt;-->
-<!--				&lt;!&ndash; End About Me &ndash;&gt;-->
-
-
 				<!-- Resume -->
 				<section id="resume">
 					<div class="main-wrapper-bg">
@@ -338,16 +203,6 @@
 										<p>{{ item.text|safe }}</p>
 									</div> <!-- /.single-block -->
 									{% endfor %}
-<!--									<div class="single-block">-->
-<!--										<h5 class="title">Graphic Design</h5>-->
-<!--										<span>University of Adobe, 2016</span>-->
-<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
-<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
-<!--									<div class="single-block">-->
-<!--										<h5 class="title">web development</h5>-->
-<!--										<span>University of Nco, 2014</span>-->
-<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
-<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
 								</div>
 
 								<div class="col-md-6">
@@ -356,22 +211,12 @@
 									<div class="single-block">
 										<h5 class="title">{{ item.company }}</h5>
 										<span class="small">{{ item.location|upper }}</span>
-										<span class="small"><a href="www.forbiom.eu">{{ item.website }}</a></span>
+										<span class="small"><a href="https://{{ item.website }}">{{ item.website }}</a></span>
 										<span>{{ item.position }}</span>
 										<span class="text-success">{{ item.year }}</span>
 										<p>{{ item.text|safe }}</p>
 									</div> <!-- /.single-block -->
 									{% endfor %}
-<!--									<div class="single-block">-->
-<!--										<h5 class="title">themeforest</h5>-->
-<!--										<span>Senior Ui/Ux Designer (1998 - 1930)</span>-->
-<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
-<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
-<!--									<div class="single-block">-->
-<!--										<h5 class="title">shutterstock</h5>-->
-<!--										<span>Web Developer (2001 - 2014)</span>-->
-<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
-<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
 								</div>
 							</div>
 							<div class="row qualification-block">
@@ -384,16 +229,6 @@
 										<p>{{ item.text|safe }}</p>
 										</div> <!-- /.single-block -->
 									{% endfor %}
-<!--									<div class="single-block">-->
-<!--										<h5 class="title">Graphic Design</h5>-->
-<!--										<span>University of Adobe, 2016</span>-->
-<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
-<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
-<!--									<div class="single-block">-->
-<!--										<h5 class="title">web development</h5>-->
-<!--										<span>University of Nco, 2014</span>-->
-<!--										<p>Investig ationes demons trave runt lectores legere liusry quod ii legunt saepius claritas Investig ationes, euismod sagittis  free super of the linal </p>-->
-<!--									</div> &lt;!&ndash; /.single-block &ndash;&gt;-->
 									</div>
 
 								</div>
@@ -415,22 +250,6 @@
 											</div>
 										</div> <!-- /.skill-bar -->
 										{% endfor %}
-<!--										<div class="skill-bar">-->
-<!--											<h6 class="skill-title">HTML/CSS</h6>-->
-<!--											<div class="progress">-->
-<!--												<div class="progress-bar" data-percent="85">-->
-<!--													<span class="percent-text"><span class="count"></span>%</span>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
-<!--										<div class="skill-bar">-->
-<!--											<h6 class="skill-title">Print Design</h6>-->
-<!--											<div class="progress">-->
-<!--												<div class="progress-bar" data-percent="90">-->
-<!--													<span class="percent-text"><span class="count"></span>%</span>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
 									</div> <!-- /.col- -->
 
 									<div class="col-md-6">
@@ -445,22 +264,6 @@
 											</div>
 										</div> <!-- /.skill-bar -->
 										{% endfor %}
-<!--										<div class="skill-bar">-->
-<!--											<h6 class="skill-title">Project Management</h6>-->
-<!--											<div class="progress">-->
-<!--												<div class="progress-bar" data-percent="80">-->
-<!--													<span class="percent-text"><span class="count"></span>%</span>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
-<!--										<div class="skill-bar">-->
-<!--											<h6 class="skill-title">Team Work</h6>-->
-<!--											<div class="progress">-->
-<!--												<div class="progress-bar" data-percent="95">-->
-<!--													<span class="percent-text"><span class="count"></span>%</span>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div> &lt;!&ndash; /.skill-bar &ndash;&gt;-->
 
 									</div> <!-- /.col- -->
 								</div> <!-- /.row -->
@@ -622,7 +425,7 @@
 				            		</div>
 				            	</div>
 				            </div> <!-- /.contact-address -->
-							Thank you {{ message_name }}!
+
 							<div class="row">
 								<div class="text-center col-lg-12 col-md-12">
 									<div class="m-2 ">
