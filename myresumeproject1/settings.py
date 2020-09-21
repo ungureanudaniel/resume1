@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['fierce-turmeric-wosexrdlqhzyk396c1a772kn.herokudns.com']
 
@@ -165,13 +165,14 @@ STATICFILES_DIRS = [
 #-----------------FILE STORAGE ----------------------------------------
 DEFAULT_FILE_STORAGE = 'myresumeproject1.storages.MediaStore'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 
 AWS_S3_URL = '//s3.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME
 #----------------------------------------------------------------------
 
-# STATIC_ROOT = ''
+
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static'),
