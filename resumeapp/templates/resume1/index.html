@@ -19,7 +19,7 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %}">
 		<!-- Awesome fonts -->
-		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
 		<!-- Main style sheet -->
 		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 		<!-- Color Css -->
@@ -100,7 +100,7 @@
 				<section id="home" class="bg-hero" style="background-image: url({% static 'images/patagonia.jpg' %});">
 
 					<div class="main-wrapper">
-						<div class="img-box"><img src="{% static '/images/home/headshot.jpg' %}" alt="" class="user-img"></div>
+						<div class="img-box"><img src="{% static 'images/home/headshot.jpg' %}" alt="" class="user-img"></div>
 						<h1 class="author-name">{{ user.first_name }} {{ user.last_name }}</h1>
 
 						<h4>
