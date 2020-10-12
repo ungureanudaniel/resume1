@@ -8,7 +8,7 @@ from .models import Profile, MainAbilities, Education, Experience, Certificates,
 
 #--------------------------------------MAIN CV PAGE -------------------------------------------------
 def home(request):
-    about = Profile.objects.filter(active="True")
+    about = Profile.objects.filter(active = 'True')
     abilities = list(MainAbilities.objects.all())
     education = Education.objects.all()
     experience = Experience.objects.all()

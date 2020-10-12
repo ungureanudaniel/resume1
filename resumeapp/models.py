@@ -18,6 +18,7 @@ class Profile(models.Model):
         ('Free of Contract', 'Free of Contract'),
         ('Currently under contract', 'Currently under contract'),
 )
+
     # chap_title = models.CharField(max_length=200, default="")
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     # main_abilities = models.(MainAbilities, on_delete=models.CASCADE)
