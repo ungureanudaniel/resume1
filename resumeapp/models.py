@@ -18,7 +18,6 @@ class Profile(models.Model):
         ('Free of Contract', 'Free of Contract'),
         ('Currently under contract', 'Currently under contract'),
 )
-    id = models.IntegerField(primary_key=True, default=1)
     # chap_title = models.CharField(max_length=200, default="")
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     # main_abilities = models.(MainAbilities, on_delete=models.CASCADE)
@@ -32,6 +31,8 @@ class Profile(models.Model):
     phone = models.IntegerField(default="0")
     employment_status = models.CharField(max_length=200, default="", choices=freelance_choices)
     timestamp = models.DateTimeField(default=datetime.now(), blank=True)
+    active = models.BooleanField()
+
 
     def __str__(self):
         return self.text
@@ -48,6 +49,9 @@ class Education(models.Model):
     text = models.TextField()
     timestamp = models.DateTimeField(default=datetime.now(), blank=True)
 
+    class Meta:
+        ordering = ["-timestamp"]
+
     def __str__(self):
         return self.title
 
@@ -60,6 +64,9 @@ class Experience(models.Model):
     year = models.CharField(max_length=300)
     text = models.TextField()
     timestamp = models.DateTimeField(default=datetime.now(), blank=True)
+
+    class Meta:
+        ordering = ["-timestamp"]
 
     def __str__(self):
         return self.company
