@@ -18,7 +18,10 @@ class Profile(models.Model):
         ('Free of Contract', 'Free of Contract'),
         ('Currently under contract', 'Currently under contract'),
 )
-
+    status_choices = (
+        ('active', 'active'),
+        ('inactive', 'inactive')
+    )
     # chap_title = models.CharField(max_length=200, default="")
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     # main_abilities = models.(MainAbilities, on_delete=models.CASCADE)
@@ -32,7 +35,9 @@ class Profile(models.Model):
     phone = models.IntegerField(default="0")
     employment_status = models.CharField(max_length=200, default="", choices=freelance_choices)
     timestamp = models.DateTimeField(default=datetime.now(), blank=True)
-    active = models.BooleanField()
+    # active = models.BooleanField()
+    status = models.CharField(max_length=200, default="", choices=status_choices)
+
 
 
     def __str__(self):

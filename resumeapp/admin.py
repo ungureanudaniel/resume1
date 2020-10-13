@@ -3,7 +3,7 @@ from .models import Profile, Education, Experience, Skill, Exchange, Certificate
 # Register your models here.
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'age', 'study', 'current_job', 'city', 'active')
+    list_display = ('id', 'name', 'age', 'study', 'current_job', 'city', 'status')
 
 class MainAbilitiesAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
