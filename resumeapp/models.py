@@ -38,8 +38,6 @@ class Profile(models.Model):
     # active = models.BooleanField()
     status = models.CharField(max_length=200, default="", choices=status_choices)
 
-
-
     def __str__(self):
         return self.text
 
