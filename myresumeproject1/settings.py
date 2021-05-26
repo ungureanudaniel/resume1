@@ -35,7 +35,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['dry-marsupial-vbntl8m8m98nk46kla54d27q.herokudns.com', 'www.danielungureanuresume.site']
+ALLOWED_HOSTS = ['aquatic-squirrel-brneqgx1m8wsjboge7sjq7hq.herokudns.com.', 'www.danielungureanuresume.site', 'danielungureanuresume.site']
 
 
 # Application definition
