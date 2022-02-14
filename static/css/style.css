@@ -1,11 +1,11 @@
 /* CSS Document */
 
-/* 
+/*
     Created on   : 04/04/2019.
     Theme Name   : CVR- CV-Resume Template.
     Version      : 1.0.
     Developed by : Jubayer al hasan. (jubayer.hasan1991@gmail.com)
-   
+
 */
 
 /* ------------------------------------------ */
@@ -49,7 +49,7 @@
 
 
 
-/*** 
+/***
 
 ====================================================================
   Loading Transition
@@ -90,19 +90,19 @@
   0% {
     transform: rotate(0deg);
   }
-  
+
   25% {
     transform: rotate(180deg);
   }
-  
+
   50% {
     transform: rotate(180deg);
   }
-  
+
   75% {
     transform: rotate(360deg);
   }
-  
+
   100% {
     transform: rotate(360deg);
   }
@@ -112,19 +112,19 @@
   0% {
     height: 0%;
   }
-  
+
   25% {
     height: 0%;
   }
-  
+
   50% {
     height: 100%;
   }
-  
+
   75% {
     height: 100%;
   }
-  
+
   100% {
     height: 0%;
   }
@@ -476,7 +476,7 @@ body .button--wayra:hover::before {
   left:50%;
   margin-left: -10px;
   z-index: -1;
-  transform:rotate(45deg); 
+  transform:rotate(45deg);
 }
 .pricing-plan .single-plan-table strong {
   font-family: 'K2D', sans-serif;
@@ -607,7 +607,7 @@ body .button--wayra:hover::before {
 }
 .project-gallery-wrapper .isotop-menu-wrapper li.is-checked {color: #242424;}
 #isotop-gallery-wrapper .grid-sizer,
-#isotop-gallery-wrapper .isotop-item {width: 33.33333%;padding: 0 15px;margin-top: 25px;}
+#isotop-gallery-wrapper .isotop-item {border: 1px solid black;width: 33.33333%;padding: 0 15px;margin-top: 25px;}
 #isotop-gallery-wrapper .single-item {
   background: linear-gradient(-45deg, #c3a165 0%,#2c3a6f 100%);
   overflow: hidden;
