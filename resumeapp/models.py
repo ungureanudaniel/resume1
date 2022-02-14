@@ -97,6 +97,9 @@ class RecentWork(models.Model):
     category = models.CharField(max_length=200)
     title = models.CharField(max_length=300)
     image = models.ImageField(upload_to='images/', blank=True, null=True)
+    class Meta:
+        verbose_name = "Recent Work"
+        verbose_name_plural = "Recent Work"
 
     def __str__(self):
         return self.title

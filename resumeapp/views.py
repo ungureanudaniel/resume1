@@ -80,4 +80,3 @@ def add_profile(request):
     }
 
     return render(request, 'resume1/add_profile.html', context)
-
