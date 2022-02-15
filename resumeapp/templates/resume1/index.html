@@ -192,7 +192,7 @@
 								</div>
 							</div>
 							<!-- Certificates -->
-							<!-- <section id="certificates" class="portfolio-section">
+							<section id="certificates" class="portfolio-section">
 								<div class="main-wrapper-bg">
 									<div class="theme-container">
 										<h2 class="theme-title">Certifi<span>cates.</span></h2>
@@ -205,9 +205,9 @@
 											</ul>
 
 											<div id="isotop-gallery-wrapper" class="row mt-40">
-												<div class="grid-sizer" style="border:none;"></div> -->
+												<div class="grid-sizer" style="border:none;"></div>
 												<!-- item -->
-												<!-- {% for c in certificates %}
+												{% for c in certificates %}
 												<div class="isotop-item {{ c.cat }}">
 													<figure class="single-item">
 														<img src="{{ c.img.url }}" alt="{{ c.title }}">
@@ -216,16 +216,16 @@
 															<p class="">{{ c.text|striptags|safe }}</p>
 															<p class="">{{ c.date|date:"Y n" }}</p>
 															<a data-fancybox="gallery" href="{{ c.img.url }}" class="fancybox" data-caption="{{ c.title }}"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-														</figcaption> -->
-													<!-- </figure> <!-- /.single-item --> -->
-												<!-- </div> <!-- /.isotop-item --> -->
-												<!-- {% endfor %} -->
-												<!-- item end -->
-											<!-- </div> <!-- /#isotop-gallery-wrapper --> -->
-										<!-- </div> <!-- /.project-gallery-wrapper --> -->
-									<!-- </div> <!-- /.theme-container --> -->
-								<!-- </div> <!-- /.main-wrapper-bg --> -->
-							<!-- </section> <!-- /#portfolio --> -->
+														</figcaption>
+													</figure> <!-- /.single-item -->
+												</div> <!-- /.isotop-item -->
+												{% endfor %}
+												item end
+											</div> <!-- /#isotop-gallery-wrapper -->
+										</div> <!-- /.project-gallery-wrapper -->
+									</div> <!-- /.theme-container -->
+								</div> <!-- /.main-wrapper-bg -->
+							</section> <!-- /#portfolio -->
 							<!-- End Certificates -->
 							<!-- SKILLS ---->
 							<div class="skill-progress pt-130">
