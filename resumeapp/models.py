@@ -3,12 +3,14 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils import timezone
-from datetime import datetime
+# from datetime import datetime
 
 class MainAbilities(models.Model):
     id = models.IntegerField(primary_key=True, default=1)
     name = models.CharField(max_length=200, default="forestry")
-
+    class Meta:
+        verbose_name = "MainAbilities"
+        verbose_name_plural = "MainAbilities"
     def __str__(self):
         return self.name
 
@@ -34,7 +36,7 @@ class Profile(models.Model):
     website = models.CharField(max_length=200, default="")
     phone = models.IntegerField(default="0")
     employment_status = models.CharField(max_length=200, default="", choices=freelance_choices)
-    timestamp = models.DateTimeField(default=datetime.now(), blank=True)
+    timestamp = models.DateTimeField(default=timezone.now(), blank=True)
     # active = models.BooleanField()
     status = models.CharField(max_length=200, default="", choices=status_choices)
 
@@ -51,11 +53,13 @@ class Education(models.Model):
     university = models.CharField(max_length=300)
     year = models.TextField()
     text = models.TextField()
-    timestamp = models.DateTimeField(default=datetime.now(), blank=True)
+    timestamp = models.DateTimeField(default=timezone.now(), blank=True)
     active = models.BooleanField(default='True')
 
     class Meta:
         ordering = ["-timestamp"]
+        verbose_name = "Education"
+        verbose_name_plural = "Education"
 
     def __str__(self):
         return self.title
@@ -68,11 +72,13 @@ class Experience(models.Model):
     position = models.CharField(max_length=300)
     year = models.CharField(max_length=300)
     text = models.TextField()
-    timestamp = models.DateTimeField(default=datetime.now(), blank=True)
+    timestamp = models.DateTimeField(default=timezone.now(), blank=True)
     active = models.BooleanField(default='True')
 
     class Meta:
         ordering = ["-timestamp"]
+        verbose_name = "Experience"
+        verbose_name_plural = "Experience"
 
     def __str__(self):
         return self.company
@@ -99,6 +105,7 @@ class RecentWork(models.Model):
     category = models.CharField(max_length=200)
     title = models.CharField(max_length=300)
     image = models.ImageField(upload_to='images/', blank=True, null=True)
+    active = models.BooleanField(default='True')
     class Meta:
         verbose_name = "Recent Work"
         verbose_name_plural = "Recent Work"
@@ -117,10 +124,20 @@ class RecentWork(models.Model):
 
 #---------------------------CERTIFICATES---------------------------------------
 class Certificates(models.Model):
+    cat_choices = (
+        ('language', 'language'),
+        ('professional', 'professional'),
+        ('hobby', 'hobby')
+    )
     title = models.CharField(max_length=200, default="Hi")
+    cat = models.CharField(max_length=250, default="professional", choices=cat_choices)
     date = models.CharField(max_length=200)
     text = models.TextField()
+    img = models.ImageField(upload_to='images/', blank=True, null=True)
     active = models.BooleanField(default='True')
+    class Meta:
+        verbose_name = "Certificates"
+        verbose_name_plural = "Certificates"
     def __str__(self):
         return self.title
 

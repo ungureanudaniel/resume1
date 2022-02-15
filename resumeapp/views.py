@@ -10,13 +10,13 @@ from .models import Profile, MainAbilities, Education, Experience, Certificates,
 def home(request):
     about = Profile.objects.filter(status='active')
     abilities = list(MainAbilities.objects.all())
-    education = Education.objects.all()
-    experience = Experience.objects.all()
-    certificates = Certificates.objects.all()
+    education = Education.objects.filter(active=True)
+    experience = Experience.objects.filter(active=True)
+    certificates = Certificates.objects.filter(active=True)
     technical_skills = Skill.objects.filter(skill_type='technical', active='True')
     professional_skills = Skill.objects.filter(skill_type='professional', active='True')
     language_skills = Skill.objects.filter(skill_type='language')
-    portfolio = RecentWork.objects.all()
+    portfolio = RecentWork.objects.filter(active=True)
     # portfolio_count = RecentWork.objects.annotate(num_categories=Count('category'))
     if request.method == "POST":
         message_name = request.POST['name']

@@ -665,6 +665,13 @@ body .button--wayra:hover::before {
   left:0;
   font-weight: normal;
 }
+#isotop-gallery-wrapper .single-item figcaption p {
+  color: #fff;
+  position: absolute;
+  top:0;
+  left:0;
+  font-weight: normal;
+}
 #isotop-gallery-wrapper .single-item figcaption h3 span {font-weight: 500;}
 #isotop-gallery-wrapper .single-item figcaption h3 a {color: #fff;}
 #isotop-gallery-wrapper .single-item figcaption>a {
