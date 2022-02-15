@@ -16,7 +16,7 @@ def home(request):
     technical_skills = Skill.objects.filter(skill_type='technical', active='True')
     professional_skills = Skill.objects.filter(skill_type='professional', active='True')
     language_skills = Skill.objects.filter(skill_type='language')
-    portfolio = RecentWork.objects.filterall()
+    portfolio = RecentWork.objects.all()
     # portfolio_count = RecentWork.objects.annotate(num_categories=Count('category'))
     if request.method == "POST":
         message_name = request.POST['name']
