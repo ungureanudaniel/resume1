@@ -233,7 +233,8 @@
 								<div class="row">
 									<div class="col-md-6">
 										<h4 class="inner-title mt-50">Technical Skills</h4>
-										{% for item in technical_skills %}
+										{% for item in skills %}
+										{% if item.skill_type == "technical" %}
 										<div class="skill-bar">
 											<h6 class="skill-title">{{ item.skill_name }}</h6>
 											<div class="progress">
@@ -247,7 +248,8 @@
 
 									<div class="col-md-6">
 										<h4 class="inner-title mt-50">Professional Skills</h4>
-										{% for item in professional_skills %}
+										{% for item in skills %}
+											{% if item.skill_type == "general" %}
 										<div class="skill-bar">
 											<h6 class="skill-title">{{ item.skill_name }}</h6>
 											<div class="progress">
@@ -256,6 +258,7 @@
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
+										{% endif %}
 										{% endfor %}
 
 									</div> <!-- /.col- -->
@@ -263,7 +266,8 @@
 								<div class="row">
 									<div class="col-md-6">
 										<h4 class="inner-title mt-50">Language Skills</h4>
-										{% for item in language_skills %}
+										{% for item in skills %}
+										{% if item.skill_type == "language" %}
 										<div class="skill-bar">
 											<h6 class="skill-title">{{ item.skill_name }}</h6>
 											<div class="progress">
@@ -272,8 +276,24 @@
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
+										{% endif %}
 										{% endfor %}
-							</div> <!-- /.skill-progress -->
+									</div> <!-- /.skill-progress -->
+									<div class="col-md-6">
+										<h4 class="inner-title mt-50">Language Skills</h4>
+										{% for item in skills %}
+										{% if item.skill_type == "hobby" %}
+										<div class="skill-bar">
+											<h6 class="skill-title">{{ item.skill_name }}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="{{ item.percent }}">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										{% endif %}
+										{% endfor %}
+									</div> <!-- /.skill-progress -->
 						</div> <!-- /.theme-container -->
 					</div> <!-- /.main-wrapper-bg -->
 				</section> <!-- /#resume -->
