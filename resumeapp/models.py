@@ -52,6 +52,7 @@ class Education(models.Model):
     year = models.TextField()
     text = models.TextField()
     timestamp = models.DateTimeField(default=datetime.now(), blank=True)
+    active = models.BooleanField(default='True')
 
     class Meta:
         ordering = ["-timestamp"]
@@ -68,6 +69,7 @@ class Experience(models.Model):
     year = models.CharField(max_length=300)
     text = models.TextField()
     timestamp = models.DateTimeField(default=datetime.now(), blank=True)
+    active = models.BooleanField(default='True')
 
     class Meta:
         ordering = ["-timestamp"]
@@ -118,7 +120,7 @@ class Certificates(models.Model):
     title = models.CharField(max_length=200, default="Hi")
     date = models.CharField(max_length=200)
     text = models.TextField()
-
+    active = models.BooleanField(default='True')
     def __str__(self):
         return self.title
 
