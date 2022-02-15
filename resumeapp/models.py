@@ -135,6 +135,7 @@ class Certificates(models.Model):
     date = models.CharField(max_length=200)
     text = models.TextField()
     img = models.ImageField(upload_to='images/', blank=True, null=True)
+    link = models.URLField(max_length=400)
     active = models.BooleanField(default='True')
     class Meta:
         verbose_name = "Certificates"
