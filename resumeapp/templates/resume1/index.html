@@ -192,7 +192,7 @@
 								</div>
 							</div>
 							<!-- Certificates -->
-							<section id="portfolio" class="portfolio-section">
+							<!-- <section id="certificates" class="portfolio-section">
 								<div class="main-wrapper-bg">
 									<div class="theme-container">
 										<h2 class="theme-title">Certifi<span>cates.</span></h2>
@@ -200,14 +200,14 @@
 											<ul class="isotop-menu-wrapper">
 												<li class=" is-checked" data-filter="*">All</li>
 												<li data-filter=".language">Language</li>
-												<li data-filter=".professional">Professional</li>
+												<li data-filter=".technical">Technical</li>
 												<li data-filter=".hobby">Hobby</li>
 											</ul>
 
 											<div id="isotop-gallery-wrapper" class="row mt-40">
-												<div class="grid-sizer" style="border:none;"></div>
+												<div class="grid-sizer" style="border:none;"></div> -->
 												<!-- item -->
-												{% for c in certificates %}
+												<!-- {% for c in certificates %}
 												<div class="isotop-item {{ c.cat }}">
 													<figure class="single-item">
 														<img src="{{ c.img.url }}" alt="{{ c.title }}">
@@ -216,7 +216,7 @@
 															<p class="">{{ c.text|striptags|safe }}</p>
 															<p class="">{{ c.date|date:"Y n" }}</p>
 															<a data-fancybox="gallery" href="{{ c.img.url }}" class="fancybox" data-caption="{{ c.title }}"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-														</figcaption>
+														</figcaption> -->
 													</figure> <!-- /.single-item -->
 												</div> <!-- /.isotop-item -->
 												{% endfor %}
