@@ -87,8 +87,9 @@ class Experience(models.Model):
 class Skill(models.Model):
     skill_type_choice = (
         ('technical', 'technical'),
-        ('professional', 'professional'),
-        ('language', 'language')
+        ('general', 'general'),
+        ('language', 'language'),
+        ('hobby', 'hobby')
     )
     skill_type = models.CharField(max_length=300, default="technical", choices=skill_type_choice)
     skill_name = models.CharField(max_length=200)
@@ -126,11 +127,11 @@ class RecentWork(models.Model):
 class Certificates(models.Model):
     cat_choices = (
         ('language', 'language'),
-        ('professional', 'professional'),
+        ('technical', 'technical'),
         ('hobby', 'hobby')
     )
     title = models.CharField(max_length=200, default="Hi")
-    cat = models.CharField(max_length=250, default="professional", choices=cat_choices)
+    cat = models.CharField(max_length=250, default="technical", choices=cat_choices)
     date = models.CharField(max_length=200)
     text = models.TextField()
     img = models.ImageField(upload_to='images/', blank=True, null=True)
