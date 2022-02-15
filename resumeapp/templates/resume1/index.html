@@ -212,7 +212,7 @@
 													<figure class="single-item">
 														<img src="{{ c.img.url }}" alt="{{ c.title }}">
 														<figcaption>
-															<h3><a href="#">{{ c.title }} <span>Certificate</span></a></h3>
+															<h3><a href="{{ c.link }}">{{ c.title }} <span>Certificate</span></a></h3>
 															<p class="">{{ c.text|striptags|safe }}</p>
 															<p class="">{{ c.date|date:"Y n" }}</p>
 															<a data-fancybox="gallery" href="{{ c.img.url }}" class="fancybox" data-caption="{{ c.title }}"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
