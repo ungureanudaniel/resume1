@@ -35,9 +35,11 @@ def home(request):
 
         context = {
             # 'form': form,
-            'technical_skills': technical_skills,
-            'professional_skills': professional_skills,
-            'language_skills': language_skills,
+            # 'technical_skills': technical_skills,
+            # 'professional_skills': professional_skills,
+            # 'language_skills': language_skills,
+            # 'language_skills': language_skills,
+            'skills': skills,
             'certificates': certificates,
             'experience': experience,
             'education': education,
