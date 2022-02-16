@@ -23,7 +23,7 @@ def home(request):
             message_name,  # name of sender
             message,  # text
             message_email,  # email
-            ['danielungureanu531@gmail.com'],  # to email
+            ['contact@ninjaweb.tech'],  # to email
             fail_silently=False,
         )
 
@@ -56,18 +56,3 @@ def home(request):
 
         }
         return render(request, 'resume1/index.html', context)
-
-#--------------------------------------ADD PROFILE PAGE -------------------------------------------------
-def add_profile(request):
-    form = ProfileForm(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-    else:
-        form = ProfileForm()
-
-    context = {
-        'form': form,
-    }
-
-    return render(request, 'resume1/add_profile.html', context)
