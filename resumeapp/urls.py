@@ -12,7 +12,6 @@ sitemaps = {
 
 urlpatterns = [
     path('', views.home, name='index'),
-    path('add_profile/', views.add_profile, name='add_profile'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path("robots.txt",TemplateView.as_view(template_name="resume1/robots.txt", content_type="text/plain")),
 ]
