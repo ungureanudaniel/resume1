@@ -8,12 +8,12 @@
 
 (function($) {
     "use strict";
-
-
+    
+    
     $(document).on ('ready', function (){
-
+        
         // -------------------- Navigation Scroll
-        $(window).on('scroll', function (){
+        $(window).on('scroll', function (){   
           var sticky = $('.theme-top-button'),
           scroll = $(window).scrollTop();
           if (scroll >= 100) sticky.addClass('fixed');
@@ -30,9 +30,9 @@
             });
             $(this).on('focusout', function() {
                 $(this).attr('placeholder',$(this).data('holder'));
-            });
+            });     
         });
-
+        
 
 
         //---------------------- Click event to scroll to top
@@ -138,7 +138,7 @@
 
 
 
-        // ------------------------------ Partner Logo Footer
+        // ------------------------------ Partner Logo Footer 
         var logoslider = $ (".partner-logo");
           if(logoslider.length) {
               logoslider.owlCarousel({
@@ -340,12 +340,12 @@
               });
           }
 
+        
 
-
-
+        
     });
 
-
+    
     $(window).on ('load', function (){ // makes sure the whole site is loaded
 
         // -------------------- Site Preloader
@@ -354,7 +354,7 @@
         $('body').delay(350).css({'overflow':'visible'});
 
 
-          // ------------------------------- AOS Animation
+          // ------------------------------- AOS Animation 
           // AOS.init({
           //   duration: 1000,
           //   mirror: true
@@ -390,37 +390,10 @@
                 });
               });
           }
-          if ($("#isotop-gallery-wrapper2").length) {
-            var $grid = $('#isotop-gallery-wrapper2').isotope({
-              // options
-              itemSelector: '.isotop-item2',
-              percentPosition: true,
-              masonry: {
-                // use element for option
-                columnWidth: '.grid-sizer2'
-              }
-
-            });
-
-            // filter items on button click
-            $('.isotop-menu-wrapper2').on( 'click', 'li', function() {
-              var filterValue = $(this).attr('data-filter');
-              $grid.isotope({ filter: filterValue });
-            });
-
-             // change is-checked class on buttons
-              $('.isotop-menu-wrapper2').each( function( i, buttonGroup ) {
-                var $buttonGroup = $( buttonGroup );
-                $buttonGroup.on( 'click', 'li', function() {
-                  $buttonGroup.find('.is-checked').removeClass('is-checked');
-                  $( this ).addClass('is-checked');
-                });
-              });
-          }
 
 
 
 
     });
-
+    
 })(jQuery);
