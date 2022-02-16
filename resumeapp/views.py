@@ -12,13 +12,7 @@ def home(request):
     abilities = list(MainAbilities.objects.all())
     education = Education.objects.all()
     experience = Experience.objects.all()
-    certificates = Certificates.objects.all()
     skills = Skill.objects.filter(active='True')
-    # technical_skills = Skill.objects.filter(skill_type='technical', active='True')
-    # professional_skills = Skill.objects.filter(skill_type='general', active='True')
-    # language_skills = Skill.objects.filter(skill_type='language')
-    # hobby_skills = Skill.objects.filter(skill_type='hobby')
-    portfolio = RecentWork.objects.all()
     # portfolio_count = RecentWork.objects.annotate(num_categories=Count('category'))
     if request.method == "POST":
         message_name = request.POST['name']
@@ -40,10 +34,8 @@ def home(request):
             # 'language_skills': language_skills,
             # 'hobby_skills': hobby_skills,
             'skills': skills,
-            'certificates': certificates,
             'experience': experience,
             'education': education,
-            'portfolio': portfolio,
             'abilities': abilities,
             'about': about,
             'message_name': message_name,
@@ -56,16 +48,9 @@ def home(request):
     else:
     # return the page
         context = {
-        # 'form': form,
-        # 'technical_skills': technical_skills,
-        # 'professional_skills': professional_skills,
-        # 'language_skills': language_skills,
-        # 'hobby_skills': hobby_skills,
         'skills': skills,
-        'certificates': certificates,
         'experience': experience,
         'education': education,
-        'portfolio': portfolio,
         'abilities': abilities,
         'about': about,
 

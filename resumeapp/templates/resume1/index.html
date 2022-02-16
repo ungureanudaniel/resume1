@@ -196,7 +196,7 @@
 								<div class="main-wrapper-bg">
 									<div class="theme-container">
 										<h2 class="theme-title">Certifi<span>cates.</span></h2>
-										<div class="project-gallery-wrapper mt-40">
+										<div class="project-gallery-wrapper2 mt-40">
 											<ul class="isotop-menu-wrapper2">
 												<li class=" is-checked" data-filter="*">All</li>
 												<li data-filter=".language">Language</li>
@@ -205,21 +205,58 @@
 											</ul>
 
 											<div id="isotop-gallery-wrapper2" class="row mt-40">
-												<div class="grid-sizer" style="border:none;"></div>
+												<div class="grid-sizer2" style="border:none;"></div>
 												<!-- item -->
-												{% for c in certificates %}
-												<div class="isotop-item2 {{ c.cat }}">
+												<div class="isotop-item2 language">
 													<figure class="single-item">
-														<img src="{{ c.img.url }}" alt="{{ c.title }}">
+														<img src="{% static 'images/certificates/IELTS.png'%}" alt="IELTS Certificate">
 														<figcaption>
-															<h3><a href="{{ c.link }}">{{ c.title }} <span>Certificate</span></a></h3>
-															<p class="">{{ c.text|striptags|safe }}</p>
-															<p class="">{{ c.date|date:"Y n" }}</p>
-															<a data-fancybox="gallery" href="{{ c.img.url }}" class="fancybox" data-caption="{{ c.title }}"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+															<h3><a href="#">IELTS <span>Certificate</span></a></h3>
+															<p class="">Band 8 IELTS Certificate</p>
+															<p class="">19 OCT 2019</p>
+															<a data-fancybox="gallery" href="{% static 'images/certificates/IELTS.png'%}" class="fancybox" data-caption="IELTS Certificate"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 														</figcaption>
 													</figure> <!-- /.single-item -->
 												</div> <!-- /.isotop-item -->
-												{% endfor %}
+												<!-- item end -->
+												<!-- item -->
+												<div class="isotop-item2 technical">
+													<figure class="single-item">
+														<img src="{% static 'images/certificates/data_analysis_certif.png' %}" alt="Data Analysis with Python Certificate">
+														<figcaption>
+															<h3><a href="https://www.freecodecamp.org/certification/fcc03020be8-3f4d-49a5-8a59-caea38f828ca/data-analysis-with-python-v7">Data Analysis with Python <span>Certificate</span></a></h3>
+															<p class="">Data Analysis with Python Certificate issued by freeCodeCamp</p>
+															<p class="">12 Jan 2021</p>
+															<a data-fancybox="gallery" href="{% static 'images/certificates/data_analysis_certif.png' %}" class="fancybox" data-caption="Data Analysis with Python Certificate"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+														</figcaption>
+													</figure> <!-- /.single-item -->
+												</div> <!-- /.isotop-item -->
+												<!-- item end -->
+												<!-- item -->
+												<div class="isotop-item2 technical">
+													<figure class="single-item">
+														<img src="{% static 'images/certificates/scientific_computing_certif.png' %}" alt="{{ c.title }}">
+														<figcaption>
+															<h3><a href="https://www.freecodecamp.org/certification/fcc03020be8-3f4d-49a5-8a59-caea38f828ca/scientific-computing-with-python-v7">Scientific Computing with Python <span>Certificate</span></a></h3>
+															<p class="">Scientific Computing with Python Certificate issued by freeCodeCamp</p>
+															<p class="">12 Jan 2021</p>
+															<a data-fancybox="gallery" href="{% static 'images/certificates/scientific_computing_certif.png' %}" class="fancybox" data-caption="Scientific Computing with Python Certificate"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+														</figcaption>
+													</figure> <!-- /.single-item -->
+												</div> <!-- /.isotop-item -->
+												<!-- item end -->
+												<!-- item -->
+												<div class="isotop-item2 hobby">
+													<figure class="single-item">
+														<img src="{% static 'images/certificates/tourism-certificate.jpg' %}" alt="Tourist Guide Certificate">
+														<figcaption>
+															<h3><a href="#">Tourist Guide Certificate <span>Certificate</span></a></h3>
+															<p class="">A Tourist Guide Certificate focused actually on nature and wildlife</p>
+															<p class="">20 NOV 2015</p>
+															<a data-fancybox="gallery" href="{% static 'images/certificates/tourism-certificate.jpg' %}" class="fancybox" data-caption="Tourist Guide Certificate"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+														</figcaption>
+													</figure> <!-- /.single-item -->
+												</div> <!-- /.isotop-item -->
 												<!-- item end -->
 											</div> <!-- /#isotop-gallery-wrapper -->
 										</div> <!-- /.project-gallery-wrapper -->
@@ -227,6 +264,7 @@
 								</div> <!-- /.main-wrapper-bg -->
 							</section> <!-- /#portfolio -->
 							<!-- End Certificates -->
+
 							<!-- SKILLS ---->
 							<div class="skill-progress pt-130">
 								<h2 class="theme-title-two">Ski<span>lls.</span></h2>
