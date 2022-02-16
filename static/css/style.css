@@ -592,7 +592,7 @@ body .button--wayra:hover::before {
   top: -40px;
 }
 /*------------------------- Recent Work -----------------*/
-.project-gallery-wrapper .isotop-menu-wrapper li {
+.project-gallery-wrapper .isotop-menu-wrapper li, .project-gallery-wrapper .isotop-menu-wrapper2 li {
   display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
@@ -605,31 +605,32 @@ body .button--wayra:hover::before {
   margin: 5px 4px 0 0;
   transition: all 0.3s ease-in-out;
 }
-.project-gallery-wrapper .isotop-menu-wrapper li.is-checked {color: #242424;}
+.project-gallery-wrapper .isotop-menu-wrapper li.is-checked, .project-gallery-wrapper .isotop-menu-wrapper2 li.is-checked {color: #242424;}
 #isotop-gallery-wrapper .grid-sizer,
-#isotop-gallery-wrapper .isotop-item {border: 1px solid black;width: 33.33333%;padding: 0 15px;margin-top: 25px;}
-#isotop-gallery-wrapper .single-item {
+#isotop-gallery-wrapper .isotop-item, #isotop-gallery-wrapper2 .grid-sizer,
+#isotop-gallery-wrapper2 .isotop-item2 {border: 1px solid black;width: 33.33333%;padding: 0 15px;margin-top: 25px;}
+#isotop-gallery-wrapper .single-item, #isotop-gallery-wrapper2 .single-item {
   background: linear-gradient(-45deg, #c3a165 0%,#2c3a6f 100%);
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-#isotop-gallery-wrapper .single-item:hover {
+#isotop-gallery-wrapper .single-item:hover, #isotop-gallery-wrapper2 .single-item:hover {
   -webkit-box-shadow: 0 3px 30px rgba(0,0,0,0.2);
           box-shadow: 0 3px 30px rgba(0,0,0,0.2);
 }
-#isotop-gallery-wrapper .single-item img {
+#isotop-gallery-wrapper .single-item img, #isotop-gallery-wrapper2 .single-item img {
   width: 100%;
   -webkit-transform: scale3d(1.05,1.05,1);
   transform: scale3d(1.05,1.05,1);
   transition: all 0.3s ease-in-out;
 }
-#isotop-gallery-wrapper .single-item:hover img {
+#isotop-gallery-wrapper .single-item:hover img, #isotop-gallery-wrapper2 .single-item:hover img {
   opacity: 0.6;
   -webkit-transform:scale3D(1,1,1);
           transform:scale3D(1,1,1);
 }
-#isotop-gallery-wrapper .single-item figcaption {
+#isotop-gallery-wrapper .single-item figcaption, #isotop-gallery-wrapper2 .single-item figcaption {
   position: absolute;
   top:0;
   left: 0;
@@ -639,7 +640,7 @@ body .button--wayra:hover::before {
   backface-visibility: hidden;
   margin: 30px 30px;
 }
-#isotop-gallery-wrapper .single-item figcaption:before {
+#isotop-gallery-wrapper .single-item figcaption:before, #isotop-gallery-wrapper2 .single-item figcaption:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -653,28 +654,28 @@ body .button--wayra:hover::before {
   -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
   transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
 }
-#isotop-gallery-wrapper .single-item:hover figcaption:before {
+#isotop-gallery-wrapper .single-item:hover figcaption:before, #isotop-gallery-wrapper2 .single-item:hover figcaption:before {
   opacity: 1;
   -webkit-transform: scale3d(2.5,1.6,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
   transform: scale3d(2.5,1.6,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
 }
-#isotop-gallery-wrapper .single-item figcaption h3 {
+#isotop-gallery-wrapper .single-item figcaption h3, #isotop-gallery-wrapper2 .single-item figcaption h3 {
   color: #fff;
   position: absolute;
   top:0;
   left:0;
   font-weight: normal;
 }
-#isotop-gallery-wrapper .single-item figcaption p {
+#isotop-gallery-wrapper .single-item figcaption p, #isotop-gallery-wrapper2 .single-item figcaption p {
   color: #fff;
   position: absolute;
   top:0;
   left:0;
   font-weight: normal;
 }
-#isotop-gallery-wrapper .single-item figcaption h3 span {font-weight: 500;}
-#isotop-gallery-wrapper .single-item figcaption h3 a {color: #fff;}
-#isotop-gallery-wrapper .single-item figcaption>a {
+#isotop-gallery-wrapper .single-item figcaption h3 span, #isotop-gallery-wrapper2 .single-item figcaption h3 span {font-weight: 500;}
+#isotop-gallery-wrapper .single-item figcaption h3 a, #isotop-gallery-wrapper2 .single-item figcaption h3 a {color: #fff;}
+#isotop-gallery-wrapper .single-item figcaption>a, #isotop-gallery-wrapper2 .single-item figcaption>a {
   position: absolute;
   font-size: 25px;
   color: #fff;
@@ -682,13 +683,15 @@ body .button--wayra:hover::before {
   right: 0;
 }
 #isotop-gallery-wrapper .single-item figcaption h3,
-#isotop-gallery-wrapper .single-item figcaption>a {
+#isotop-gallery-wrapper .single-item figcaption>a, #isotop-gallery-wrapper2 .single-item figcaption h3,
+#isotop-gallery-wrapper2 .single-item figcaption>a {
   opacity: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 #isotop-gallery-wrapper .single-item:hover figcaption h3,
-#isotop-gallery-wrapper .single-item:hover figcaption>a {
+#isotop-gallery-wrapper .single-item:hover figcaption>a, #isotop-gallery-wrapper2 .single-item:hover figcaption h3,
+#isotop-gallery-wrapper2 .single-item:hover figcaption>a {
   opacity: 1;
   -webkit-transition-delay:0.2s;
           transition-delay:0.2s;
