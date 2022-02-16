@@ -362,7 +362,7 @@
 
 
 
-        // ----------------------------- isotop gallery
+        // ----------------------------- isotop portfolio gallery
           if ($("#isotop-gallery-wrapper").length) {
             var $grid = $('#isotop-gallery-wrapper').isotope({
               // options
@@ -390,6 +390,34 @@
                 });
               });
           }
+          // ----------------------------- isotop certificates gallery
+            if ($("#isotop-gallery-wrapper2").length) {
+              var $grid = $('#isotop-gallery-wrapper2').isotope({
+                // options
+                itemSelector: '.isotop-item2',
+                percentPosition: true,
+                masonry: {
+                  // use element for option
+                  columnWidth: '.grid-sizer'
+                }
+
+              });
+
+              // filter items on button click
+              $('.isotop-menu-wrapper2').on( 'click', 'li', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+              });
+
+               // change is-checked class on buttons
+                $('.isotop-menu-wrapper2').each( function( i, buttonGroup ) {
+                  var $buttonGroup = $( buttonGroup );
+                  $buttonGroup.on( 'click', 'li', function() {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $( this ).addClass('is-checked');
+                  });
+                });
+            }
 
 
 
