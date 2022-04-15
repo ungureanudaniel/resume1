@@ -76,22 +76,30 @@ WSGI_APPLICATION = 'myresumeproject1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+if PRODUCTION == True:
+    DATABASES = {
+        'default': {
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': os.getenv('DATABASE_NAME'),
+            'NAME': os.getenv('DATABASE_NAME'),
 
-        'USER': os.getenv('DATABASE_USER'),
+            'USER': os.getenv('DATABASE_USER'),
 
-        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+            'PASSWORD': os.getenv('DATABASE_PASSWORD'),
 
-        'HOST': os.getenv('DATABASE_HOST'),
+            'HOST': os.getenv('DATABASE_HOST'),
 
-        'PORT': os.getenv('DATABASE_PORT'),
+            'PORT': os.getenv('DATABASE_PORT'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
