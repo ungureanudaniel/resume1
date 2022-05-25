@@ -23,7 +23,7 @@ PRODUCTION = os.getenv('PRODUCTION')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['aquatic-squirrel-brneqgx1m8wsjboge7sjq7hq.herokudns.com.', 'www.danielungureanuresume.site', 'danielungureanuresume.site']
+ALLOWED_HOSTS = ['www.danielungureanuresume.live', 'danielungureanuresume.live']
 
 
 # Application definition
