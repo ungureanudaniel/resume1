@@ -150,3 +150,10 @@ class Exchange(models.Model):
 
     def __str__(self):
         return self.title
+#---------------------------PROFILE---------------------------------------
+class CvFile(models.Model):
+    file = models.FileField(upload_to='files/')
+    timestamp = models.DateTimeField(default=timezone.now(), blank=True)
+
+    def __str__(self):
+        return self.timestamp
