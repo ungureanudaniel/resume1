@@ -1,7 +1,8 @@
 {% load static %}
-
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
 	<head>
 		<meta charset="UTF-8">
 		<!-- For IE -->
@@ -59,6 +60,23 @@
 			        	<li class="nav-item"><a class="nav-link" href="#resume"><i class="icon flaticon-resume-and-cv"></i> Resume</a></li>
 			        	<li class="nav-item"><a class="nav-link" href="#portfolio"><i class="icon flaticon-motivational"></i> Portfolio</a></li>
 			        	<li class="nav-item"><a class="nav-link" href="#contact"><i class="icon flaticon-contact"></i> Contact</a></li>
+								<li class="nav-item dropdown">
+									{% get_available_languages as LANGUAGES %}
+									{% get_language_info_list for LANGUAGES as languages %}
+									{% get_language_info for LANGUAGE_CODE as lang %}
+
+										<a class="nav-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" href="#0" aria-expanded="false">{% trans 'Language' %}</a>
+										<div class="dropdown-menu bg-dark" style="width:50px;border:1px solid white;" aria-labelledby="dropdownMenuLink">
+											{% for language in languages %}
+									    	<a class="text-uppercase ml-3" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a>
+									    {% endfor %}
+									  </div>
+										<ul class="sub-menu">
+
+												<li><a class="text-uppercase" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+
+										</ul>
+								</li>
 			        </ul>
 				</nav>
 				<a href="{% static 'files/daniel-ungureanu-resume.pdf' %}" download="daniel-ungureanu-resume.pdf" class="cv-button">Download CV <i class="fa fa-download" aria-hidden="true"></i></a>
