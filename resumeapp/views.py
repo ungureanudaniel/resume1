@@ -58,9 +58,9 @@ def home(request):
         return render(request, 'resume1/index.html', context)
 #======================== page not found page================================
 def page_not_found(request, exception):
-    template = 'services/404.html'
+    template = 'resume1/404.html'
     return render(request, template, {})
 #======================== page not found page================================
 def server_error(request):
-    template = 'services/500.html'
+    template = 'resume1/500.html'
     return render(request, template, {})

@@ -20,7 +20,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 PRODUCTION = os.getenv('PRODUCTION')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = False
 ALLOWED_HOSTS = []
 if os.getenv('ALLOWED_HOSTS'):
     ALLOWED_HOSTS.extend(os.getenv('ALLOWED_HOSTS').split(','))
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'resumeapp',
+    'captcha',
 
 ]
 SITE_ID = 1
@@ -129,7 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = 'resume1/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

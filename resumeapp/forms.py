@@ -1,6 +1,12 @@
 from .models import Profile
 from django import forms
 
+from captcha.fields import CaptchaField
+
+
+class CaptchaForm(forms.Form):
+    captcha = CaptchaField()
+
 class ProfileForm(forms.ModelForm):
 
     class Meta:

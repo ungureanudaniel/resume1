@@ -1,0 +1,208 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+	<head>
+		<meta charset="UTF-8">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- For Window Tab Color -->
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#3b2e4d">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#3b2e4d">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#3b2e4d">
+		<title>Daniel Ungureanu Resume</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/logo/brain.png' %}">
+		<!-- Awesome fonts -->
+		<link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+		<!-- Color Css -->
+		<link rel="stylesheet" id="jssDefault" href="{% static 'css/color4.css' %}">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.min.css' %}">
+
+		<!-- Fix Internet Explorer ______________________________________-->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="{% static 'vendor/html5shiv.js' %}"></script>
+			<script src="{% static 'vendor/respond.js' %}"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="main-page-wrapper">
+
+			<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+			<div id="loader-wrapper">
+				<div id="loader">
+					<span class="loader-inner"></span>
+				</div>
+			</div>
+
+			<!-- ==================== Style Switcher ==================== -->
+
+			<!-- Aside Navigation Menu -->
+			<div id="aside-nav-wrapper">
+				<a href="{% url 'index' %}" class="logo ml-5 mt-5"><img src="{% static 'images/logo/logo2.WebP' %}" alt=""></a>
+				<nav id='theme-menu-list'>
+					<ul class="navbar-nav ml-auto">
+			        	<li class="nav-item"><a class="nav-link" href="#home"><i class="icon flaticon-house-outline"></i> Home</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#about"><i class="icon flaticon-user"></i> About Me</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#resume"><i class="icon flaticon-resume-and-cv"></i> Resume</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#portfolio"><i class="icon flaticon-motivational"></i> Portfolio</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#contact"><i class="icon flaticon-contact"></i> Contact</a></li>
+								<li class="nav-item dropdown">
+									{% get_available_languages as LANGUAGES %}
+									{% get_language_info_list for LANGUAGES as languages %}
+									{% get_language_info for LANGUAGE_CODE as lang %}
+
+										<a class="nav-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" href="#0" aria-expanded="false">{% trans 'Language' %}</a>
+										<div class="dropdown-menu bg-dark" style="width:50px;border:1px solid white;" aria-labelledby="dropdownMenuLink">
+											{% for language in languages %}
+									    	<a class="ml-3" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a>
+									    {% endfor %}
+									  </div>
+										<ul class="sub-menu">
+
+												<li><a class="text-uppercase" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+
+										</ul>
+								</li>
+			        </ul>
+				</nav>
+				<a href="{% static 'files/daniel-ungureanu-resume.pdf' %}" download="daniel-ungureanu-resume.pdf" class="cv-button">Download CV <i class="fa fa-download" aria-hidden="true"></i></a>
+			</div> <!-- /.aside-nav-wrapper -->
+
+
+			<!-- ============================ Main Page ========================== -->
+			<div id="main-page">
+				<!-- Home -->
+
+				<section id="home" class="bg-hero" style="background-image: url({% static 'images/home/header-background7.WebP' %});">
+
+					<div class="main-wrapper">
+						<div class="img-box"><img src="{% static 'images/home/headshot.WebP' %}" alt="" class="user-img"></div>
+						<h1 class="author-name">404</h1>
+
+						<h4>
+
+			                <span class="cd-headline letters scale">
+			                  <span class="cd-words-wrapper">
+			                    <b>{{ abilities.1.name|safe }}</b>
+			                    <b class="is-visible">{{ abilities.0.name|safe }}</b>
+			                    <b>{{ abilities.2.name|safe }}</b>
+			                  </span>
+			                </span>
+			            </h4>
+
+			            <ul class="social-icon">
+				       		<li><a href="https://www.facebook.com/ungureanu.daniel.96/"  target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				       		<li><a href="https://www.instagram.com/daniel_ungureanu86/"  target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				       		<li><a href="https://github.com/ungureanudaniel"  target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+				       		<li><a href="https://www.linkedin.com/in/daniel-ungureanu-32a1a8a3/"  target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				       	</ul>
+			        </div> <!-- /.main-wrapper -->
+				</section> <!-- /#home -->
+				<!-- End Home -->
+
+
+				<!-- About Me -->
+
+
+							<div class="row">
+								<div class="text-center col-lg-12 col-md-12">
+									<div class="m-2 " style="align-items: center">
+									  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89245.39472599306!2d25.526423469855324!3d45.65245670123032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b862aa214f1%3A0x6cf5f2ef54391e0f!2zQnJhyJlvdg!5e0!3m2!1sen!2sro!4v1593452481294!5m2!1sen!2sro" width="70%" height="350" frameborder="0" style="align-items: center;border:5px solid black;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+									</div>
+								</div>
+							</div>
+<!--							<div class="contact-form mt-50">-->
+								<h4 class="inner-title">Get In Touch.</h4>
+				              	<form action="{% url 'index' %}" method="POST" class="form mt-50 form-horizontal">
+									{% csrf_token %}
+<!--				                	<div class="messages"></div>-->
+<!--				                	<div class="controls">-->
+				                		<div class="row">
+					                    	<div class="col-md-6">
+					                    		<div class="form-group">
+							                        <input class="form-control" type="text" name="name" placeholder="Your Name" required="required" data-error="Name is required.">
+<!--&lt;!&ndash;							                        <div class="help-block with-errors"></div>&ndash;&gt;-->
+							                    </div>
+					                    	</div>
+					                    	<div class="col-md-6">
+					                    		<div class="form-group">
+							                        <input class="form-control" type="email" name="email" placeholder="Your Email" required="required" data-error="Valid email is required.">
+<!--&lt;!&ndash;							                        <div class="help-block with-errors"></div>&ndash;&gt;-->
+							                    </div>
+					                    	</div>
+					                    </div>
+				                		<div class="form-group">
+					                    	<textarea  class="form-control"  name="message" class="form_message" placeholder="Type Your Message" required="required" data-error="Please,leave us a message."></textarea>
+<!--&lt;!&ndash;					                    	<div class="help-block with-errors"></div>&ndash;&gt;-->
+					                    </div>
+
+<!--&lt;!&ndash;				                	</div> &lt;!&ndash; /.controls &ndash;&gt;&ndash;&gt;-->
+									<button type="submit" class="theme-btn button--wayra mt-50">Send Message</button>
+				              	</form>
+<!--				            </div> &lt;!&ndash; /.contact-form &ndash;&gt;-->
+						</div> <!-- /.theme-container -->
+					</div> <!-- /.main-wrapper-bg -->
+				</section> <!-- /#contact -->
+
+				<footer class="theme-footer">
+					<div class="theme-container">
+						&copy; Copyright 2019. All Rights are Reserved.
+					</div>
+				</footer>
+				<!-- End Contact -->
+
+
+			</div> <!-- #main-page -->
+
+
+
+
+
+
+
+		<!-- Optional JavaScript _____________________________  -->
+
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<!-- jQuery -->
+		<script src="{% static 'vendor/jquery.2.2.3.min.js' %}"></script>
+		<!-- Popper js -->
+		<script src="{% static 'vendor/popper.js/popper.min.js' %}"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+		<!-- Style-switcher  -->
+		<script src="{% static 'vendor/jQuery.style.switcher.min.js' %}"></script>
+		<!-- AOS js -->
+		<script src="{% static 'vendor/aos-next/dist/aos.js' %}"></script>
+		<!-- owl.carousel -->
+		<!-- js count to -->
+		<script src="{% static 'vendor/jquery.appear.js' %}"></script>
+		<script src="{% static 'vendor/jquery.countTo.js' %}"></script>
+		<!-- Fancybox -->
+		<script src="{% static 'vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+		<!-- Animated Headline -->
+		<script src="{% static 'vendor/animated-headline-master/main.js' %}"></script>
+		<!-- validator js -->
+    	<script src="{% static 'vendor/validator.js' %}"></script>
+    	<!-- isotop -->
+		<script  src="{% static 'vendor/isotope.pkgd.min.js' %}"></script>
+
+		<!-- Theme js -->
+		<script src="{% static 'js/theme.min.js' %}"></script>
+		</div> <!-- /.main-page-wrapper -->
+	</body>
+</html>

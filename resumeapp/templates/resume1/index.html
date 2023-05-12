@@ -18,7 +18,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="#3b2e4d">
 		<title>Daniel Ungureanu Resume</title>
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %}">
+		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/logo/brain.png' %}">
 		<!-- Awesome fonts -->
 		<link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
 		<!-- Main style sheet -->
@@ -68,7 +68,7 @@
 										<a class="nav-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" href="#0" aria-expanded="false">{% trans 'Language' %}</a>
 										<div class="dropdown-menu bg-dark" style="width:50px;border:1px solid white;" aria-labelledby="dropdownMenuLink">
 											{% for language in languages %}
-									    	<a class="text-uppercase ml-3" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a>
+									    	<a class="ml-3" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a>
 									    {% endfor %}
 									  </div>
 										<ul class="sub-menu">
