@@ -20,9 +20,8 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('resumeapp.urls')),
-    path('i18n/', include('django.conf.urls.i18n')),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path("robots.txt", TemplateView.as_view(template_name="resumeapp/robots.txt", content_type="text/plain"),),
 ]

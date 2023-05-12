@@ -20,7 +20,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 PRODUCTION = os.getenv('PRODUCTION')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = []
 if os.getenv('ALLOWED_HOSTS'):
     ALLOWED_HOSTS.extend(os.getenv('ALLOWED_HOSTS').split(','))
@@ -44,6 +44,11 @@ INSTALLED_APPS = [
 
 ]
 SITE_ID = 1
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
