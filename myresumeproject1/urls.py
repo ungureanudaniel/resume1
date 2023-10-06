@@ -9,7 +9,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import TemplateView
 from resumeapp.sitemaps import *
-from django.conf.urls import handler404, handler500
+# from django.conf.urls import handler404, handler500
 sitemaps = {
     'static': StaticViewSitemap,
     'skillsitemap':SkillSitemap,
@@ -26,5 +26,3 @@ urlpatterns = [
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-handler404 = "resumeapp.views.page_not_found"
-handler500 = "resumeapp.views.server_error"
