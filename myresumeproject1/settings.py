@@ -1,5 +1,4 @@
 import os
-import dj_database_url
 from dotenv import load_dotenv
 from django.contrib.messages import constants as messages
 from django.utils.translation import gettext_lazy as _
