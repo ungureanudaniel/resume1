@@ -16,7 +16,7 @@
 		<meta name="msapplication-navbutton-color" content="#3b2e4d">
 		<!-- iOS Safari -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="#3b2e4d">
-		<title>Daniel Ungureanu Resume</title>
+		<title>{% trans 'Daniel Ungureanu Resume' %}</title>
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/logo/man-light-bulb-brain.svg' %}">
 		<!-- Awesome fonts -->
@@ -55,10 +55,10 @@
 				<a href="{% url 'index' %}" class="logo ml-5 mt-5"><img src="{% static 'images/logo/logo2.WebP' %}" alt=""></a>
 				<nav id='theme-menu-list'>
 					<ul class="navbar-nav ml-auto">
-			        	<li class="nav-item"><a class="nav-link" href="#home"><i class="icon flaticon-house-outline"></i> Home</a></li>
-			        	<li class="nav-item"><a class="nav-link" href="#about"><i class="icon flaticon-user"></i> About Me</a></li>
-			        	<li class="nav-item"><a class="nav-link" href="#resume"><i class="icon flaticon-resume-and-cv"></i> Resume</a></li>
-			        	<li class="nav-item"><a class="nav-link" href="#portfolio"><i class="icon flaticon-motivational"></i> Portfolio</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#home"><i class="icon flaticon-house-outline"></i> {% trans 'Home' %}</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#about"><i class="icon flaticon-user"></i> {% trans 'About Me' %}</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#resume"><i class="icon flaticon-resume-and-cv"></i> {% trans 'Resume' %}</a></li>
+			        	<li class="nav-item"><a class="nav-link" href="#portfolio"><i class="icon flaticon-motivational"></i> {% trans 'Portfolio' %}</a></li>
 			        	<li class="nav-item"><a class="nav-link" href="#contact"><i class="icon flaticon-contact"></i> Contact</a></li>
 								<li class="nav-item dropdown">
 									{% get_available_languages as LANGUAGES %}
@@ -79,7 +79,7 @@
 								</li>
 			        </ul>
 				</nav>
-				<a href="{% static 'files/daniel-ungureanu-resume.pdf' %}" download="daniel-ungureanu-resume.pdf" class="cv-button">Download CV <i class="fa fa-download" aria-hidden="true"></i></a>
+				<a href="{% static 'files/cv-daniel-ungureanu-20231010.pdf' %}" download="daniel-ungureanu-resume.pdf" class="cv-button">Download CV <i class="fa fa-download" aria-hidden="true"></i></a>
 			</div> <!-- /.aside-nav-wrapper -->
 
 
@@ -87,7 +87,7 @@
 			<div id="main-page">
 				<!-- Home -->
 
-				<section id="home" class="bg-hero" style="background-image: url({% static 'images/home/header-background7.WebP' %});">
+				<section id="home" class="bg-hero" style="background-image: url({% static 'images/20230902_162017crop.webp' %});">
 
 					<div class="main-wrapper">
 						<div class="img-box"><img src="{% static 'images/home/headshot.WebP' %}" alt="" class="user-img"></div>
@@ -97,26 +97,26 @@
 
 			                <span class="cd-headline letters scale">
 			                  <span class="cd-words-wrapper">
-			                    <b>{{ abilities.1.name|safe }}</b>
-			                    <b class="is-visible">{{ abilities.0.name|safe }}</b>
-			                    <b>{{ abilities.2.name|safe }}</b>
+			                    <b>GIS</b>
+			                    <b class="is-visible">PYTHON</b>
+			                    <b>FORESTRY</b>
 			                  </span>
 			                </span>
 
 
 			                <span class="cd-headline letters scale">
 			                  <span class="cd-words-wrapper">
-			                    <b>{{ abilities.0.name }}</b>
-			                    <b>{{ abilities.2.name }}</b>
-			                    <b class="is-visible">{{ abilities.1.name }}</b>
+			                    <b>PYTHON</b>
+			                    <b>FORESTRY</b>
+			                    <b class="is-visible">GIS</b>
 			                  </span>
 			                </span>
 
 			                <span class="cd-headline letters scale">
 			                  <span class="cd-words-wrapper">
-			                    <b class="is-visible">{{ abilities.2.name }}</b>
-			                    <b>{{ abilities.1.name }}</b>
-			                    <b>{{ abilities.0.name }}</b>
+			                    <b class="is-visible">FORESTRY</b>
+			                    <b>GIS</b>
+			                    <b>PYTHON</b>
 			                  </span>
 			                </span>
 
@@ -137,145 +137,333 @@
 				<section id="about">
 					<div class="main-wrapper-bg">
 						<div class="theme-container">
-							<h2 class="theme-title">About <span>Me.</span></h2>
+							{% blocktranslate %}<h2 class='theme-title'>About <span>Me.</span></h2>{% endblocktranslate %}
 							<div class="about-block">
-								{% for item in about %}
-
 								<div class="text">
-
 									<div class="row">
-
 										<div class="col-12">
-											<p class="cd-headline clip is-full-width">Hi! My name is <span class="name">{{ item.name.first_name }} {{ item.name.last_name }}</span>. I’m a python developer, nature lover
-<!--												<span class="cd-words-wrapper">-->
-<!--												<b class="is-visible">forester</b>-->
-<!--													<b>GIS enthusiast</b>-->
-<!--													<b>developer</b>-->
-<!--												</span>-->
-												and problem solver! {{ item.text }}
-											</p>
+											{% blocktranslate %}<p class='cd-headline clip is-full-width'>Hi! My name is <span class='name'>Daniel Ungureanu</span>. I am a junior python developer, GIS enthusiast and nature lover! I have a strong passion for tech, a B.Sc & a M.Sc. in forest sciences, ~8 years in nature related projects, working constantly with QGIS, ARCGIS, MySQL and PostgreSQL databases, ~3 years in web development with Python, Django, SQL and more, as a freelancer. I built the digital infrastructure for field data surveys using QFIELD, cloud services and QuantumGIS, built a portfolio of 9 websites, plus a few apps. Also gained some multicultural experience abroad, during exchange programs in Germany, Greece, Canada and South America. For hobbies, I enjoy sports, photography, reading about history, tech & decentralized finances. My aim for the future is to go deeper into programming & GIS, learn new skills, by getting involved in complex & challenging projects.
+											</p>{% endblocktranslate %}
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-xl-5 col-lg-4 col-md-5 order-md-last"><img src="images/home/me.jpg" alt="" class="my-img"></div>
 										<div class="col-xl-7 col-lg-8 col-md-7 order-md-first">
 											<ul class="clearfix profile-list">
-												<li><span>Age:</span> {{ item.age }} years</li>
-												<li><span>City:</span> {{ item.city }}</li>
-												<li><span>Study:</span> {{ item.study }}</li>
-												<li><span>Website:</span> <a href="http://www.ninjaweb.tech/">{{ item.website }}</a></li>
-												<li><span>Current Job:</span> {{ item.current_job }}</li>
+												{% blocktranslate %}<li><span>Age:</span> 36 years</li>{% endblocktranslate %}
+												<li><span>City:</span> Brasov</li>
+												{% blocktranslate %}<li><span>Study:</span> Forest Ecology, Transilvania University of Brasov</li>{% endblocktranslate %}
+												<li><span>Website:</span> <a href='#'>-</a></li>
+												{% blocktranslate %}<li><span>Current Job:</span> IT Specialist, Bucegi Natural Park Administration</li>{% endblocktranslate %}
 <!--												<li><span>Freelance Status:</span> {{ item.freelance_status }}</li>-->
 											</ul>
-											<a href="#contact" class="theme-btn button--wayra scroll-target">Hire Me</a>
-											<a href="{% static 'files/daniel-ungureanu-resume.pdf' %}" download="daniel-ungureanu-resume.pdf" class="theme-btn button--wayra cv-button">Download CV</a>
+											<a href="#contact" class="theme-btn button--wayra scroll-target">{% trans 'Hire Me' %}</a>
+											<a href="{% static 'files/cv-daniel-ungureanu-20231010.pdf' %}" download="daniel-ungureanu-resume.pdf" class="theme-btn button--wayra cv-button">{% trans 'Download CV' %}</a>
 										</div>
 									</div>
 								</div> <!-- /.text -->
 
-								{% endfor %}
 							</div> <!-- /.about-block -->
 
 				<!-- Resume -->
 				<section id="resume">
 					<div class="main-wrapper-bg">
 						<div class="theme-container">
-							<h2 class="theme-title">Resu<span>me.</span></h2>
+							{% blocktranslate %}<h2 class='theme-title'>Resu<span>me.</span></h2>{% endblocktranslate %}
 
 							<div class="row qualification-block">
 								<div class="col-md-6">
-									<h4 class="inner-title mt-40">Education</h4>
-									{% for item in education %}
+									<h4 class="inner-title mt-40">{% trans 'Education' %}</h4>
 									<div class="single-block">
-										<h5 class="title">{{ item.title }}</h5>
-										<span>{{ item.university }}</span>
-										<span class="text-success">{{ item.year }}</span>
-										<p>{{ item.text|safe }}</p>
+										{% blocktranslate %}<h5 class="title">B.Sc. in Forestry</h5>{% endblocktranslate %}
+										<span>{% trans 'TRANSYLVANIA UNIVERSITY OF BRASOV' %}</span>
+										<span class="text-success">2010</span>
+										<p>{% trans 'Besides the knowledge in forestry, i accumulated skills in GIS, statistics, research, being part of two scientific student groups (entomology and silviculture), international experience as an Erasmus Student in Germany, at Georg - August Universitat Goettingen' %}.</p>
 									</div> <!-- /.single-block -->
-									{% endfor %}
+									<div class="single-block">
+										<h5 class="title">{% trans 'M.Sc. in Forest Ecology' %}</h5>
+										<span>{% trans 'TRANSYLVANIA UNIVERSITY OF BRASOV' %}</span>
+										<span class="text-success">2010 - 2012</span>
+										<p>{% trans 'Got deeper silviculture fundamentals, forest ecology, GIS. During the dissertation project, at the end of M.Sc. program i used a lot QuantumGIS and Nautiz7 field survey device for data collection on a 4000 ha forest, in 200 plots, with the aim to measure several tree species caracteristics accross different slopes, position, orientation, etc' %}.</p>
+									</div> <!-- /.single-block -->
+									<div class="single-block">
+										<h5 class="title">{% trans 'OCEAN Exchange Scholarship in Canada' %}</h5>
+										<span>UNIVERSITY OF ALBERTA</span>
+										<span class="text-success">AUGUST 2011</span>
+										<p>{% trans 'Three weeks exchange program in Western Canada, consisting of a field trip throughout Coast Mountains and Rocky Mountains, starting from Edmonton and finishing it in Vancouver. We were taken through all aspects of field work in forestry and national parks, from logging and monitoring insect breakouts to managing forest fires, wildlife and protected areas in Canada (Banff and Jasper National Parks, Grove Cathedral in Vancouver Island)' %}'.</p>
+									</div> <!-- /.single-block -->
+								</div>
+								<div class="col-md-6 mt-40">
+									
+									<div class="single-block ">
+										<h5 class="title">{% trans 'Erasmus Mundus Scholarship' %}</h5>
+										<span>GEORG-AUGUST-UNIVERSITÄT, GÖTTINGEN</span>
+										<span class="text-success">2009 - 2010</span>
+										<p>{% trans 'A 6-months exchange program at the Georg - August Universitat Goettingen. It consisted of courses on international, tropical and temperate forestry, plus German language courses' %}.</p>
+									</div> <!-- /.single-block -->
+									<div class="single-block">
+										<h5 class="title">{% trans 'Summer School focused on site index statistics' %}</h5>
+										<span>ARISTOTLE UNIVERSITY OF THESSALONIKI</span>
+										<span class="text-success">AUGUST 2010</span>
+										<p>{% trans 'A three weeks exchange program in Greece, Halkidiki area, where we practiced cluster analysis on site index and flora datasets' %}</p>
+									</div> <!-- /.single-block -->
+									<div class="single-block">
+										<h5 class="title">{% trans 'Erasmus Mundus Scholarship' %}</h5>
+										<span>GEORG-AUGUST-UNIVERSITÄT, GÖTTINGEN</span>
+										<span class="text-success">APR 2011 - JUN 2011</span>
+										<p>{% trans 'A 3 months long scholarship at Georg-August-Universität Göttingen, in an entomology research lab. Practiced R programming in statistics, among other tasks related to entomology' %}.</p>
+									</div> <!-- /.single-block -->
+									
 								</div>
 
 								<div class="col-md-6">
-									<h4 class="inner-title mt-40">Experience</h4>
-									{% for item in experience %}
+									<h4 class="inner-title mt-40">{% trans 'Experience' %}</h4>
 									<div class="single-block">
-										<h5 class="title">{{ item.company }}</h5>
-										<span class="small">{{ item.location|upper }}</span>
-										<span class="small"><a href="https://{{ item.website }}">{{ item.website }}</a></span>
-										<span>{{ item.position }}</span>
-										<span class="text-success">{{ item.year }}</span>
-										<p>{{ item.text|safe }}</p>
+										<h5 class="title">FBR FOREST OPS S.A.</h5>
+										<span class="small">{% trans 'TIMIȘOARA, ROMANIA' %}</span>
+										<span class="small"><a target="_blank" href="https://www.forbiom.eu/ro/index.php">website</a></span>
+										<span>{% trans 'Technical Director' %}</span>
+										<span class="text-success">2012 - 2014</span>
+										<p>{% trans 'Started as a Deputy Forest Engineer, involved into forest surveys, using Quantum GIS and mobile devices like Nautiz7 in the field. Later been promoted to Technical Director of the forest operations, planning and managing forestry activities on 4200 ha area. This involved also GIS using QuantumGIS' %}.</p>
 									</div> <!-- /.single-block -->
-									{% endfor %}
+									<div class="single-block">
+										<h5 class="title">Obiceiuri Sanatoase S.R.L.</h5>
+										<span class="small">{% trans 'BRASOV, ROMANIA' %}</span>
+										<span class="small"><a target="_blank" href="https://www.artisanbakery.ro">website</a></span>
+										<span>{% trans 'Business Associate' %}</span>
+										<span class="text-success">2018 - 2022</span>
+										<p>{% trans 'This is a food industry start-up that i co-founded and i am still involved as an associate. I created the website and maintain it, created a voucher management software in python and tkinter, i also manage google ads and advertising in general, business development and various administrative task' %}.</p>
+									</div> <!-- /.single-block -->
+									<div class="single-block">
+										<h5 class="title">RNP ROMSILVA - Administrația Parcului Natural Bucegi R.A.</h5>
+										<span class="small">{% trans 'BRASOV, ROMANIA' %}</span>
+										<span class="small"><a target="_blank" href="https://www.bucegipark.ro">website</a></span>
+										<span>{% trans 'Specialist IT' %}</span>
+										<span class="text-success">2018 - 2022</span>
+										<p>{% trans 'GIS database management, implementation of QFIELD application with conditional QGIS forms, for field data collection, with wireless data transmission to the server, network maintenance, computers, custom website for public institution' %}.</p>
+									</div> <!-- /.single-block -->
+								</div>
+								<div class="col-md-6">
+									<div class="single-block">
+										<h5 class="title">FUNDAȚIA CONSERVATION CARPATHIA</h5>
+										<span class="small">{% trans 'BRASOV, ROMANIA' %}</span>
+										<span class="small"><a target="_blank" href="https://www.carpathia.org">website</a></span>
+										<span>{% trans 'Assistant Manager' %}</span>
+										<span class="text-success">2014 - 2018</span>
+										<p>{% trans 'Coordinated field activities in a 5.9 mil euros LIFE+ project, did periodical reports, habitat assessments, used ARCGIS 10.2 extensively, managed large databases, first contact with Python scripts for ARCGIS. Other skills obtained here consist of presentations, public awareness on the environment, wildlife guide' %}.</p>
+									</div> <!-- /.single-block -->
+									<div class="single-block">
+										<h5 class="title">UNGUREANU WEBTECH S.R.L.</h5>
+										<span class="small">{% trans 'BRASOV, ROMANIA' %}</span>
+										<span class="small"><a target="_blank" href="#"></a></span>
+										<span>{% trans 'Owner / Web Developer' %}</span>
+										<span class="text-success">2021 - 2023</span>
+										<p>{% trans 'Writings software and creating websites for clients, using Python / Django, JavaScript, jQuery, Bootstrap, HTML, CSS, Asyncio, Linux. Examples:' %}.</p>
+										<a href="https://bucegipark.ro">Bucegi Park Natural </a>
+										<a href="https://obcinastanisoarei.ro">Grup Folcloric Obcina Stanisoarei </a>
+										<a href="https://energyfit.ro">Energyfit Karate Brasov</a>
+									</div> <!-- /.single-block -->
+								</div>
+								<div class="col-md-6">
+									
 								</div>
 							</div>
 							<!-- SKILLS ---->
 							<div class="skill-progress pt-130">
-								<h2 class="theme-title-two">Ski<span>lls.</span></h2>
+								{% blocktranslate %}<h2 class='theme-title-two'>Ski<span>lls.</span></h2>{% endblocktranslate %}
 								<div class="row">
 									<div class="col-md-6">
-										<h4 class="inner-title mt-50">Technical Skills</h4>
-										{% for item in skills %}
-										{% if item.skill_type == "technical" %}
+										<h4 class="inner-title mt-50">{% trans 'Technical Skills' %}</h4>
 										<div class="skill-bar">
-											<h6 class="skill-title">{{ item.skill_name }}</h6>
+											<h6 class="skill-title">QuantumGIS</h6>
 											<div class="progress">
-												<div class="progress-bar" data-percent="{{ item.percent }}">
+												<div class="progress-bar" data-percent="80">
 													<span class="percent-text"><span class="count"></span>%</span>
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
-										{% endif %}
-										{% endfor %}
+										<div class="skill-bar">
+											<h6 class="skill-title">QFIELD</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="70">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">Python</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="80">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">Django</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="80">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">MySQL</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="60">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">Data Science</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="40">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">Pandas & Numpy</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="35">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Wildlife monitoring' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="76">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Habitat assessments' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="66">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Ecological reconstruction' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="66">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Ecology' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="86">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
 									</div> <!-- /.col- -->
 
 									<div class="col-md-6">
-										<h4 class="inner-title mt-50">General Skills</h4>
-										{% for item in skills %}
-											{% if item.skill_type == "general" %}
+										<h4 class="inner-title mt-50">{% trans 'General Skills' %}</h4>
+										
 										<div class="skill-bar">
-											<h6 class="skill-title">{{ item.skill_name }}</h6>
+											<h6 class="skill-title">{% trans 'Self - organized' %}</h6>
 											<div class="progress">
-												<div class="progress-bar" data-percent="{{ item.percent }}">
+												<div class="progress-bar" data-percent="70">
 													<span class="percent-text"><span class="count"></span>%</span>
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
-										{% endif %}
-										{% endfor %}
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Project management' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="60">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Analytical thinking' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="90">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Reporting' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="80">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Problem solving' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="90">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
 
 									</div> <!-- /.col- -->
 								</div> <!-- /.row -->
 								<div class="row">
 									<div class="col-md-6">
-										<h4 class="inner-title mt-50">Language Skills</h4>
-										{% for item in skills %}
-										{% if item.skill_type == "language" %}
+										<h4 class="inner-title mt-50">{% trans 'Language Skills' %}</h4>
 										<div class="skill-bar">
-											<h6 class="skill-title">{{ item.skill_name }}</h6>
+											<h6 class="skill-title">{% trans 'English' %}</h6>
 											<div class="progress">
-												<div class="progress-bar" data-percent="{{ item.percent }}">
+												<div class="progress-bar" data-percent="90">
 													<span class="percent-text"><span class="count"></span>%</span>
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
-										{% endif %}
-										{% endfor %}
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'German' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="25">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
 									</div> <!-- /.skill-progress -->
 									<div class="col-md-6">
-										<h4 class="inner-title mt-50">Hobby Skills</h4>
-										{% for item in skills %}
-										{% if item.skill_type == "hobby" %}
+										<h4 class="inner-title mt-50">{% trans 'Hobbies' %}</h4>
 										<div class="skill-bar">
-											<h6 class="skill-title">{{ item.skill_name }}</h6>
+											<h6 class="skill-title">{% trans 'Photography' %}</h6>
 											<div class="progress">
-												<div class="progress-bar" data-percent="{{ item.percent }}">
+												<div class="progress-bar" data-percent="60">
 													<span class="percent-text"><span class="count"></span>%</span>
 												</div>
 											</div>
 										</div> <!-- /.skill-bar -->
-										{% endif %}
-										{% endfor %}
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Reading' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="80">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Mountaineering' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="80">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
+										<div class="skill-bar">
+											<h6 class="skill-title">{% trans 'Skiing' %}</h6>
+											<div class="progress">
+												<div class="progress-bar" data-percent="60">
+													<span class="percent-text"><span class="count"></span>%</span>
+												</div>
+											</div>
+										</div> <!-- /.skill-bar -->
 									</div> <!-- /.skill-progress -->
 						</div> <!-- /.theme-container -->
 					</div> <!-- /.main-wrapper-bg -->
@@ -288,17 +476,35 @@
 				<section id="portfolio" class="portfolio-section">
 					<div class="main-wrapper-bg">
 						<div class="theme-container">
-							<h2 class="theme-title">Recent <span>Work. & </span>Certifi<span>cates.</span></h2>
+							{% blocktranslate %}<h2 class='theme-title'>Recent <span>Work. & </span>Certifi<span>cates.</span></h2>{% endblocktranslate %}
 							<div class="project-gallery-wrapper mt-40">
 								<ul class="isotop-menu-wrapper">
-									<li class="is-checked" data-filter=".web">Websites</li>
+									<li class="is-checked" data-filter=".web">{% trans 'Websites' %}</li>
 									<li data-filter=".soft">Software</li>
-									<li data-filter=".certificate">Certificates</li>
+									<li data-filter=".certificate">{% trans 'Certificates' %}</li>
 								</ul>
 
 								<div id="isotop-gallery-wrapper" class="row mt-40">
 									<div class="grid-sizer" style="border:none;"></div>
 									<!-- /.isotop-item -->
+									<div class="isotop-item web">
+										<figure class="single-item">
+											<img src="{% static 'images/portfolio/bucegi.png' %}" alt="Artisan Bakery header img">
+											<figcaption>
+												<h3><a href="https://www.bucegipark.ro">Bucegi Natural Park <span>Website</span></a></h3>
+												<a data-fancybox="gallery" href="{% static 'images/portfolio/bucegi.png' %}" class="fancybox" data-caption="Artisan Bakery"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+											</figcaption>
+										</figure> <!-- /.single-item -->
+									</div> <!-- /.isotop-item -->
+									<div class="isotop-item web">
+										<figure class="single-item">
+											<img src="{% static 'images/portfolio/energyfit.png' %}" alt="Artisan Bakery header img">
+											<figcaption>
+												<h3><a href="https://www.energyfit.ro">Energyfit Karate Brasov <span>Website</span></a></h3>
+												<a data-fancybox="gallery" href="{% static 'images/portfolio/energyfit.png' %}" class="fancybox" data-caption="Artisan Bakery"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+											</figcaption>
+										</figure> <!-- /.single-item -->
+									</div> <!-- /.isotop-item -->
 									<div class="isotop-item web">
 										<figure class="single-item">
 											<img src="{% static 'images/portfolio/artisan.WebP' %}" alt="Artisan Bakery header img">
@@ -419,9 +625,19 @@
 										<figure class="single-item">
 											<img src="{% static 'images/certificates/tourism-certificate.WebP' %}" alt="Tourist Guide Certificate">
 											<figcaption>
-												<h3><a href="#">Tourist Guide Certificate <span>Certificate</span></a></h3>
+												{% blocktranslate %}<h3><a href="#">Tourist Guide Certificate <span>Certificate</span></a></h3>{% endblocktranslate %}
 												<p class="mt-5 pt-5">20 NOV 2015</p>
 												<a data-fancybox="gallery" href="{% static 'images/certificates/tourism-certificate.WebP' %}" class="fancybox" data-caption="Tourist Guide Certificate"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+											</figcaption>
+										</figure> <!-- /.single-item -->
+									</div> <!-- /.isotop-item -->
+									<div class="isotop-item certificate">
+										<figure class="single-item">
+											<img src="https://www.testdome.com/tests/python-online-test/45" alt="TestDome">
+											<figcaption>
+												<h3><a href="https://www.testdome.com/certificates/69442d98b70b4a9c8dd17188d0a83375">Top 25% Python Developers <span>Certificate</span></a></h3>
+												<p class="mt-5 pt-5">12 Apr 2022</p>
+												<a data-fancybox="gallery" href="https://www.testdome.com/tests/python-online-test/45" class="fancybox" data-caption="Top 25% Python Developers"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
 											</figcaption>
 										</figure> <!-- /.single-item -->
 									</div> <!-- /.isotop-item -->
@@ -437,28 +653,28 @@
 				<section id="contact" class="contact-section">
 					<div class="main-wrapper-bg">
 						<div class="theme-container">
-							<h2 class="theme-title">Contact <span>Me.</span></h2>
+							{% blocktranslate %}<h2 class="theme-title">Contact <span>Me.</span></h2>{% endblocktranslate %}
 							<div class="contact-address pt-35">
 				            	<div class="row">
 				            		<div class="col-md-4">
 				            			<div class="single-block">
 				            				<div class="icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
-				            				<h5>My Location</h5>
+				            				<h5>{% trans 'My Location' %}</h5>
 											<p>500461, Str. Pelicanului 5, Bl. B9, Ap. 41, Brasov, Romania</p>
 										</div> <!-- /.single-block -->
 				            		</div>
 				            		<div class="col-md-4">
 				            			<div class="single-block">
 				            				<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-				            				<h5>Phone Number</h5>
+				            				<h5>{% trans 'Phone Number' %}</h5>
 				            				<p>+40-757-484560</p>
 				            			</div> <!-- /.single-block -->
 				            		</div>
 				            		<div class="col-md-4">
 				            			<div class="single-block">
 				            				<div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-				            				<h5>Email Address</h5>
-				            				<p><a style="color:#777" href="mailto:contact@ninjaweb.tech">contact@ninjaweb.tech</a> <br> </p>
+				            				<h5>{% trans 'Email Address' %}</h5>
+				            				<p><a style="color:#777" href="mailto:contact@ninjaweb.tech">ungureanu.daniel86@gmail.com</a> <br> </p>
 				            			</div> <!-- /.single-block -->
 				            		</div>
 				            	</div>
@@ -472,7 +688,7 @@
 								</div>
 							</div>
 <!--							<div class="contact-form mt-50">-->
-								<h4 class="inner-title">Get In Touch.</h4>
+								<h4 class="inner-title">{% trans 'Get In Touch' %}.</h4>
 				              	<form action="{% url 'index' %}" method="POST" class="form mt-50 form-horizontal">
 									{% csrf_token %}
 <!--				                	<div class="messages"></div>-->
@@ -497,7 +713,7 @@
 					                    </div>
 
 <!--&lt;!&ndash;				                	</div> &lt;!&ndash; /.controls &ndash;&gt;&ndash;&gt;-->
-									<button type="submit" class="theme-btn button--wayra mt-50">Send Message</button>
+									<button type="submit" class="theme-btn button--wayra mt-50">{% trans 'Send Message' %}</button>
 				              	</form>
 <!--				            </div> &lt;!&ndash; /.contact-form &ndash;&gt;-->
 						</div> <!-- /.theme-container -->
