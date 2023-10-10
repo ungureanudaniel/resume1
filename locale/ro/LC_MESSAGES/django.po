@@ -1563,6 +1563,13 @@ msgstr "Gestionarea bazei de date GIS, implementarea infrastructurii digitale de
 msgid "Erasmus Mundus Scholarship"
 msgstr "Bursă Erasmus Mundus"
 
+#: resumeapp/templates/resume1/index.html:217
+msgid "Networks"
+msgstr "Rețele"
+
+#: resumeapp/templates/resume1/index.html:217
+msgid "Forest Management"
+msgstr "Silvicultură"
 #: resumeapp/templates/resume1/index.html:207
 msgid "A 6-months exchange program at the Georg - August Universitat Goettingen. It consisted of courses on international, tropical and temperate forestry, plus German language courses"
 msgstr "Un schimb de experiență de 6 luni la Georg - August Universitat Goettingen. A constat în cursuri despre silvicultură internațională, tropicală și temperată, plus cursuri de limba germană"
