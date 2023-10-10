@@ -64,14 +64,14 @@
 						<li class="nav-item dropdown">
 							{% get_available_languages as LANGUAGES %}
 							{% get_language_info_list for LANGUAGES as languages %}
-							{% get_language_info for LANGUAGE_CODE as lang %}
-							<!-- {% for language in languages %} -->
-								{% if LANGUAGE_CODE == 'ro' %}
+							<!-- {% get_language_info for LANGUAGE_CODE as lang %} -->
+							{% for language in languages %}
+							{% if LANGUAGE_CODE == 'ro' %}
 							    	
-								<a class="text-uppercase ml-3" value="{{ languages.0.name_local }}" href="/{{ languages.0.code }}/{{ request.get_full_path |slice:'4:'}}">{{ languages.0.name_local }}</a>
-								{% else %}
-								<a class="text-uppercase ml-3" value="{{ languages.1.name_local }}" href="/{{ languages.1.code }}/{{ request.get_full_path |slice:'4:'}}">{{ languages.1.name_local }}</a>
-								{% endif %}
+							<a class="text-uppercase ml-3" value="" href="/{{ languages.0.code }}/{{ request.get_full_path |slice:'4:'}}">English</a>
+							{% elif LANGUAGE_CODE == 'en' %}
+							<a class="text-uppercase ml-3" value="" href="/{{ languages.1.code }}/{{ request.get_full_path |slice:'4:'}}">Română</a>
+							{% endif %}
 							
 							{% endfor %}
 
