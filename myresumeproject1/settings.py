@@ -86,7 +86,13 @@ WSGI_APPLICATION = 'myresumeproject1.wsgi.application'
 #         'PORT': os.getenv('DB_PORT'),
 #     }
 # }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'resume1', # This is where you put the name of the db file. 
+                 # If one doesn't exist, it will be created at migration time.
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
