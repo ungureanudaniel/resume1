@@ -1634,6 +1634,10 @@ msgid "Technical Skills"
 msgstr "Abilități Tehnice"
 
 #: resumeapp/templates/resume1/index.html:274
+msgid "Exchange programs"
+msgstr "Programe de schimb de experiență"
+
+#: resumeapp/templates/resume1/index.html:274
 msgid "Skills"
 msgstr "Abilități"
 
