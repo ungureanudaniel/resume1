@@ -23,7 +23,7 @@ def home(request):
             message_name,  # name of sender
             message,  # text
             message_email,  # email
-            ['contact@ninjaweb.tech'],  # to email
+            ['ungureanu.daniel86@gmail.com'],  # to email
             fail_silently=False,
         )
 

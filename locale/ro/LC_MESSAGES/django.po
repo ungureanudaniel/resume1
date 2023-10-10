@@ -1495,7 +1495,7 @@ msgstr "<h2 class='theme-title'>Despre <span>Mine.</span></h2>"
 
 #: resumeapp/templates/resume1/index.html:145
 msgid "<p class='cd-headline clip is-full-width'>Hi! My name is <span class='name'>Daniel Ungureanu</span>. I am a junior python developer, GIS enthusiast and nature lover! I have a strong passion for tech, a B.Sc & a M.Sc. in forest sciences, ~8 years in nature related projects, working constantly with QGIS, ARCGIS, MySQL and PostgreSQL databases, ~3 years in web development with Python, Django, SQL and more, as a freelancer. I built the digital infrastructure for field data surveys using QFIELD, cloud services and QuantumGIS, built a portfolio of 9 websites, plus a few apps. Also gained some multicultural experience abroad, during exchange programs in Germany, Greece, Canada and South America. For hobbies, I enjoy sports, photography, reading about history, tech & decentralized finances. My aim for the future is to go deeper into programming & GIS, learn new skills, by getting involved in complex & challenging projects.\n\t\t\t\t\t\t\t\t\t\t\t</p>"
-msgstr "<p class='cd-headline clip is-full-width'>Salut! Numele meu este <span class='name'>Daniel Ungureanu</span>. Sunt Inginer Silvic, cu M.Sc. în ecologie forestieră, pasionat de GIS, programator python și iubitor de natură! Am o pasiune puternică pentru tehnologie, ~8 ani în proiecte legate de natură, lucrând constant cu baze de date QGIS, ARCGIS, MySQL și PostgreSQL, ~3 ani în dezvoltare web cu Python, Django, SQL și multe altele, ca freelancer. Am construit infrastructura digitală pentru studiile de date de teren folosind QFIELD, servicii cloud și QuantumGIS, am construit un portofoliu de 9 site-uri web, plus câteva aplicații. De asemenea, am dobândit o experiență multiculturală în străinătate, în cadrul unor programe de schimb în Germania, Grecia, Canada și America de Sud. Ca hobby-uri, îmi plac sportul, fotografia, cititul despre istorie, tehnologie și finanțe descentralizate. Obiectivul meu pentru viitor este să aprofundez în programare & GIS, să învăț noi abilități, implicându-mă în proiecte complexe & provocatoare.\n\t\t\t\t\t\t\t\t\t\t\t</p>"
+msgstr "<p class='cd-headline clip is-full-width'>Salut! Numele meu este <span class='name'>Daniel Ungureanu</span>. Sunt Inginer Silvic, cu M.Sc. în ecologie forestieră, pasionat de GIS, programator python și iubitor de natură! Am o pasiune puternică pentru tehnologie, ~8 ani în proiecte legate de natură, lucrând constant cu QGIS, ARCGIS, baze de date MySQL și PostgreSQL, ~3 ani în dezvoltare web cu Python, Django, SQL și multe altele, ca freelancer. Am construit infrastructura digitală pentru studiile de date de teren folosind QFIELD, servicii cloud și QuantumGIS, am construit un portofoliu de 9 site-uri web, plus câteva aplicații. De asemenea, am dobândit o experiență multiculturală în străinătate, în cadrul unor programe de schimb în Germania, Grecia, Canada și America de Sud. Ca hobby-uri, îmi plac sportul, fotografia, cititul despre istorie, tehnologie și blockchain. Obiectivul meu pentru viitor este să aprofundez în GIS & programare, să învăț noi abilități, implicându-mă în proiecte complexe & provocatoare.\n\t\t\t\t\t\t\t\t\t\t\t</p>"
 
 #: resumeapp/templates/resume1/index.html:153
 msgid "<li><span>Age:</span> 36 years</li>"
@@ -1544,7 +1544,7 @@ msgstr "M.Sc. în Ecologie Forestieră"
 
 #: resumeapp/templates/resume1/index.html:191
 msgid "Got deeper silviculture fundamentals, forest ecology, GIS. During the dissertation project, at the end of M.Sc. program i used a lot QuantumGIS and Nautiz7 field survey device for data collection on a 4000 ha forest, in 200 plots, with the aim to measure several tree species caracteristics accross different slopes, position, orientation, etc"
-msgstr "Am aprofundat noțiuni fundamentale de silvicultură, ecologie forestieră, GIS. În timpul proiectului de disertație, la sfârșitul programului de masterat, am folosit mult QuantumGIS și aparatul de teren Nautiz7 pentru colectarea de date pe o pădure de 4000 ha, în 200 de parcele, cu scopul de a măsura mai multe caracteristici ale speciilor de arbori pe diferite pante, poziție, orientare etc."
+msgstr "Am aprofundat noțiuni fundamentale de silvicultură, ecologie forestieră, GIS. În timpul proiectului de disertație, la sfârșitul programului de masterat, am folosit mult QuantumGIS și aparatul de teren Nautiz7 pentru colectarea de date pe o pădure de 4000 ha, în 200 de plot-uri, cu scopul de a măsura mai multe caracteristici ale speciilor de arbori pe diferite pante, poziție, orientare etc"
 
 #: resumeapp/templates/resume1/index.html:195
 msgid "OCEAN Exchange Scholarship in Canada"
@@ -1615,7 +1615,7 @@ msgstr "Asistent manager"
 
 #: resumeapp/templates/resume1/index.html:251
 msgid "Coordinated field activities in a 5.9 mil euros LIFE+ project, did periodical reports, habitat assessments, used ARCGIS 10.2 extensively, managed large databases, first contact with Python scripts for ARCGIS. Other skills obtained here consist of presentations, public awareness on the environment, wildlife guide"
-msgstr "A coordonat activitățile de teren într-un proiect LIFE+ în valoare de 5,9 milioane de euro, a întocmit rapoarte periodice, evaluări ale habitatelor, a utilizat ARCGIS 10.2 pe scară largă, a gestionat baze de date mari, a avut primul contact cu scripturile Python pentru ARCGIS. Alte competențe obținute aici constau în prezentări, conștientizarea publicului cu privire la mediu, ghid pentru fauna sălbatică"
+msgstr "Coordonarea activităților de teren într-un proiect LIFE+ în valoare de 5,9 milioane de euro, întocmirea de rapoarte periodice, evaluări ale habitatelor, timp in care am utilizat ARCGIS 10.2 pe scară largă, am gestionat baze de date mari, am avut primul contact cu scripturile Python pentru ARCGIS. Alte competențe obținute aici constau în prezentări, conștientizarea publicului cu privire la mediu, ghid pentru fauna sălbatică"
 
 #: resumeapp/templates/resume1/index.html:257
 msgid "Owner / Web Developer"
@@ -1632,6 +1632,10 @@ msgstr "<h2 class='theme-title-two'>Apti<span>tudini.</span></h2>"
 #: resumeapp/templates/resume1/index.html:274
 msgid "Technical Skills"
 msgstr "Abilități Tehnice"
+
+#: resumeapp/templates/resume1/index.html:274
+msgid "Skills"
+msgstr "Abilități"
 
 #: resumeapp/templates/resume1/index.html:316
 msgid "Wildlife monitoring"
