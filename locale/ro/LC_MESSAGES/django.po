@@ -1635,8 +1635,8 @@ msgid "Business Associate"
 msgstr "Asociat / Co-fondator"
 
 #: resumeapp/templates/resume1/index.html:241
-msgid "This is a food industry start-up that i co-founded and i am still involved as an associate. I created the website and maintain it, created a voucher management software in python and tkinter, i also manage google ads and advertising in general, business development and various administrative task"
-msgstr "Acesta este un start-up din industria alimentară pe care l-am co-fondat și în care sunt încă implicat ca asociat. Am creat site-ul web și îl întrețin, am creat un software de gestionare a bonurilor în python și tkinter, gestionez, de asemenea, reclamele Google și publicitatea în general, dezvoltarea afacerilor și diverse sarcini administrative"
+msgid "This is a food industry start-up that i co-founded. I created the website and maintain it, created a voucher management software in python and tkinter, i also manage google ads and advertising in general, business development and various administrative task"
+msgstr "Acesta este un start-up din industria alimentară pe care l-am co-fondat. Am creat site-ul web și îl întrețin, am creat un software de gestionare a bonurilor în python și tkinter, gestionez, de asemenea, reclamele Google și publicitatea în general, dezvoltarea afacerilor și diverse sarcini administrative"
 
 #: resumeapp/templates/resume1/index.html:249
 msgid "Assistant Manager"
