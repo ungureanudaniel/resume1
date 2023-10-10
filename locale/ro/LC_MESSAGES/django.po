@@ -1632,6 +1632,10 @@ msgid "Assistant Manager"
 msgstr "Asistent manager"
 
 #: resumeapp/templates/resume1/index.html:249
+msgid "present"
+msgstr "prezent"
+
+#: resumeapp/templates/resume1/index.html:249
 msgid "<li><span>City:</span> Brasov</li>"
 msgstr "<li><span>Oraș:</span> Brașov</li>"
 
