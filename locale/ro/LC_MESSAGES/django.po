@@ -1568,6 +1568,10 @@ msgid "Networks"
 msgstr "Rețele"
 
 #: resumeapp/templates/resume1/index.html:217
+msgid "Digital Graphic"
+msgstr "Grafică Digitală"
+
+#: resumeapp/templates/resume1/index.html:217
 msgid "Forest Management"
 msgstr "Silvicultură"
 #: resumeapp/templates/resume1/index.html:207
