@@ -1603,8 +1603,8 @@ msgid "Technical Director"
 msgstr "Director tehnic"
 
 #: resumeapp/templates/resume1/index.html:233
-msgid "Started as a Deputy Forest Engineer, involved into forest surveys, using Quantum GIS and mobile devices like Nautiz7 in the field. Later been promoted to Technical Director of the forest operations, planning and managing forestry activities on 4200 ha area. This involved also GIS using QuantumGIS"
-msgstr "Am început ca inginer silvic debutant, implicat în inventarieri forestiere, folosind Quantum GIS și dispozitive mobile precum Nautiz7 pe teren. Ulterior, am fost promovat la funcția de director tehnic al operațiunilor forestiere, planificând și gestionând activitățile forestiere pe o suprafață de 4200 ha. Acest lucru a implicat, de asemenea, utilizarea GIS cu QuantumGIS"
+msgid "Started as a Deputy Forest Engineer, involved into forest surveys, using Quantum GIS and mobile devices like Nautiz7 in the field. Later been promoted to Technical Director of the forest operations, planning and managing forestry activities on 4200 ha. This involved also GIS using QuantumGIS"
+msgstr "Am început ca inginer silvic debutant, implicat în inventarieri forestiere, folosind Quantum GIS și dispozitive mobile precum Nautiz7 pe teren. Ulterior, am fost promovat la funcția de director tehnic al operațiunilor forestiere, planificând și gestionând activitățile de recoltare a masei lemnoase, pe o suprafață de 4200 ha. Acest lucru a implicat, de asemenea, utilizarea GIS cu QuantumGIS"
 
 #: resumeapp/templates/resume1/index.html:237
 #: resumeapp/templates/resume1/index.html:247
