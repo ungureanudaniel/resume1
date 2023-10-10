@@ -1494,8 +1494,8 @@ msgid "<h2 class='theme-title'>About <span>Me.</span></h2>"
 msgstr "<h2 class='theme-title'>Despre <span>Mine.</span></h2>"
 
 #: resumeapp/templates/resume1/index.html:145
-msgid "<p class='cd-headline clip is-full-width'>Hi! My name is <span class='name'>Daniel Ungureanu</span>. I am a junior python developer, GIS enthusiast and nature lover! I have a strong passion for tech, a B.Sc & a M.Sc. in forest sciences, ~8 years in nature related projects, working constantly with QGIS, ARCGIS, MySQL and PostgreSQL databases, ~3 years in web development with Python, Django, SQL and more, as a freelancer. I built the digital infrastructure for field data surveys using QFIELD, cloud services and QuantumGIS, built a portfolio of 9 websites, plus a few apps. Also gained some multicultural experience abroad, during exchange programs in Germany, Greece, Canada and South America. For hobbies, I enjoy sports, photography, reading about history, tech & decentralized finances. My aim for the future is to go deeper into programming & GIS, learn new skills, by getting involved in complex & challenging projects.\n\t\t\t\t\t\t\t\t\t\t\t</p>"
-msgstr "<p class='cd-headline clip is-full-width'>Salut! Numele meu este <span class='name'>Daniel Ungureanu</span>. Sunt Inginer Silvic, cu M.Sc. în ecologie forestieră, pasionat de GIS, programator python și iubitor de natură! Am o pasiune puternică pentru tehnologie, ~8 ani în proiecte legate de natură, lucrând constant cu QGIS, ARCGIS, baze de date MySQL și PostgreSQL, ~3 ani în dezvoltare web cu Python, Django, SQL și multe altele, ca freelancer. Am construit infrastructura digitală pentru studiile de date de teren folosind QFIELD, servicii cloud și QuantumGIS, am construit un portofoliu de 9 site-uri web, plus câteva aplicații. De asemenea, am dobândit o experiență multiculturală în străinătate, în cadrul unor programe de schimb în Germania, Grecia, Canada și America de Sud. Ca hobby-uri, îmi plac sportul, fotografia, cititul despre istorie, tehnologie și blockchain. Obiectivul meu pentru viitor este să aprofundez în GIS & programare, să învăț noi abilități, implicându-mă în proiecte complexe & provocatoare.\n\t\t\t\t\t\t\t\t\t\t\t</p>"
+msgid "<p class='cd-headline clip is-full-width'>Hi! My name is <span class='name'>Daniel Ungureanu</span>. I am a junior python developer, GIS enthusiast and nature lover! I have a strong passion for tech, a B.Sc & a M.Sc. in forest sciences, ~8 years in nature related projects, working constantly with QGIS, ARCGIS, MySQL and PostgreSQL databases, ~3 years in web development with Python, Django, SQL and more, as a freelancer. I built the digital infrastructure for field data surveys using QFIELD, cloud services and QuantumGIS, built a portfolio of 9 websites, plus a few apps. Also gained some multicultural experience abroad, during exchange programs in Germany, Greece, Canada and South America. For hobbies, I enjoy sports, photography, reading about history, tech & decentralized finances. My aim for the future is to go deeper into programming & GIS, learn new skills, by getting involved in complex & challenging projects.</p>"
+msgstr "<p class='cd-headline clip is-full-width'>Salut! Numele meu este <span class='name'>Daniel Ungureanu</span>. Sunt Inginer Silvic, cu Master în ecologie forestieră, pasionat de GIS, programator python și iubitor de natură! Am o pasiune puternică pentru tehnologie, ~8 ani în proiecte legate de natură, lucrând constant cu QGIS, ARCGIS, baze de date MySQL și PostgreSQL, ~3 ani în dezvoltare web cu Python, Django, SQL și multe altele, ca freelancer. Am construit infrastructura digitală pentru studiile de date de teren folosind QFIELD, servicii cloud și QuantumGIS, am construit un portofoliu de 9 site-uri web, plus câteva aplicații. De asemenea, am dobândit o experiență multiculturală în străinătate, în cadrul unor programe de schimb în Germania, Grecia, Canada și America de Sud. Ca hobby-uri, îmi plac sportul, fotografia, cititul despre istorie, tehnologie și blockchain. Obiectivul meu pentru viitor este să aprofundez în GIS & programare, să învăț noi abilități, implicându-mă în proiecte complexe & provocatoare.</p>"
 
 #: resumeapp/templates/resume1/index.html:153
 msgid "<li><span>Age:</span> 36 years</li>"
@@ -1503,11 +1503,11 @@ msgstr "<li><span>Varstă:</span> 36 ani</li>"
 
 #: resumeapp/templates/resume1/index.html:155
 msgid "<li><span>Study:</span> Forest Ecology, Transilvania University of Brasov</li>"
-msgstr "<li><span>Study:</span> Ecologie forestieră, Universitatea Transilvania din Brașov</li>"
+msgstr "<li><span>Studii:</span> Ecologie forestieră, Universitatea Transilvania din Brașov</li>"
 
 #: resumeapp/templates/resume1/index.html:157
 msgid "<li><span>Current Job:</span> IT Specialist, Bucegi Natural Park Administration</li>"
-msgstr "<li><span>Current Job:</span> Specialist IT, Administrația Parcului Natural Bucegi R.A.</li>"
+msgstr "<li><span>Job curent:</span> Specialist IT, Administrația Parcului Natural Bucegi R.A.</li>"
 
 #: resumeapp/templates/resume1/index.html:160
 msgid "Hire Me"
@@ -1526,8 +1526,8 @@ msgid "Education"
 msgstr "Educație"
 
 #: resumeapp/templates/resume1/index.html:178
-msgid "<h5 class='title'>B.Sc. in Forestry</h5>"
-msgstr "<h5 class='title'>B.Sc. în Silvicultură</h5>"
+msgid "B.Sc. - Forest Management"
+msgstr "B.Sc. - Silvicultură"
 
 #: resumeapp/templates/resume1/index.html:179
 #: resumeapp/templates/resume1/index.html:189
@@ -1539,20 +1539,20 @@ msgid "Besides the knowledge in forestry, i accumulated skills in GIS, statistic
 msgstr "Pe lângă cunoștințele în domeniul silviculturii, am acumulat competențe în GIS, statistică, cercetare, făcând parte din două grupuri științifice studențești (entomologie și silvicultură), experiență internațională ca student Erasmus în Germania, la Georg - August Universitat Goettingen"
 
 #: resumeapp/templates/resume1/index.html:188
-msgid "M.Sc. in Forest Ecology"
-msgstr "M.Sc. în Ecologie Forestieră"
+msgid "M.Sc. - Forest Ecology"
+msgstr "M.Sc. - Ecologia Ecosistemelor Forestiere"
 
 #: resumeapp/templates/resume1/index.html:191
-msgid "Got deeper silviculture fundamentals, forest ecology, GIS. During the dissertation project, at the end of M.Sc. program i used a lot QuantumGIS and Nautiz7 field survey device for data collection on a 4000 ha forest, in 200 plots, with the aim to measure several tree species caracteristics accross different slopes, position, orientation, etc"
-msgstr "Am aprofundat noțiuni fundamentale de silvicultură, ecologie forestieră, GIS. În timpul proiectului de disertație, la sfârșitul programului de masterat, am folosit mult QuantumGIS și aparatul de teren Nautiz7 pentru colectarea de date pe o pădure de 4000 ha, în 200 de plot-uri, cu scopul de a măsura mai multe caracteristici ale speciilor de arbori pe diferite pante, poziție, orientare etc"
+msgid "Got deeper silviculture fundamentals, forest ecology, GIS. During the dissertation project, at the end of M.Sc. program i used a lot QuantumGIS and Nautiz7 field survey device for data collection on a 4000 ha forest, in ~200 plots, with the aim to measure several tree species caracteristics accross different slopes, position, orientation, etc"
+msgstr "Am aprofundat noțiuni fundamentale de silvicultură, ecologie forestieră, GIS. În timpul proiectului de disertație, la sfârșitul programului de masterat, am folosit mult QuantumGIS și aparatul de teren Nautiz7 pentru colectarea de date pe o suprafată de pădure de 4200 ha, în ~100 de plot-uri, cu scopul de a măsura mai multe caracteristici ale speciilor de arbori pe diferite pante, poziție, orientare etc"
 
 #: resumeapp/templates/resume1/index.html:195
-msgid "OCEAN Exchange Scholarship in Canada"
-msgstr "Bursă de studiu OCEAN în Canada"
+msgid "OCEAN Exchange Scholarship"
+msgstr "Bursă de studiu OCEAN"
 
 #: resumeapp/templates/resume1/index.html:198
 msgid "Three weeks exchange program in Western Canada, consisting of a field trip throughout Coast Mountains and Rocky Mountains, starting from Edmonton and finishing it in Vancouver. We were taken through all aspects of field work in forestry and national parks, from logging and monitoring insect breakouts to managing forest fires, wildlife and protected areas in Canada (Banff and Jasper National Parks, Grove Cathedral in Vancouver Island)"
-msgstr "Program de schimb de trei săptămâni în vestul Canadei, constând într-o excursie pe teren în Munții Coastei și Munții Stâncoși, cu plecare din Edmonton și sosire în Vancouver. Ne-au fost prezentate toate aspectele muncii de teren în silvicultură și în parcurile naționale, de la exploatarea forestieră și monitorizarea insectelor până la gestionarea incendiilor forestiere, a vieții sălbatice și a zonelor protejate din Canada (parcurile naționale Banff și Jasper, Catedrala Grove din Insula Vancouver)."
+msgstr "Program de schimb de trei săptămâni în vestul Canadei, constând într-o excursie pe teren în Munții Coastei și Munții Stâncoși, cu plecare din Edmonton și sosire în Vancouver. Ne-au fost prezentate toate aspectele muncii de teren în silvicultură și în parcurile naționale, de la exploatarea forestieră și monitorizarea insectelor până la gestionarea incendiilor forestiere, a vieții sălbatice și a zonelor protejate din Canada (parcurile naționale Banff și Jasper, Grove Cathedral de pe Insula Vancouver)"
 
 #: resumeapp/templates/resume1/index.html:198
 msgid "GIS database management, implementation of QFIELD application with conditional QGIS forms, for field data collection, with wireless data transmission to the server, network maintenance, computers, custom website for public institution"
@@ -1568,8 +1568,8 @@ msgid "A 6-months exchange program at the Georg - August Universitat Goettingen.
 msgstr "Un schimb de experiență de 6 luni la Georg - August Universitat Goettingen. A constat în cursuri despre silvicultură internațională, tropicală și temperată, plus cursuri de limba germană"
 
 #: resumeapp/templates/resume1/index.html:211
-msgid "Summer School focused on site index statistics"
-msgstr "Școala de vară axată pe statistica stațiunilor forestiere"
+msgid "Summer School"
+msgstr "Școala de vară"
 
 #: resumeapp/templates/resume1/index.html:214
 msgid "A three weeks exchange program in Greece, Halkidiki area, where we practiced cluster analysis on site index and flora datasets"
@@ -1593,13 +1593,31 @@ msgstr "Director tehnic"
 
 #: resumeapp/templates/resume1/index.html:233
 msgid "Started as a Deputy Forest Engineer, involved into forest surveys, using Quantum GIS and mobile devices like Nautiz7 in the field. Later been promoted to Technical Director of the forest operations, planning and managing forestry activities on 4200 ha area. This involved also GIS using QuantumGIS"
-msgstr "Am început ca inginer silvic debutant, implicat în inventarieri forestiere, folosind Quantum GIS și dispozitive mobile precum Nautiz7 pe teren. Ulterior, a fost promovat la funcția de director tehnic al operațiunilor forestiere, planificând și gestionând activitățile forestiere pe o suprafață de 4200 ha. Acest lucru a implicat, de asemenea, utilizarea GIS cu QuantumGIS."
+msgstr "Am început ca inginer silvic debutant, implicat în inventarieri forestiere, folosind Quantum GIS și dispozitive mobile precum Nautiz7 pe teren. Ulterior, am fost promovat la funcția de director tehnic al operațiunilor forestiere, planificând și gestionând activitățile forestiere pe o suprafață de 4200 ha. Acest lucru a implicat, de asemenea, utilizarea GIS cu QuantumGIS"
 
 #: resumeapp/templates/resume1/index.html:237
 #: resumeapp/templates/resume1/index.html:247
 #: resumeapp/templates/resume1/index.html:255
 msgid "BRASOV, ROMANIA"
 msgstr "BRAȘOV, ROMÂNIA"
+
+#: resumeapp/templates/resume1/index.html:255
+msgid "A few examples:"
+msgstr "Câteva exemple:"
+
+#: resumeapp/templates/resume1/index.html:255
+msgid "Add name..."
+msgstr "Adaugă-ți numele..."
+#: resumeapp/templates/resume1/index.html:255
+msgid "Add your email..."
+msgstr "Adaugă-ți e-mailul..."
+#: resumeapp/templates/resume1/index.html:255
+msgid "Add a few words..."
+msgstr "Adaugă câteva cuvinte..."
+
+#: resumeapp/templates/resume1/index.html:255
+msgid "Bucegi Natural Park"
+msgstr "Parcul Natural Bucegi"
 
 #: resumeapp/templates/resume1/index.html:239
 msgid "Business Associate"
@@ -1612,6 +1630,10 @@ msgstr "Acesta este un start-up din industria alimentară pe care l-am co-fondat
 #: resumeapp/templates/resume1/index.html:249
 msgid "Assistant Manager"
 msgstr "Asistent manager"
+
+#: resumeapp/templates/resume1/index.html:249
+msgid "<li><span>City:</span> Brasov</li>"
+msgstr "<li><span>Oraș:</span> Brașov</li>"
 
 #: resumeapp/templates/resume1/index.html:251
 msgid "Coordinated field activities in a 5.9 mil euros LIFE+ project, did periodical reports, habitat assessments, used ARCGIS 10.2 extensively, managed large databases, first contact with Python scripts for ARCGIS. Other skills obtained here consist of presentations, public awareness on the environment, wildlife guide"
