@@ -1582,6 +1582,10 @@ msgstr "O bursă de 6 luni la Georg-August-Universität Göttingen, în cadrul u
 msgid "Summer School"
 msgstr "Școala de vară"
 
+#: resumeapp/templates/resume1/index.html:211
+msgid "A 6 months Python programming language course which introduced me into the world of programming and web develpoment, at a local school in Brasov"
+msgstr "Un curs de 6 luni de programare cu Python, care m-a introdus în lumea programării și a dezvoltării web, la o școală locală din Brașov"
+
 #: resumeapp/templates/resume1/index.html:214
 msgid "A three weeks exchange program in Greece, Halkidiki area, where we practiced cluster analysis on site index and flora datasets"
 msgstr "Un program de schimb de trei săptămâni în Grecia, în zona Halkidiki, unde am exersat analiza cluster pe seturi de date privind stațiunile forestiere"
