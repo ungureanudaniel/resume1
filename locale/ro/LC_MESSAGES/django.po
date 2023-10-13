@@ -1535,16 +1535,16 @@ msgid "TRANSYLVANIA UNIVERSITY OF BRASOV"
 msgstr "UNIVERSITATEA TRANSILVANIA DIN BRAȘOV"
 
 #: resumeapp/templates/resume1/index.html:181
-msgid "Besides the knowledge in forestry, i accumulated skills in GIS, statistics, research, being part of two scientific student groups (entomology and silviculture), international experience as an Erasmus Student in Germany, at Georg - August Universitat Goettingen"
-msgstr "Pe lângă cunoștințele în domeniul silviculturii, am acumulat competențe în GIS, statistică, cercetare, făcând parte din două grupuri științifice studențești (entomologie și silvicultură), experiență internațională ca student Erasmus în Germania, la Georg - August Universitat Goettingen"
+msgid "Besides the knowledge in forest management, i accumulated skills in GIS, statistics, research, being part of two scientific student groups (entomology and silviculture), international experience as an Erasmus Student in Germany, at Georg-August Universität Göttingen"
+msgstr "Pe lângă cunoștințele în domeniul silviculturii, am acumulat competențe în GIS, statistică, cercetare, făcând parte din două grupuri științifice studențești (entomologie și silvicultură), experiență internațională ca student Erasmus în Germania, la Georg-August Universität Göttingen"
 
 #: resumeapp/templates/resume1/index.html:188
 msgid "M.Sc. - Forest Ecology"
 msgstr "M.Sc. - Ecologia Ecosistemelor Forestiere"
 
 #: resumeapp/templates/resume1/index.html:191
-msgid "Got deeper silviculture fundamentals, forest ecology, GIS. During the dissertation project, at the end of M.Sc. program i used a lot QuantumGIS and Nautiz7 field survey device for data collection on a 4000 ha forest, in ~200 plots, with the aim to measure several tree species caracteristics accross different slopes, position, orientation, etc"
-msgstr "Am aprofundat noțiuni fundamentale de silvicultură, ecologie forestieră, GIS. În timpul proiectului de disertație, la sfârșitul programului de masterat, am folosit mult QuantumGIS și aparatul de teren Nautiz7 pentru colectarea de date pe o suprafată de pădure de 4200 ha, în ~100 de plot-uri, cu scopul de a măsura mai multe caracteristici ale speciilor de arbori pe diferite pante, poziție, orientare etc"
+msgid "Got deeper into forest management, forest ecology and GIS. During the dissertation project, at the end of M.Sc. program i used a lot QuantumGIS and a Nautiz7 field survey device for data collection on a 4200 ha forest, in ~100 plots, with the aim to measure several tree species biometrics in relation to external factors"
+msgstr "Am aprofundat noțiuni fundamentale de silvicultură, ecologie forestieră și GIS. În timpul proiectului de disertație, la sfârșitul programului de masterat, am folosit mult QuantumGIS și aparatul de teren Nautiz7 pentru colectarea de date pe o suprafată de pădure de 4200 ha, în ~100 de plot-uri, cu scopul de a măsura caracteristicile biometrice ale catorva specii de arbori, in funcție de factori externi"
 
 #: resumeapp/templates/resume1/index.html:195
 msgid "OCEAN Exchange Scholarship"
@@ -1552,7 +1552,7 @@ msgstr "Bursă de studiu OCEAN"
 
 #: resumeapp/templates/resume1/index.html:198
 msgid "Three weeks exchange program in Western Canada, consisting of a field trip throughout Coast Mountains and Rocky Mountains, starting from Edmonton and finishing it in Vancouver. We were taken through all aspects of field work in forestry and national parks, from logging and monitoring insect breakouts to managing forest fires, wildlife and protected areas in Canada (Banff and Jasper National Parks, Grove Cathedral in Vancouver Island)"
-msgstr "Program de schimb de trei săptămâni în vestul Canadei, constând într-o excursie pe teren în Munții Coastei și Munții Stâncoși, cu plecare din Edmonton și sosire în Vancouver. Ne-au fost prezentate toate aspectele muncii de teren în silvicultură și în parcurile naționale, de la exploatarea forestieră și monitorizarea insectelor până la gestionarea incendiilor forestiere, a vieții sălbatice și a zonelor protejate din Canada (parcurile naționale Banff și Jasper, Grove Cathedral de pe Insula Vancouver)"
+msgstr "Program de schimb de trei săptămâni în vestul Canadei, constând într-o excursie pe teren în Munții Coastei și Munții Stâncoși, cu plecare din Edmonton și sosire în Vancouver. Ne-au fost prezentate toate aspectele muncii de teren în silvicultură și în parcurile naționale, de la exploatarea forestieră și monitorizarea insectelor până la gestionarea incendiilor forestiere, a faunei sălbatice și a zonelor protejate din Canada (parcurile naționale Banff și Jasper, Grove Cathedral de pe Insula Vancouver)"
 
 #: resumeapp/templates/resume1/index.html:198
 msgid "GIS database management, implementation of field data collection digital infrastructure with phones, using QFIELD, cloud database services and QGIS forms, network and computers maintenance. Built a custom website with a remote MySQL database where it saves all public documents, photos and it has a park visitor fee custom payment system using EuPlatesc provider. The website also has a content management system where employees can add data without programming knowledge and an integrated GIS map, generated through QGIS in JavaScript, which works as a separate app on the same domain as the website. Also took the social media presence of the park to another lovel by adding a YouTube channel connected to the new website, twitter, linkedin, instagram accounts. Designed custom graphics for the website and facebook page. Underconstruction is an online timesheet system for the park employees to generate their monthly activities reports"
@@ -1575,8 +1575,8 @@ msgstr "Grafică Digitală"
 msgid "Forest Management"
 msgstr "Silvicultură"
 #: resumeapp/templates/resume1/index.html:207
-msgid "A 6-months exchange program at the Georg - August Universitat Goettingen. It consisted of courses on international, tropical and temperate forestry, plus German language courses"
-msgstr "Un schimb de experiență de 6 luni la Georg - August Universitat Goettingen. A constat în cursuri despre silvicultură internațională, tropicală și temperată, plus cursuri de limba germană"
+msgid "A 6 months long scholarship at Georg-August-Universität Göttingen, as an exchange student in an International Forestry class, where I built an overview on global forest management practices, plus German language courses"
+msgstr "O bursă de 6 luni la Georg-August-Universität Göttingen, în cadrul unei clase de silvicultură internațională, unde mi-am făcut o imagine de ansamblu asupra practicilor globale de administrare a pădurilor, plus cursuri de limba germană"
 
 #: resumeapp/templates/resume1/index.html:211
 msgid "Summer School"
