@@ -780,9 +780,16 @@
 
 				<footer class="theme-footer">
 					<div class="theme-container">
-						&copy; Copyright 2019. All Rights are Reserved.
+						&copy; Copyright <span id="currentYear"></span>. All Rights are Reserved.
 					</div>
 				</footer>
+				<script>
+					// Get the current year
+					var currentYear = new Date().getFullYear();
+			
+					// Display the current year in the HTML element with id "currentYear"
+					document.getElementById("currentYear").innerHTML = currentYear;
+				</script>
 				<!-- End Contact -->
 
 

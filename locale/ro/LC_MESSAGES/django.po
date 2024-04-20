@@ -1568,7 +1568,7 @@ msgid "Networks"
 msgstr "Rețele"
 
 #: resumeapp/templates/resume1/index.html:217
-msgid "Digital Graphic"
+msgid "Digital Graphics"
 msgstr "Grafică Digitală"
 
 #: resumeapp/templates/resume1/index.html:217
@@ -1664,7 +1664,7 @@ msgstr "Coordonarea activităților de teren într-un proiect LIFE+ în valoare 
 
 #: resumeapp/templates/resume1/index.html:257
 msgid "Owner / Web Developer"
-msgstr "Proprietar / Web Developer"
+msgstr "Administrator / Web Developer"
 
 #: resumeapp/templates/resume1/index.html:259
 msgid "Writing software and creating websites for clients, using Python / Django, JavaScript, jQuery, Bootstrap, HTML, CSS, Asyncio, Linux. Examples:"
