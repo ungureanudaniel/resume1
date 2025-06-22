@@ -1,9 +1,9 @@
 from django.contrib import admin
-# from .models import Profile, Education, Experience, Skill, Exchange, Certificates, MainAbilities, RecentWork, CvFile
-# Register your models here.
+from .models import Profile
+# , Education, Experience, Skill, Exchange, Certificates, MainAbilities, RecentWork, CvFile
 
-# class ProfileAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'name', 'age', 'study', 'current_job', 'city', 'status')
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user', 'age', 'study', 'current_job', 'city', 'status')
 
 # class MainAbilitiesAdmin(admin.ModelAdmin):
 #     list_display = ('id', 'name')
@@ -29,7 +29,7 @@ from django.contrib import admin
 # class CvFileAdmin(admin.ModelAdmin):
 #     list_display = ('timestamp', 'file')
 
-# admin.site.register(Profile, ProfileAdmin)
+admin.site.register(Profile, ProfileAdmin)
 # admin.site.register(RecentWork, RecentWorkAdmin)
 # admin.site.register(MainAbilities, MainAbilitiesAdmin)
 # admin.site.register(Education, EducationAdmin)

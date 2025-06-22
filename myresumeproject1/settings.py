@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'myresumeproject1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
@@ -149,6 +149,7 @@ LANGUAGES = (
     ('ro', _('Română')),
 )
 #---------------------- SEND EMAIL SETTINGS ----------------------------
+email_backend = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_PORT=os.getenv('EMAIL_PORT')
 EMAIL_HOST=os.getenv('EMAIL_HOST')
 EMAIL_USE_TLS=True

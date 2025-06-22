@@ -14,38 +14,34 @@ from django.utils import timezone
 #     def __str__(self):
 #         return self.name
 
-# #---------------------------PROFILE---------------------------------------
-# class Profile(models.Model):
-#     freelance_choices = (
-#         ('Free of Contract', 'Free of Contract'),
-#         ('Currently under contract', 'Currently under contract'),
-# )
-#     status_choices = (
-#         ('active', 'active'),
-#         ('inactive', 'inactive')
-#     )
-#     # chap_title = models.CharField(max_length=200, default="")
-#     name = models.ForeignKey(User, on_delete=models.CASCADE)
-#     # main_abilities = models.(MainAbilities, on_delete=models.CASCADE)
-#     text = models.TextField()
-#     age = models.IntegerField(default="5")
-#     study = models.CharField(max_length=200, default="")
-#     mail = models.EmailField(max_length=200, default="")
-#     current_job = models.CharField(max_length=200, default="")
-#     city = models.CharField(max_length=200, default="")
-#     website = models.CharField(max_length=200, default="")
-#     phone = models.IntegerField(default="0")
-#     employment_status = models.CharField(max_length=200, default="", choices=freelance_choices)
-#     timestamp = models.DateTimeField(default=timezone.now(), blank=True)
-#     # active = models.BooleanField()
-#     status = models.CharField(max_length=200, default="", choices=status_choices)
+#---------------------------PROFILE---------------------------------------
+class Profile(models.Model):
+    freelance_choices = (
+        ('Free of Contract', 'Free of Contract'),
+        ('Currently under contract', 'Currently under contract'),
+)
+    status_choices = (
+        ('active', 'active'),
+        ('inactive', 'inactive')
+    )
+    # chap_title = models.CharField(max_length=200, default="")
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # main_abilities = models.(MainAbilities, on_delete=models.CASCADE)
+    text = models.TextField()
+    age = models.IntegerField(default="5")
+    study = models.CharField(max_length=200, default="")
+    mail = models.EmailField(max_length=200, default="")
+    current_job = models.CharField(max_length=200, default="")
+    city = models.CharField(max_length=200, default="")
+    website = models.CharField(max_length=200, default="")
+    phone = models.IntegerField(default="0")
+    employment_status = models.CharField(max_length=200, default="", choices=freelance_choices)
+    timestamp = models.DateTimeField(default=timezone.now(), blank=True)
+    # active = models.BooleanField()
+    status = models.CharField(max_length=200, default="", choices=status_choices)
 
-#     def __str__(self):
-#         return self.text
-
-#     def get_absolute_url(self):
-#         # return reverse('post_detail', kwargs={'pk': self.pk})
-#         return reverse('home')
+    def __str__(self):
+        return f"{self.user.username}'s Profile"
 
 # #---------------------------EDUCATITON---------------------------------------
 # class Education(models.Model):
