@@ -156,7 +156,7 @@ EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 EMAIL_HOST_USER='contact@bucegipark.ro'
 EMAIL_HOST_PASSWORD=os.getenv('EMAIL_HOST_PASSWORD')
-
+EMAIL_HOST_USER = 'danielungureanu531@gmail.com'
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-secondary',
         messages.INFO: 'alert-info',
