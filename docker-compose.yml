@@ -1,6 +1,6 @@
 services:
   django:
-    build: ./app
+    build: .
     container_name: resume-django
     restart: unless-stopped
     expose:
