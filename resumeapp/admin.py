@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Profile
-# , Education, Experience, Skill, Exchange, Certificates, MainAbilities, RecentWork, CvFile
+from .models import Profile, CvFile
+# , Education, Experience, Skill, Exchange, Certificates, MainAbilities, RecentWork
 
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'age', 'study', 'current_job', 'city', 'status')
@@ -37,4 +37,4 @@ admin.site.register(Profile, ProfileAdmin)
 # admin.site.register(Skill, SkillAdmin)
 # admin.site.register(Certificates, CertificatesAdmin)
 # admin.site.register(Exchange, ExchangeAdmin)
-# admin.site.register(CvFile, CvFileAdmin)
+admin.site.register(CvFile, CvFileAdmin)
