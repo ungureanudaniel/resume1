@@ -26,8 +26,8 @@ class ProfileAdmin(admin.ModelAdmin):
 # class RecentWorkAdmin(admin.ModelAdmin):
 #     list_display = ('id', 'category', 'title', 'image')
 
-# class CvFileAdmin(admin.ModelAdmin):
-#     list_display = ('timestamp', 'file')
+class CvFileAdmin(admin.ModelAdmin):
+    list_display = ('timestamp', 'file')
 
 admin.site.register(Profile, ProfileAdmin)
 # admin.site.register(RecentWork, RecentWorkAdmin)
